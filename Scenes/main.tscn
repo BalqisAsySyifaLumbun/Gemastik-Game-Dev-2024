@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=3 uid="uid://502qv0f2gtdp"]
+
+[ext_resource type="Texture2D" uid="uid://dlugn4231uwvf" path="res://Sprites/Background/koridor.png" id="1_smlyg"]
+[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://character_body_2d.tscn" id="3_60r7p"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="4_f2s5q"]
+[ext_resource type="Texture2D" uid="uid://dsr6m60itnr37" path="res://Sprites/Terrain/sunny.png" id="6_fo81h"]
+[ext_resource type="Texture2D" uid="uid://cw5ifmi31tarf" path="res://Sprites/Terrain/lantai.png" id="6_vywqh"]
+[ext_resource type="Texture2D" uid="uid://cf0dnvkldk8hm" path="res://Sprites/Terrain/pilar2.png" id="7_4t6n4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_smhg5"]
+size = Vector2(1281.67, 187)
+
+[node name="Main" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = -3.0
+offset_top = 1.0
+offset_right = 1533.0
+offset_bottom = 721.0
+texture = ExtResource("1_smlyg")
+stretch_mode = 1
+
+[node name="Lantai" type="Sprite2D" parent="."]
+position = Vector2(764.5, 555)
+scale = Vector2(1.19922, 1.28906)
+texture = ExtResource("6_vywqh")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Lantai"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lantai/StaticBody2D"]
+position = Vector2(-0.833923, 32.5)
+shape = SubResource("RectangleShape2D_smhg5")
+
+[node name="Badak" parent="." instance=ExtResource("3_60r7p")]
+position = Vector2(95, 113)
+script = ExtResource("4_f2s5q")
+
+[node name="Sunny" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.458824)
+light_mask = 13
+position = Vector2(761, 361)
+scale = Vector2(1.19688, 1)
+texture = ExtResource("6_fo81h")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 237.0
+offset_top = 239.0
+offset_right = 491.0
+offset_bottom = 301.0
+text = "Selamat datang di sekolah,
+tekan SPASI untuk melompat."
+
+[node name="Pilar" type="Sprite2D" parent="."]
+position = Vector2(737, 360.5)
+scale = Vector2(0.515625, 0.717)
+texture = ExtResource("7_4t6n4")
+
+[node name="Pilar2" type="Sprite2D" parent="."]
+position = Vector2(1475, 362.5)
+scale = Vector2(0.460937, 0.721)
+texture = ExtResource("7_4t6n4")
