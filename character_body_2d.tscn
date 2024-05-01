@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://cjq723u0rgaxo"]
+
+[ext_resource type="Texture2D" uid="uid://na14yqw1rutj" path="res://Sprites/badak idle 2.png" id="1_n20m0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hf8ep"]
+atlas = ExtResource("1_n20m0")
+region = Rect2(0, 0, 100, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10l3a"]
+atlas = ExtResource("1_n20m0")
+region = Rect2(100, 0, 100, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_38lki"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hf8ep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hf8ep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hf8ep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10l3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10l3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hf8ep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hf8ep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hf8ep")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10l3a")
+}, {
+"duration": 1.2,
+"texture": SubResource("AtlasTexture_10l3a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10l3a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ieknj"]
+custom_solver_bias = 0.168
+size = Vector2(94, 192)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-9.53674e-07, -1)
+scale = Vector2(1.45313, 1.64063)
+sprite_frames = SubResource("SpriteFrames_38lki")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.282887
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4, 1)
+shape = SubResource("RectangleShape2D_ieknj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
