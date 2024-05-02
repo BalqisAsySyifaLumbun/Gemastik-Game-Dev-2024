@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://502qv0f2gtdp"]
+[gd_scene load_steps=16 format=3 uid="uid://502qv0f2gtdp"]
 
 [ext_resource type="Texture2D" uid="uid://dlugn4231uwvf" path="res://Sprites/Background/koridor.png" id="1_smlyg"]
 [ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://character_body_2d.tscn" id="3_60r7p"]
@@ -10,13 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://cf0dnvkldk8hm" path="res://Sprites/Terrain/pilar2.png" id="7_4t6n4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_30xax"]
-size = Vector2(528, 704.5)
+size = Vector2(528, 485)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_of0g0"]
-size = Vector2(541.5, 709)
+size = Vector2(399, 486)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smhg5"]
-size = Vector2(2010.7, 187)
+size = Vector2(1713.63, 187)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_64fp0"]
 atlas = ExtResource("6_odb7f")
@@ -41,17 +41,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mmc8i"]
-size = Vector2(71, 29)
-
-[sub_resource type="SyntaxHighlighter" id="SyntaxHighlighter_brj74"]
+size = Vector2(71, 3)
 
 [node name="Main" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 offset_left = -589.0
-offset_top = -228.0
-offset_right = 3372.0
+offset_top = 1.0
+offset_right = 2889.0
 offset_bottom = 721.0
 texture = ExtResource("1_smlyg")
 stretch_mode = 1
@@ -59,58 +57,40 @@ stretch_mode = 1
 [node name="StaticBody2D" type="StaticBody2D" parent="TextureRect"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D"]
-position = Vector2(268, 347)
+position = Vector2(374, 241)
 shape = SubResource("RectangleShape2D_30xax")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TextureRect/StaticBody2D"]
-position = Vector2(3684.75, 365)
+position = Vector2(3159.5, 242)
 shape = SubResource("RectangleShape2D_of0g0")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 320.0
-offset_top = 102.0
-offset_right = 574.0
-offset_bottom = 164.0
-text = "Selamat datang di sekolah,
-tekan SPASI untuk melompat."
-
 [node name="Lantai" type="TextureRect" parent="."]
-offset_left = -615.0
+offset_left = -490.0
 offset_top = 396.0
-offset_right = 1415.0
+offset_right = 1231.0
 offset_bottom = 652.0
 scale = Vector2(1.9625, 1.28906)
 texture = ExtResource("6_vywqh")
-expand_mode = 2
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Lantai"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lantai/StaticBody2D"]
-position = Vector2(1003.31, 162.134)
+position = Vector2(854.777, 162.134)
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_smhg5")
-
-[node name="TextEdit2" type="TextEdit" parent="."]
-offset_left = 1029.0
-offset_top = 118.0
-offset_right = 1325.0
-offset_bottom = 216.0
-text = "Lihat, ada seekor badak.
-Ayo, dekati dia dan tekan tombol X
-untuk berkenalan dengannya!"
 
 [node name="Badak" type="CharacterBody2D" parent="."]
 script = ExtResource("5_sfst6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Badak"]
-position = Vector2(1587, 367)
+position = Vector2(1031.25, 366)
 scale = Vector2(1.995, 2.01563)
 sprite_frames = SubResource("SpriteFrames_s2jtn")
 autoplay = "default"
 frame_progress = 0.255855
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Badak"]
-position = Vector2(1586, 497.5)
+position = Vector2(1028.5, 479.5)
 shape = SubResource("RectangleShape2D_mmc8i")
 
 [node name="MC" parent="." instance=ExtResource("3_60r7p")]
@@ -121,33 +101,24 @@ script = ExtResource("4_f2s5q")
 visible = false
 modulate = Color(1, 1, 1, 0.458824)
 light_mask = 13
-position = Vector2(1180.5, 244.5)
-scale = Vector2(2.67266, 1.32361)
+position = Vector2(1210, 361)
+scale = Vector2(2.62656, 1)
 texture = ExtResource("6_fo81h")
 
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 237.0
+offset_top = 239.0
+offset_right = 491.0
+offset_bottom = 301.0
+text = "Selamat datang di sekolah,
+tekan SPASI untuk melompat."
+
 [node name="Pilar" type="Sprite2D" parent="."]
-position = Vector2(737, 249.5)
-scale = Vector2(0.515625, 0.955)
+position = Vector2(737, 364.5)
+scale = Vector2(0.515625, 0.725)
 texture = ExtResource("7_4t6n4")
 
 [node name="Pilar2" type="Sprite2D" parent="."]
-position = Vector2(1953, 246)
-scale = Vector2(0.460937, 0.956)
+position = Vector2(1953, 363.25)
+scale = Vector2(0.460937, 0.7215)
 texture = ExtResource("7_4t6n4")
-
-[node name="TextEdit3" type="TextEdit" parent="."]
-offset_left = 1506.0
-offset_top = 150.0
-offset_right = 1664.0
-offset_bottom = 217.0
-theme_override_colors/background_color = Color(0, 0, 0, 0)
-text = "Badak
-                 ..."
-syntax_highlighter = SubResource("SyntaxHighlighter_brj74")
-
-[node name="TextEdit4" type="TextEdit" parent="."]
-visible = false
-offset_left = 963.0
-offset_top = 521.0
-offset_right = 1684.0
-offset_bottom = 670.0
