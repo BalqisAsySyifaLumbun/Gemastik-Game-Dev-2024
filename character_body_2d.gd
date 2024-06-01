@@ -44,7 +44,7 @@ func _physics_process(delta):
 			dialog_in_progress = true
 
 	if dialog_in_progress and Input.is_action_just_pressed("dialog"):
-		var array = ["Badak\nHalo, kamu murid baru, ya?", "Badak\nOh, namaku Cula. Sepertinya aku harus membantumu pergi ke ruang guru.", "Cula\nRuang guru arahnya lurus saja, dan pintu pertama yang kau temui adalah ruangannya.", "Cula\nSemoga beruntung."]
+		var array = ["Badak\nHalo, kamu murid baru, ya?", "Badak\nOh, namaku Cula. Sepertinya aku harus membantumu pergi ke ruang guru.", "Cula\nRuang guru arahnya lurus saja, dan pintu kuning yang kau temui adalah ruangannya.", "Cula\nSemoga beruntung."]
 		if count < array.size():
 			text_edit.text = array[count]
 			count += 1
