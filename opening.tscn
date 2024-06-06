@@ -1,0 +1,104 @@
+[gd_scene load_steps=16 format=3 uid="uid://bjcneey0wwcj0"]
+
+[ext_resource type="Texture2D" uid="uid://rrk4k3omx563" path="res://Sprites/BG/Landing Page_0000.png" id="1_0k4b2"]
+[ext_resource type="PackedScene" uid="uid://c4xn23tutkjw3" path="res://menu.tscn" id="2_amnjs"]
+[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="3_4xxvt"]
+[ext_resource type="Script" path="res://Sprite2D.gd" id="4_5tdr6"]
+[ext_resource type="Script" path="res://MenuChoice.gd" id="5_dtcbr"]
+[ext_resource type="Texture2D" uid="uid://yby16wkqevcl" path="res://Sprites/BG/about us off.png" id="5_ql7wp"]
+[ext_resource type="Texture2D" uid="uid://dmfhl3bsivfdm" path="res://Sprites/BG/about us on.png" id="6_l1yve"]
+[ext_resource type="Texture2D" uid="uid://gc8jwshyot82" path="res://Sprites/BG/new game on.png" id="7_q54o0"]
+[ext_resource type="Texture2D" uid="uid://fcwjml2u4qh7" path="res://Sprites/BG/new game off.png" id="7_vogbu"]
+[ext_resource type="Texture2D" uid="uid://dywwblpfvci4l" path="res://Sprites/BG/load game on.png" id="8_b8kr7"]
+[ext_resource type="Script" path="res://MenuChoiceNewGame.gd" id="8_mb44v"]
+[ext_resource type="Texture2D" uid="uid://qfbr4k3fqxl" path="res://Sprites/BG/load game off.png" id="9_rmagi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f84xp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_ql7wp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_l1yve")
+}],
+"loop": true,
+"name": &"mouse",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ghgur"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_vogbu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_q54o0")
+}],
+"loop": true,
+"name": &"mouse",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k3hwv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_rmagi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_b8kr7")
+}],
+"loop": true,
+"name": &"mouse",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_0k4b2")
+
+[node name="Menu" parent="." instance=ExtResource("2_amnjs")]
+
+[node name="About Us" type="AnimatedSprite2D" parent="."]
+position = Vector2(263, 890)
+sprite_frames = SubResource("SpriteFrames_f84xp")
+autoplay = "default"
+script = ExtResource("5_dtcbr")
+
+[node name="New_Game" type="AnimatedSprite2D" parent="."]
+position = Vector2(334, 674)
+sprite_frames = SubResource("SpriteFrames_ghgur")
+autoplay = "default"
+script = ExtResource("8_mb44v")
+
+[node name="Load Game" type="AnimatedSprite2D" parent="."]
+position = Vector2(277, 781)
+sprite_frames = SubResource("SpriteFrames_k3hwv")
+autoplay = "default"
+script = ExtResource("5_dtcbr")
+
+[node name="Dark" type="Sprite2D" parent="."]
+position = Vector2(976, 543.25)
+scale = Vector2(1.62333, 1.61704)
+texture = ExtResource("3_4xxvt")
+script = ExtResource("4_5tdr6")
