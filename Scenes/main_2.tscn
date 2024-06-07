@@ -1,34 +1,176 @@
-[gd_scene load_steps=5 format=3 uid="uid://61jc52o18t4o"]
+[gd_scene load_steps=32 format=3 uid="uid://61jc52o18t4o"]
 
-[ext_resource type="Texture2D" uid="uid://dlugn4231uwvf" path="res://Sprites/Background/koridor.png" id="1_0i30w"]
-[ext_resource type="Texture2D" uid="uid://cw5ifmi31tarf" path="res://Sprites/Terrain/lantai.png" id="2_wmw3a"]
+[ext_resource type="Texture2D" uid="uid://bytou1d4kln6e" path="res://Sprites/Background/base.jpg" id="1_ed5t6"]
+[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_tbjwe"]
 [ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://character_body_2d.tscn" id="3_kq8qm"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="4_bqhkg"]
+[ext_resource type="PackedScene" uid="uid://f718ufaumg8q" path="res://kotak.tscn" id="3_pk2tj"]
+[ext_resource type="Script" path="res://Scenes/CharacterBody2D.gd" id="3_q43x6"]
+[ext_resource type="Texture2D" uid="uid://djqvnrw62lho3" path="res://Sprites/Background/lighting animasi/lighting animation_0000.png" id="6_6ahyn"]
+[ext_resource type="Texture2D" uid="uid://dc6vovvhjla81" path="res://Sprites/Background/lighting animasi/lighting animation_0001.png" id="7_tctht"]
+[ext_resource type="Texture2D" uid="uid://ccut8wrl1hkbb" path="res://Sprites/Background/lighting animasi/lighting animation_0002.png" id="8_cvp5d"]
+[ext_resource type="Texture2D" uid="uid://c72hx7ncuas57" path="res://Sprites/Background/lighting animasi/lighting animation_0003.png" id="9_uuv5b"]
+[ext_resource type="Texture2D" uid="uid://swtvcpn0e6w2" path="res://Sprites/Background/lighting animasi/lighting animation_0004.png" id="10_jujx3"]
+[ext_resource type="Texture2D" uid="uid://c11hajm4tm01b" path="res://Sprites/Background/lighting animasi/lighting animation_0005.png" id="11_ytxfw"]
+[ext_resource type="Texture2D" uid="uid://bil774vww66mt" path="res://Sprites/Background/lighting animasi/lighting animation_0006.png" id="12_hw6v4"]
+[ext_resource type="Texture2D" uid="uid://drkn0o3dkqefc" path="res://Sprites/Background/lighting animasi/lighting animation_0007.png" id="13_cpjpp"]
+[ext_resource type="Texture2D" uid="uid://hj2fhh6wdr6x" path="res://Sprites/Background/lighting animasi/lighting animation_0008.png" id="14_5g4jb"]
+[ext_resource type="Texture2D" uid="uid://deg4p2fqamum1" path="res://Sprites/Background/lighting animasi/lighting animation_0009.png" id="15_sdbse"]
+[ext_resource type="Texture2D" uid="uid://c1qhmu2lktc8v" path="res://Sprites/Background/lighting animasi/lighting animation_0010.png" id="16_15njq"]
+[ext_resource type="Texture2D" uid="uid://bju45m21ykue1" path="res://Sprites/Background/lighting animasi/lighting animation_0011.png" id="17_t6f1f"]
+[ext_resource type="Texture2D" uid="uid://lsfj2qvp47ty" path="res://Sprites/Background/lighting animasi/lighting animation_0012.png" id="18_iaeqe"]
+[ext_resource type="Texture2D" uid="uid://b47rg1vw3iiwq" path="res://Sprites/Background/lighting animasi/lighting animation_0013.png" id="19_buwcu"]
+[ext_resource type="Texture2D" uid="uid://bfx7ppn78a0j8" path="res://Sprites/Background/lighting animasi/lighting animation_0014.png" id="20_xopyw"]
+[ext_resource type="Texture2D" uid="uid://bq2bfok3fekl6" path="res://Sprites/Background/lighting animasi/lighting animation_0015.png" id="21_j2hle"]
+[ext_resource type="Texture2D" uid="uid://c5aq7lfaglaxn" path="res://Sprites/Background/lighting animasi/lighting animation_0016.png" id="22_ukc0j"]
+[ext_resource type="Texture2D" uid="uid://hvkicv7dbnty" path="res://Sprites/Background/lighting animasi/lighting animation_0017.png" id="23_dcumv"]
+[ext_resource type="Texture2D" uid="uid://krd468aas7al" path="res://Sprites/Background/lighting animasi/lighting animation_0018.png" id="24_dhsf7"]
+[ext_resource type="Texture2D" uid="uid://oqkdymyy15mj" path="res://Sprites/Background/lighting animasi/lighting animation_0019.png" id="25_0i72p"]
+[ext_resource type="Texture2D" uid="uid://bydfnfp7jh8je" path="res://Sprites/Background/lighting animasi/lighting animation_0020.png" id="26_debe4"]
+[ext_resource type="Texture2D" uid="uid://jsfivcy6rt7h" path="res://Sprites/Background/lighting animasi/lighting animation_0021.png" id="27_qy8xw"]
+[ext_resource type="Texture2D" uid="uid://dh2dc3teyt8ok" path="res://Sprites/Background/lighting animasi/lighting animation_0022.png" id="28_u4yt2"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2kptv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ia4g"]
+size = Vector2(8150, 49)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bmidd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_6ahyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_tctht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_cvp5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_uuv5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_jujx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ytxfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_hw6v4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_cpjpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_5g4jb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_sdbse")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_15njq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_t6f1f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_iaeqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_buwcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_xopyw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_j2hle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_ukc0j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dcumv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_dhsf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_0i72p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_debe4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qy8xw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_u4yt2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Main2" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -4364.0
 offset_top = -256.0
-offset_right = 3292.0
-offset_bottom = 720.0
-texture = ExtResource("1_0i30w")
+offset_right = 3780.0
+offset_bottom = 824.0
+texture = ExtResource("1_ed5t6")
 stretch_mode = 1
 
-[node name="Lantai" type="TextureRect" parent="."]
-offset_left = 3.0
-offset_top = 464.0
-offset_right = 3291.0
-offset_bottom = 720.0
-texture = ExtResource("2_wmw3a")
+[node name="RichTextLabel" type="TextEdit" parent="."]
+offset_left = 1180.0
+offset_top = 174.0
+offset_right = 1699.0
+offset_bottom = 376.0
+theme_override_font_sizes/font_size = 30
+text = "OH TIDAK! - Ini bukan ruang guru, 
+tapi gudang.
+Sepertinya Otan telah menipuku!!
+Ayo kita cari jalan keluar!"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-292, 1010.75)
+scale = Vector2(6.79833, 0.673333)
+texture = ExtResource("2_tbjwe")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, -256)
+physics_material_override = SubResource("PhysicsMaterial_2kptv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-287, 1057.5)
+shape = SubResource("RectangleShape2D_6ia4g")
+
+[node name="Kotak" parent="." instance=ExtResource("3_pk2tj")]
+position = Vector2(-1965, -128)
 
 [node name="MC" parent="." instance=ExtResource("3_kq8qm")]
-position = Vector2(107, 130)
-script = ExtResource("4_bqhkg")
+position = Vector2(735, 365)
+scale = Vector2(2, 2)
+script = ExtResource("3_q43x6")
 
-[node name="RichTextLabel" type="TextEdit" parent="."]
-offset_left = 1303.0
-offset_top = 142.0
-offset_right = 1582.0
-offset_bottom = 225.0
-text = "						OH TIDAK!
-Sepertinya Cula telah menipumu!"
+[node name="RichTextLabel2" type="TextEdit" parent="."]
+visible = false
+offset_left = -240.0
+offset_top = 938.0
+offset_right = 546.0
+offset_bottom = 1140.0
+theme_override_font_sizes/font_size = 30
+text = "Ups..
+Yuk bantu aku bereskan kotak-kotak ini!"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1295, 285)
+sprite_frames = SubResource("SpriteFrames_bmidd")
+autoplay = "default"
+frame_progress = 0.640245
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2483, 291)
+sprite_frames = SubResource("SpriteFrames_bmidd")
+autoplay = "default"
+frame_progress = 0.0682485

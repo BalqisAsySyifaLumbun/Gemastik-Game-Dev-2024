@@ -1,140 +1,104 @@
-[gd_scene load_steps=23 format=3 uid="uid://502qv0f2gtdp"]
+[gd_scene load_steps=15 format=3 uid="uid://502qv0f2gtdp"]
 
 [ext_resource type="Texture2D" uid="uid://xkwvu4iu0um4" path="res://Sprites/Background/room1.jpg" id="1_2ycil"]
 [ext_resource type="Script" path="res://Scenes/Greet.gd" id="2_g8vg1"]
+[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="3_03gsx"]
 [ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://character_body_2d.tscn" id="3_60r7p"]
 [ext_resource type="Script" path="res://Scenes/TextEdit2.gd" id="4_3jgnc"]
 [ext_resource type="Script" path="res://character_body_2d.gd" id="4_f2s5q"]
-[ext_resource type="Script" path="res://Scenes/CharacterBody2D.gd" id="5_sfst6"]
 [ext_resource type="Texture2D" uid="uid://dsr6m60itnr37" path="res://Sprites/Terrain/sunny.png" id="6_fo81h"]
-[ext_resource type="Texture2D" uid="uid://na14yqw1rutj" path="res://Sprites/badak idle 2.png" id="6_odb7f"]
-[ext_resource type="Texture2D" uid="uid://cw5ifmi31tarf" path="res://Sprites/Terrain/lantai.png" id="6_vywqh"]
-[ext_resource type="Texture2D" uid="uid://cf0dnvkldk8hm" path="res://Sprites/Terrain/pilar2.png" id="7_4t6n4"]
 [ext_resource type="Texture2D" uid="uid://c7rey8axxt3ls" path="res://Sprites/Terrain/darky.png" id="9_jj2fj"]
 [ext_resource type="Script" path="res://Scenes/Dark.gd" id="10_7ykce"]
 [ext_resource type="Script" path="res://Scenes/Pintu.gd" id="14_5py8b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_30xax"]
-size = Vector2(528, 954.25)
+size = Vector2(1245, 1080.13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_of0g0"]
-size = Vector2(541.5, 811.5)
+size = Vector2(1688, 1072.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smhg5"]
-size = Vector2(4129.42, 144.679)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_64fp0"]
-atlas = ExtResource("6_odb7f")
-region = Rect2(0, 0, 100, 128)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i54x2"]
-atlas = ExtResource("6_odb7f")
-region = Rect2(100, 0, 100, 128)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_s2jtn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_64fp0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i54x2")
-}],
-"loop": true,
-"name": &"default",
-"speed": 2.0
-}]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mmc8i"]
-size = Vector2(178, 68)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rphnn"]
-size = Vector2(301, 692.5)
+size = Vector2(5672.1, 144.679)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t2e5e"]
 size = Vector2(300, 680)
 
 [node name="Main" type="Node2D"]
 
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+offset_left = 7389.0
+offset_top = -143.0
+offset_right = 15389.0
+offset_bottom = 937.0
+texture = ExtResource("1_2ycil")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TextureRect2"]
+
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-offset_left = -942.0
-offset_top = -159.0
-offset_right = 7163.0
-offset_bottom = 921.0
+offset_left = -1984.0
+offset_top = -146.0
+offset_right = 7365.0
+offset_bottom = 934.0
 texture = ExtResource("1_2ycil")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="TextureRect"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TextureRect/StaticBody2D"]
-position = Vector2(451, 474.875)
+position = Vector2(621, 541)
 shape = SubResource("RectangleShape2D_30xax")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="TextureRect/StaticBody2D"]
-position = Vector2(7730, 410.25)
+position = Vector2(10069, 537)
 shape = SubResource("RectangleShape2D_of0g0")
 
 [node name="Greet" type="TextEdit" parent="."]
-offset_left = 360.0
-offset_top = 300.0
-offset_right = 614.0
-offset_bottom = 362.0
-text = "Selamat datang di sekolah,
-tekan SPASI untuk melompat."
+offset_left = 145.0
+offset_top = 400.0
+offset_right = 585.0
+offset_bottom = 606.0
+theme_override_font_sizes/font_size = 20
+text = "Ini sekolah baruku!
+Ayo jelajahi sekolah baru 
+bersamaku.
+
+Ayo, ketik SPASI untuk melompat
+dan panah kiri dan kanan untuk berjalan!"
 script = ExtResource("2_g8vg1")
 
-[node name="Lantai" type="TextureRect" parent="."]
-modulate = Color(1, 1, 1, 0.027451)
-offset_left = -804.0
-offset_top = 374.0
-offset_right = 3268.0
-offset_bottom = 623.0
+[node name="Langtai" type="TextureRect" parent="."]
+offset_left = -1991.0
+offset_top = 825.0
+offset_right = 9145.0
+offset_bottom = 1500.0
+texture = ExtResource("3_03gsx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Langtai"]
 scale = Vector2(1.9625, 1.28906)
-texture = ExtResource("6_vywqh")
-expand_mode = 2
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Lantai"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Lantai/StaticBody2D"]
-position = Vector2(2030.57, 350.837)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Langtai/StaticBody2D"]
+position = Vector2(2835.8, 80.6789)
 shape = SubResource("RectangleShape2D_smhg5")
 
 [node name="TextEdit2" type="TextEdit" parent="."]
-offset_left = 973.0
-offset_top = 278.0
-offset_right = 1269.0
-offset_bottom = 376.0
-text = "Lihat, ada seekor badak.
+offset_left = 1720.0
+offset_top = 480.0
+offset_right = 2078.0
+offset_bottom = 595.0
+theme_override_font_sizes/font_size = 20
+text = "Lihat, ada seekor Orangutan.
 Ayo, dekati dia dan tekan tombol X
 untuk berkenalan dengannya!"
 script = ExtResource("4_3jgnc")
-
-[node name="Badak" type="CharacterBody2D" parent="."]
-script = ExtResource("5_sfst6")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Badak"]
-position = Vector2(1528, 599)
-scale = Vector2(1.995, 2.01563)
-sprite_frames = SubResource("SpriteFrames_s2jtn")
-autoplay = "default"
-frame_progress = 0.255855
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Badak"]
-position = Vector2(1534, 718)
-shape = SubResource("RectangleShape2D_mmc8i")
 
 [node name="Pintu" type="Area2D" parent="."]
 position = Vector2(5312, 230)
 scale = Vector2(1.01333, 1.38)
 script = ExtResource("14_5py8b")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Pintu"]
-position = Vector2(6.9077, 54.3478)
-scale = Vector2(0.986841, 0.724637)
-shape = SubResource("RectangleShape2D_rphnn")
-
 [node name="MC" parent="." instance=ExtResource("3_60r7p")]
-position = Vector2(25, 63)
+position = Vector2(671, 576)
 script = ExtResource("4_f2s5q")
 
 [node name="Sunny" type="Sprite2D" parent="."]
@@ -145,22 +109,8 @@ position = Vector2(1180.5, 244.5)
 scale = Vector2(2.67266, 1.32361)
 texture = ExtResource("6_fo81h")
 
-[node name="Pilar" type="Sprite2D" parent="."]
-position = Vector2(737, 258.5)
-scale = Vector2(0.515625, 0.973)
-texture = ExtResource("7_4t6n4")
-
-[node name="Pilar2" type="Sprite2D" parent="."]
-position = Vector2(1953, 257)
-scale = Vector2(0.460937, 0.978)
-texture = ExtResource("7_4t6n4")
-
-[node name="Pilar3" type="Sprite2D" parent="."]
-position = Vector2(3442.4, 258.5)
-scale = Vector2(0.574982, 0.967)
-texture = ExtResource("7_4t6n4")
-
 [node name="TextEdit3" type="RichTextLabel" parent="."]
+visible = false
 offset_left = 1539.0
 offset_top = 63.0
 offset_right = 1697.0
@@ -176,9 +126,8 @@ offset_right = 1684.0
 offset_bottom = 670.0
 
 [node name="Dark" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(3293, 255.75)
-scale = Vector2(6.03594, 1.35347)
+position = Vector2(1058, 444)
+scale = Vector2(2.77344, 1.63889)
 texture = ExtResource("9_jj2fj")
 script = ExtResource("10_7ykce")
 
