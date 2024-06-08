@@ -2,8 +2,6 @@ extends Sprite2D
 
 var fade_duration = 3.0 # Duration of the fade in seconds
 var current_time = 0.0 # Current time elapsed
-@onready var border = get_parent().get_node('Borders')
-@onready var player = get_parent().get_node('MC/Sprite2D')
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

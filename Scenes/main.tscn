@@ -1,4 +1,3 @@
-[gd_scene load_steps=15 format=3 uid="uid://502qv0f2gtdp"]
 
 [ext_resource type="Texture2D" uid="uid://xkwvu4iu0um4" path="res://Sprites/Background/room1.jpg" id="1_2ycil"]
 [ext_resource type="Script" path="res://Scenes/Greet.gd" id="2_g8vg1"]
@@ -9,7 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://dsr6m60itnr37" path="res://Sprites/Terrain/sunny.png" id="6_fo81h"]
 [ext_resource type="Texture2D" uid="uid://c7rey8axxt3ls" path="res://Sprites/Terrain/darky.png" id="9_jj2fj"]
 [ext_resource type="Script" path="res://Scenes/Dark.gd" id="10_7ykce"]
-[ext_resource type="Script" path="res://Scenes/Pintu.gd" id="14_5py8b"]
+[ext_resource type="Script" path="res://Scenes/Go_Door.gd" id="11_ejnud"]
+[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Menu/door.png" id="11_lir1v"]
+[ext_resource type="Script" path="res://Scenes/Dark transition.gd" id="12_ouo3k"]
+[ext_resource type="PackedScene" uid="uid://cghoewxqjvi45" path="res://Badak.tscn" id="13_fxasy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_30xax"]
 size = Vector2(1245, 1080.13)
@@ -20,8 +22,8 @@ size = Vector2(1688, 1072.75)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smhg5"]
 size = Vector2(5672.1, 144.679)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t2e5e"]
-size = Vector2(300, 680)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57dde"]
+size = Vector2(58.8344, 94.9651)
 
 [node name="Main" type="Node2D"]
 
@@ -53,20 +55,6 @@ shape = SubResource("RectangleShape2D_30xax")
 position = Vector2(10069, 537)
 shape = SubResource("RectangleShape2D_of0g0")
 
-[node name="Greet" type="TextEdit" parent="."]
-offset_left = 145.0
-offset_top = 400.0
-offset_right = 585.0
-offset_bottom = 606.0
-theme_override_font_sizes/font_size = 20
-text = "Ini sekolah baruku!
-Ayo jelajahi sekolah baru 
-bersamaku.
-
-Ayo, ketik SPASI untuk melompat
-dan panah kiri dan kanan untuk berjalan!"
-script = ExtResource("2_g8vg1")
-
 [node name="Langtai" type="TextureRect" parent="."]
 offset_left = -1991.0
 offset_top = 825.0
@@ -81,24 +69,12 @@ scale = Vector2(1.9625, 1.28906)
 position = Vector2(2835.8, 80.6789)
 shape = SubResource("RectangleShape2D_smhg5")
 
-[node name="TextEdit2" type="TextEdit" parent="."]
-offset_left = 1720.0
-offset_top = 480.0
-offset_right = 2078.0
-offset_bottom = 595.0
-theme_override_font_sizes/font_size = 20
-text = "Lihat, ada seekor Orangutan.
-Ayo, dekati dia dan tekan tombol X
-untuk berkenalan dengannya!"
-script = ExtResource("4_3jgnc")
-
 [node name="Pintu" type="Area2D" parent="."]
 position = Vector2(5312, 230)
 scale = Vector2(1.01333, 1.38)
-script = ExtResource("14_5py8b")
 
 [node name="MC" parent="." instance=ExtResource("3_60r7p")]
-position = Vector2(671, 576)
+position = Vector2(633, 638)
 script = ExtResource("4_f2s5q")
 
 [node name="Sunny" type="Sprite2D" parent="."]
@@ -108,6 +84,31 @@ light_mask = 13
 position = Vector2(1180.5, 244.5)
 scale = Vector2(2.67266, 1.32361)
 texture = ExtResource("6_fo81h")
+
+[node name="Greet" type="TextEdit" parent="."]
+offset_left = 382.0
+offset_top = 924.0
+offset_right = 1204.0
+offset_bottom = 1130.0
+theme_override_font_sizes/font_size = 20
+text = "Ini sekolah baruku!
+Ayo jelajahi sekolah baru 
+bersamaku.
+
+Ayo, ketik SPASI untuk melompat
+dan panah kiri dan kanan untuk berjalan!"
+script = ExtResource("2_g8vg1")
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = 2038.0
+offset_top = 921.0
+offset_right = 2396.0
+offset_bottom = 1036.0
+theme_override_font_sizes/font_size = 20
+text = "Lihat, ada seekor Orangutan.
+Ayo, dekati dia dan tekan tombol X
+untuk berkenalan dengannya!"
+script = ExtResource("4_3jgnc")
 
 [node name="TextEdit3" type="RichTextLabel" parent="."]
 visible = false
@@ -126,12 +127,41 @@ offset_right = 1684.0
 offset_bottom = 670.0
 
 [node name="Dark" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1058, 444)
 scale = Vector2(2.77344, 1.63889)
 texture = ExtResource("9_jj2fj")
 script = ExtResource("10_7ykce")
 
-[node name="Borders" type="CollisionShape2D" parent="."]
+[node name="Go_Door" type="CharacterBody2D" parent="."]
+position = Vector2(5240, 332)
+scale = Vector2(0.798851, 0.737113)
+script = ExtResource("11_ejnud")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Go_Door"]
+position = Vector2(-22.5324, 23.0629)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_57dde")
+
+[node name="Sprite2D" type="Sprite2D" parent="Go_Door"]
+position = Vector2(-15.0216, 13.5664)
+texture = ExtResource("11_lir1v")
+
+[node name="TextEdit5" type="TextEdit" parent="."]
+offset_left = 4945.0
+offset_top = 913.0
+offset_right = 5538.0
+offset_bottom = 994.0
+theme_override_font_sizes/font_size = 20
+text = "Ini pintu kuningnya.
+Ayo kita masuk! - Ketik 'x' untuk membuka pintunya."
+
+[node name="Dark2" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(5311, 221)
-shape = SubResource("RectangleShape2D_t2e5e")
+position = Vector2(5519, 454.236)
+scale = Vector2(2.72656, 1.58121)
+texture = ExtResource("9_jj2fj")
+script = ExtResource("12_ouo3k")
+
+[node name="Badak" parent="." instance=ExtResource("13_fxasy")]
+position = Vector2(2865, 660)

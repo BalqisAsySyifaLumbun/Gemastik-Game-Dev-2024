@@ -8,7 +8,9 @@ const TEXT_DELAY_FRAMES = 10 * 60  # 10 seconds at 60 FPS
 @onready var kotak = get_parent().get_node('Kotak/AnimatedSprite2D')
 @onready var kotak2 = get_parent().get_node('Kotak/CollisionShape2D')
 @onready var main_char = get_parent().get_node('MC/CollisionShape2D')
+@onready var text_gudang = get_parent().get_node('RichTextLabel')
 @onready var text_gudang2 = get_parent().get_node('RichTextLabel2')
+
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var animation_played = false
@@ -31,11 +33,20 @@ func _physics_process(delta):
 	# Check if nodes are properly initialized
 	if main_char != null and kotak != null:
 		var player_global_pos = main_char.global_position
+		var text_gudang_global_pos = text_gudang.global_position
 		var sprite2_global_pos = kotak2.global_position
 		
+		
 		# Calculate the distance between the characters
+		var distance_a = player_global_pos.distance_to(text_gudang_global_pos)
+		print("DistanceA:", distance_a)
 		var distance = player_global_pos.distance_to(sprite2_global_pos)
 		print("Distance:", distance)
+		
+		if distance_a <= 400:
+			text_gudang.visible = true
+		else:
+			text_gudang.visible = false
 		
 		# Check if the distance is within a certain range
 		if distance <= 400 && !animation_played:
