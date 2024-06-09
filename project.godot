@@ -11,9 +11,17 @@ config_version=5
 [application]
 
 config/name="Game"
-run/main_scene="res://opening.tscn"
+run/main_scene="res://Storyline/1_Main Menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/show_image=false
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=2
+window/stretch/mode="viewport"
 
 [input]
 

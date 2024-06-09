@@ -1,0 +1,195 @@
+[gd_scene load_steps=33 format=3 uid="uid://2dpf4vwnxdxn"]
+
+[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_is3rv"]
+[ext_resource type="Texture2D" uid="uid://bytou1d4kln6e" path="res://Sprites/Background/base.jpg" id="2_dn7qr"]
+[ext_resource type="Texture2D" uid="uid://r6uyc6w0rqk5" path="res://Sprites/lighting animasi/lighting animation_0000.png" id="3_clcht"]
+[ext_resource type="Texture2D" uid="uid://dxpkblquk0k7m" path="res://Sprites/lighting animasi/lighting animation_0001.png" id="4_sbou6"]
+[ext_resource type="Texture2D" uid="uid://y4oytpbcgr0h" path="res://Sprites/lighting animasi/lighting animation_0002.png" id="5_ykg3p"]
+[ext_resource type="Texture2D" uid="uid://2bnr3ckobsit" path="res://Sprites/lighting animasi/lighting animation_0003.png" id="6_kv11r"]
+[ext_resource type="Texture2D" uid="uid://dwfmmk8u7a4av" path="res://Sprites/lighting animasi/lighting animation_0004.png" id="7_74xw6"]
+[ext_resource type="Texture2D" uid="uid://13pg2y4p4wb4" path="res://Sprites/lighting animasi/lighting animation_0005.png" id="8_rd27h"]
+[ext_resource type="Texture2D" uid="uid://yq71b2gjsgcx" path="res://Sprites/lighting animasi/lighting animation_0006.png" id="9_i72y3"]
+[ext_resource type="Texture2D" uid="uid://t5dgjvydkufi" path="res://Sprites/lighting animasi/lighting animation_0007.png" id="10_46ymg"]
+[ext_resource type="Texture2D" uid="uid://bxu23igimcu6y" path="res://Sprites/lighting animasi/lighting animation_0008.png" id="11_1icxb"]
+[ext_resource type="Texture2D" uid="uid://dp15e711qcjdv" path="res://Sprites/lighting animasi/lighting animation_0009.png" id="12_3fahp"]
+[ext_resource type="Texture2D" uid="uid://exj012aqdvbf" path="res://Sprites/lighting animasi/lighting animation_0010.png" id="13_76xub"]
+[ext_resource type="Texture2D" uid="uid://dkpsi6jhsvan0" path="res://Sprites/lighting animasi/lighting animation_0011.png" id="14_mn83y"]
+[ext_resource type="Texture2D" uid="uid://b1q1o3tuqrgiq" path="res://Sprites/lighting animasi/lighting animation_0012.png" id="15_bpero"]
+[ext_resource type="Texture2D" uid="uid://dfm0tyyfsyabl" path="res://Sprites/lighting animasi/lighting animation_0013.png" id="16_glvpm"]
+[ext_resource type="Texture2D" uid="uid://m4aa8usoppuc" path="res://Sprites/lighting animasi/lighting animation_0014.png" id="17_lc6lt"]
+[ext_resource type="Texture2D" uid="uid://bbwwvsdo4pu3s" path="res://Sprites/lighting animasi/lighting animation_0015.png" id="18_s35d2"]
+[ext_resource type="Texture2D" uid="uid://brfe2cf4medsg" path="res://Sprites/lighting animasi/lighting animation_0016.png" id="19_8n7g5"]
+[ext_resource type="Texture2D" uid="uid://bhtlvdiuy11f0" path="res://Sprites/lighting animasi/lighting animation_0017.png" id="20_c3hsg"]
+[ext_resource type="Texture2D" uid="uid://tmegati2ov1g" path="res://Sprites/lighting animasi/lighting animation_0018.png" id="21_715vq"]
+[ext_resource type="Texture2D" uid="uid://dqmjyycmbqplq" path="res://Sprites/lighting animasi/lighting animation_0019.png" id="22_78wos"]
+[ext_resource type="Texture2D" uid="uid://bi4apu8sx6oot" path="res://Sprites/lighting animasi/lighting animation_0020.png" id="23_gw6c8"]
+[ext_resource type="Texture2D" uid="uid://bmo2rt177o7qj" path="res://Sprites/lighting animasi/lighting animation_0021.png" id="24_qh5hu"]
+[ext_resource type="Texture2D" uid="uid://ciuak1n5osc2" path="res://Sprites/lighting animasi/lighting animation_0022.png" id="25_bahit"]
+[ext_resource type="PackedScene" uid="uid://bdayto4slwus3" path="res://Storyline/3_Storage Room/subscenes/kotak.tscn" id="26_073ue"]
+[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="27_2hg52"]
+[ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/MainCharacterGudang.gd" id="28_ramj0"]
+[ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/DarkIn.gd" id="29_dbkcw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6j02s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_clcht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sbou6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ykg3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kv11r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_74xw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_rd27h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i72y3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_46ymg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_1icxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3fahp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_76xub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_mn83y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bpero")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_glvpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_lc6lt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_s35d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_8n7g5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_c3hsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_715vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_78wos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_gw6c8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_qh5hu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_bahit")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lked"]
+size = Vector2(7600, 297)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4vqc"]
+size = Vector2(170.5, 1513)
+
+[node name="Main2" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -3823.0
+offset_top = -256.0
+offset_right = 3780.0
+offset_bottom = 824.0
+texture = ExtResource("2_dn7qr")
+stretch_mode = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect"]
+position = Vector2(1908, 650)
+scale = Vector2(1.08886, 1.21667)
+sprite_frames = SubResource("SpriteFrames_6j02s")
+autoplay = "default"
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="TextureRect"]
+position = Vector2(5686, 657)
+scale = Vector2(1.08886, 1.21667)
+sprite_frames = SubResource("SpriteFrames_6j02s")
+autoplay = "default"
+
+[node name="LeftWall" type="Sprite2D" parent="."]
+position = Vector2(-4538.56, 498.5)
+scale = Vector2(1.19261, 2.2563)
+texture = ExtResource("1_is3rv")
+
+[node name="RightWall" type="Sprite2D" parent="."]
+position = Vector2(4886.75, 495.5)
+scale = Vector2(1.85208, 2.23556)
+texture = ExtResource("1_is3rv")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(-16, 918.5)
+shape = SubResource("RectangleShape2D_4lked")
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+position = Vector2(-26.9998, 1004.25)
+scale = Vector2(6.33667, 0.722222)
+texture = ExtResource("1_is3rv")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Floor"]
+position = Vector2(3881, 479)
+shape = SubResource("RectangleShape2D_w4vqc")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor"]
+position = Vector2(-3770.75, 495.5)
+shape = SubResource("RectangleShape2D_w4vqc")
+
+[node name="Kotak" parent="." instance=ExtResource("26_073ue")]
+
+[node name="MC" parent="." instance=ExtResource("27_2hg52")]
+position = Vector2(3311, 596)
+script = ExtResource("28_ramj0")
+
+[node name="RichTextLabel2" type="TextEdit" parent="."]
+visible = false
+offset_left = 508.0
+offset_top = 875.0
+offset_right = 993.0
+offset_bottom = 986.0
+theme_override_font_sizes/font_size = 20
+text = "Ayo kita susun isi kotaknya lagi."
+
+[node name="RichTextLabel" type="TextEdit" parent="."]
+offset_left = 2199.0
+offset_top = 811.0
+offset_right = 2684.0
+offset_bottom = 899.0
+theme_override_font_sizes/font_size = 20
+text = "						OH TIDAK!
+Otan telah menipu kita - ini bukan ruang guru!"
+
+[node name="DarkIn" type="Sprite2D" parent="."]
+position = Vector2(1904, 494.25)
+scale = Vector2(3.17, 2.22444)
+texture = ExtResource("1_is3rv")
+script = ExtResource("29_dbkcw")

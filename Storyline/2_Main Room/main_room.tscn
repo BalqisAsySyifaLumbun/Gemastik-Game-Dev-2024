@@ -1,0 +1,117 @@
+[gd_scene load_steps=11 format=3 uid="uid://rir5f88uh8k0"]
+
+[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_b6san"]
+[ext_resource type="PackedScene" uid="uid://dnyv5ckw26ug8" path="res://Characters/Otan/otan.tscn" id="2_b88js"]
+[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="3_qissp"]
+[ext_resource type="Script" path="res://Characters/MC/MainCharacter.gd" id="4_xucuy"]
+[ext_resource type="PackedScene" uid="uid://bwmhkvebg3qd7" path="res://Storyline/2_Main Room/subscenes/Door.tscn" id="5_kfx8v"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/GoDoor.gd" id="6_nry5r"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkTransition.gd" id="7_6jvkr"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkIn.gd" id="8_1q0l7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4fg8a"]
+size = Vector2(8005, 282)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_286nd"]
+size = Vector2(297, 970)
+
+[node name="Main" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = 2.0
+offset_right = 8002.0
+offset_bottom = 720.0
+
+[node name="Otan" parent="." instance=ExtResource("2_b88js")]
+position = Vector2(2469, 339)
+
+[node name="MC" parent="." instance=ExtResource("3_qissp")]
+position = Vector2(1310, 448)
+script = ExtResource("4_xucuy")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+position = Vector2(4000, 923.25)
+scale = Vector2(6.65833, 0.627407)
+texture = ExtResource("1_b6san")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(4010, 804)
+shape = SubResource("RectangleShape2D_4fg8a")
+
+[node name="RightWall" type="StaticBody2D" parent="."]
+position = Vector2(-1186, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="RightWall"]
+offset_left = 9181.0
+offset_top = -5.0
+offset_right = 10394.0
+offset_bottom = 1130.0
+texture = ExtResource("1_b6san")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightWall"]
+position = Vector2(9248, 505)
+shape = SubResource("RectangleShape2D_286nd")
+
+[node name="LeftWall" type="StaticBody2D" parent="."]
+position = Vector2(-1186, 1)
+
+[node name="TextureRect2" type="TextureRect" parent="LeftWall"]
+offset_right = 1200.0
+offset_bottom = 1121.0
+texture = ExtResource("1_b6san")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LeftWall"]
+position = Vector2(1044.5, 475)
+shape = SubResource("RectangleShape2D_286nd")
+
+[node name="Go_Door" parent="." instance=ExtResource("5_kfx8v")]
+script = ExtResource("6_nry5r")
+
+[node name="TextEdit3" type="TextEdit" parent="."]
+offset_left = 1231.0
+offset_top = 713.0
+offset_right = 1564.0
+offset_bottom = 891.0
+text = "Ini sekolah baruku.
+Kamu bisa ikut menjelajahi sekolahku.
+Ketik saja tombol panah kiri (<-) atau
+panah kanan (->) untuk bergerak, dan
+SPASI untuk melompat.
+"
+
+[node name="TextEdit4" type="TextEdit" parent="."]
+offset_left = 2166.0
+offset_top = 712.0
+offset_right = 3090.0
+offset_bottom = 934.0
+text = "???
+
+Hei, Halo!
+(Iya maaf aku masih hardsketch)
+- Tekan 'x' untuk berkenalan! -"
+
+[node name="TextEdit5" type="TextEdit" parent="."]
+offset_left = 6035.0
+offset_top = 747.0
+offset_right = 6346.0
+offset_bottom = 903.0
+text = "Ini pintu yang Otan bilang!
+
+Ayo kita masuk - ketik 'X'
+untuk masuk!"
+
+[node name="DarkLeave" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(3963.62, 1218.33)
+scale = Vector2(4.44156, 2.11003)
+texture = ExtResource("1_b6san")
+script = ExtResource("7_6jvkr")
+
+[node name="DarkIn" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1275.5, 496.75)
+scale = Vector2(2.1075, 1.45259)
+texture = ExtResource("1_b6san")
+script = ExtResource("8_1q0l7")

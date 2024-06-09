@@ -107,11 +107,12 @@ size = Vector2(1939, 1126)
 [node name="Menu" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(967, 544)
-scale = Vector2(1.50781, 1.49722)
+position = Vector2(1042.89, 582.514)
+scale = Vector2(1.6295, 1.61806)
 sprite_frames = SubResource("SpriteFrames_0ra16")
 autoplay = "default"
-frame_progress = 0.577374
+frame = 5
+frame_progress = 0.840254
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false

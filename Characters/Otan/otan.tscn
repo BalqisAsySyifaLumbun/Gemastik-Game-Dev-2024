@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dnyv5ckw26ug8"]
 
-[ext_resource type="Script" path="res://Otan.gd" id="1_pyt5c"]
+[ext_resource type="Script" path="res://Characters/Otan/Otan.gd" id="1_pyt5c"]
 [ext_resource type="Texture2D" uid="uid://dywdpt0t3tbnu" path="res://Sprites/Main Characters/Otan/Otan.png" id="2_7ni2k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4s1hg"]

@@ -27,7 +27,7 @@ func _physics_process(delta):
 		text_edit_5.visible = true
 		if Input.is_action_just_pressed("talk"):
 			gelap.visible = true
-			get_tree().change_scene_to_file("res://main_2.tscn")
+			get_tree().change_scene_to_file("res://Storyline/2_Chapter One/storage_room.tscn")
 	else:
 		text_edit_5.visible = false
 	

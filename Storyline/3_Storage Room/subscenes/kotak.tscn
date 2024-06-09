@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=3 uid="uid://bdayto4slwus3"]
 
-[ext_resource type="Script" path="res://Scenes/Kotak_2.gd" id="1_83m32"]
+[ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/Kotak.gd" id="1_83m32"]
 [ext_resource type="Texture2D" uid="uid://chvw4yn6sdnum" path="res://Sprites/lighting animasi/box jatuh_0000.png" id="2_2565u"]
 [ext_resource type="Texture2D" uid="uid://coghkn3tlqtrb" path="res://Sprites/animasi jatuh/box jatuh_0000.png" id="2_themv"]
 [ext_resource type="Texture2D" uid="uid://b3y1dyoa4hq6f" path="res://Sprites/lighting animasi/box jatuh_0001.png" id="3_cclee"]

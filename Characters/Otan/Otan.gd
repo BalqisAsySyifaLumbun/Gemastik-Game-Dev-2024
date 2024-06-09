@@ -1,11 +1,10 @@
 extends CharacterBody2D
 
 @onready var player = get_parent().get_node('MC/CollisionShape2D')
-var sprite = null
+@onready var sprite = $Sprite2D
 
 func _ready():
 	# Assign the sprite node when the scene is ready
-	sprite = $Sprite
 	if sprite == null:
 		print("Sprite node not found!")
 

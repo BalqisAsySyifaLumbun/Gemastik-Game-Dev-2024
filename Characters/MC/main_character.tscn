@@ -81,7 +81,8 @@ size = Vector2(531.667, 706.667)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(29.25, 44)
-scale = Vector2(0.792887, 0.826667)
+scale = Vector2(-4.58195, 2.51919)
+position_smoothing_enabled = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(55, 63)

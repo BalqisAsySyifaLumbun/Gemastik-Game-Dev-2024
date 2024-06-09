@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://baj4pbhwpkuo4"]
 
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://character_body_2d.tscn" id="1_0te7a"]
+[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="1_0te7a"]
 [ext_resource type="Texture2D" uid="uid://gfkqemsg4xfw" path="res://Sprites/Background/lantai bawah.jpg" id="1_s2vtv"]
-[ext_resource type="Script" path="res://Scenes/CharacterBody2D.gd" id="2_2to42"]
-[ext_resource type="Script" path="res://character_body_2d.gd" id="2_k0sl6"]
+[ext_resource type="Script" path="res://Unused/Scenes/CharacterBody2D.gd" id="2_2to42"]
+[ext_resource type="Script" path="res://Characters/MC/MainCharacter.gd" id="2_k0sl6"]
 [ext_resource type="Texture2D" uid="uid://cheltubqo1o62" path="res://Sprites/Main Characters/sketch.png" id="2_l40fv"]
-[ext_resource type="Script" path="res://Scenes/Camera2D.gd" id="3_4iatp"]
+[ext_resource type="Script" path="res://Unused/Scenes/Camera2D.gd" id="3_4iatp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m487y"]
 size = Vector2(198, 294)
