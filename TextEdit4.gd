@@ -1,5 +1,4 @@
-extends Sprite2D
-
+extends TextEdit
 var fade_duration = 3.0 # Duration of the fade in seconds
 var current_time = 0.0 # Current time elapsed
 

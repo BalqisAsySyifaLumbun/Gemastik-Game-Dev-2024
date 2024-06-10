@@ -177,7 +177,9 @@ offset_top = 875.0
 offset_right = 993.0
 offset_bottom = 986.0
 theme_override_font_sizes/font_size = 20
-text = "Ayo kita susun isi kotaknya lagi."
+text = "Ayo kita susun isi kotaknya lagi.
+
+- Ketik x untuk membereskan!-"
 
 [node name="RichTextLabel" type="TextEdit" parent="."]
 offset_left = 2199.0

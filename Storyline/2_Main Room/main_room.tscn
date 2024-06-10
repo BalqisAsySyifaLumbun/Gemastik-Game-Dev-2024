@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://rir5f88uh8k0"]
+[gd_scene load_steps=12 format=3 uid="uid://rir5f88uh8k0"]
 
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_b6san"]
+[ext_resource type="Texture2D" uid="uid://cf2y8hijkclgj" path="res://Sprites/Background/room_1.png" id="1_nryv8"]
 [ext_resource type="PackedScene" uid="uid://dnyv5ckw26ug8" path="res://Characters/Otan/otan.tscn" id="2_b88js"]
 [ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="3_qissp"]
 [ext_resource type="Script" path="res://Characters/MC/MainCharacter.gd" id="4_xucuy"]
@@ -18,12 +19,22 @@ size = Vector2(297, 970)
 [node name="Main" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
+visible = false
 offset_left = 2.0
 offset_right = 8002.0
 offset_bottom = 720.0
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(25429, -141)
+scale = Vector2(44.3334, 0.39364)
+texture = ExtResource("1_b6san")
+
+[node name="Koridor" type="Sprite2D" parent="."]
+position = Vector2(4008, 368)
+texture = ExtResource("1_nryv8")
+
 [node name="Otan" parent="." instance=ExtResource("2_b88js")]
-position = Vector2(2469, 339)
+position = Vector2(2534, 354)
 
 [node name="MC" parent="." instance=ExtResource("3_qissp")]
 position = Vector2(1310, 448)
@@ -84,13 +95,13 @@ SPASI untuk melompat.
 [node name="TextEdit4" type="TextEdit" parent="."]
 offset_left = 2166.0
 offset_top = 712.0
-offset_right = 3090.0
-offset_bottom = 934.0
+offset_right = 2615.0
+offset_bottom = 877.0
 text = "???
 
 Hei, Halo!
-(Iya maaf aku masih hardsketch)
-- Tekan 'x' untuk berkenalan! -"
+
+				- Tekan 'x' untuk berkenalan! -"
 
 [node name="TextEdit5" type="TextEdit" parent="."]
 offset_left = 6035.0
@@ -104,14 +115,14 @@ untuk masuk!"
 
 [node name="DarkLeave" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(3963.62, 1218.33)
-scale = Vector2(4.44156, 2.11003)
+position = Vector2(5208, 570.068)
+scale = Vector2(4.44156, 1.67427)
 texture = ExtResource("1_b6san")
 script = ExtResource("7_6jvkr")
 
 [node name="DarkIn" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(1275.5, 496.75)
-scale = Vector2(2.1075, 1.45259)
+position = Vector2(2434.5, 496.75)
+scale = Vector2(4.03917, 1.45259)
 texture = ExtResource("1_b6san")
 script = ExtResource("8_1q0l7")
