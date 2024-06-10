@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://biaqrikmnejos"]
+
+[ext_resource type="Texture2D" uid="uid://bqdl4kk2kqg3c" path="res://Sprites/Tasks/Task 1/Background.jpg" id="1_jvm5v"]
+[ext_resource type="PackedScene" uid="uid://c4l210mx7csop" path="res://Storyline/4_Task 1/subscenes/box_bola.tscn" id="2_at18e"]
+[ext_resource type="PackedScene" uid="uid://b3lkgcf5aku4y" path="res://Storyline/4_Task 1/subscenes/box_boneka.tscn" id="3_huwl0"]
+[ext_resource type="PackedScene" uid="uid://bvp3l652utlm0" path="res://Storyline/4_Task 1/subscenes/box_buku.tscn" id="4_6bdwv"]
+
+[node name="Node" type="Node2D"]
+
+[node name="Background" type="TextureRect" parent="."]
+texture_filter = 1
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_jvm5v")
+
+[node name="Container" type="Container" parent="."]
+offset_left = 174.0
+offset_top = 155.0
+offset_right = 1720.0
+offset_bottom = 533.0
+
+[node name="BoxBola" parent="Container" instance=ExtResource("2_at18e")]
+position = Vector2(-233, -209)
+
+[node name="BoxBoneka" parent="Container" instance=ExtResource("3_huwl0")]
+position = Vector2(768, 187)
+
+[node name="BoxBuku" parent="Container" instance=ExtResource("4_6bdwv")]
+position = Vector2(1328, 188)

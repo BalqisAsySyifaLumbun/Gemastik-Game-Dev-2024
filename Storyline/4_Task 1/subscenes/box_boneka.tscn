@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://b3lkgcf5aku4y"]
+
+[ext_resource type="Texture2D" uid="uid://ccjmv1m76ms24" path="res://Sprites/Tasks/Task 1/Boxes/boneka off.png" id="1_s7gbu"]
+[ext_resource type="Texture2D" uid="uid://b77n6jdvaakau" path="res://Sprites/Tasks/Task 1/Boxes/boneka on.png" id="2_rn2of"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rc05s"]
+atlas = ExtResource("1_s7gbu")
+region = Rect2(0, 0, 415, 357)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ag860"]
+atlas = ExtResource("2_rn2of")
+region = Rect2(0, 0, 483, 423)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o3yeh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rc05s")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ag860")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iegvg"]
+size = Vector2(412, 356)
+
+[node name="BoxBoneka" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_o3yeh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_iegvg")
