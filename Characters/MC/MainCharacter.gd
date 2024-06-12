@@ -57,7 +57,7 @@ func _physics_process(delta):
 	var isleft = velocity.x < 0
 	sprite_2d.flip_h = isleft
 	
-	if (player_global_pos.x <= instruction.global_position.x + 200) && (player_global_pos.x >= instruction.global_position.x - 200):
+	if (player_global_pos.x <= instruction.global_position.x + 150) && (player_global_pos.x >= instruction.global_position.x - 150):
 		instruction.visible = true
 	else:
 		instruction.visible = false
