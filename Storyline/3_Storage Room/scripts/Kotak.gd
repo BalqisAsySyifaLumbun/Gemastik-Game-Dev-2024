@@ -38,15 +38,16 @@ func _physics_process(delta):
 		
 		
 		# Calculate the distance between the characters
-		var distance_a = player_global_pos.distance_to(text_gudang_global_pos)
+		var distance_a = player_global_pos.x - text_gudang_global_pos.x
 		print("DistanceA:", distance_a)
 		var distance = player_global_pos.distance_to(sprite2_global_pos)
 		print("Distance:", distance)
 		
-		if distance_a <= 250:
-			text_gudang.visible = true
-		else:
+		if distance_a >= 250 || distance_a <= 0 :
+			print("False")
 			text_gudang.visible = false
+		else:
+			text_gudang.visible = true
 		
 		# Check if the distance is within a certain range
 		if distance <= 250 && !animation_played:

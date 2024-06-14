@@ -14,6 +14,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var gelap = get_parent().get_node('DarkLeave')
 var count = 0
 var dialog_in_progress = false
+var gelap_fade_duration = 3.0
+var gelap_current_time = 0.0
 
 func _physics_process(delta):
 	
@@ -22,7 +24,7 @@ func _physics_process(delta):
 	var pintu_global_pos = label_pintu.global_position
 	
 	var distance_pintu = player_global_pos.distance_to(pintu_global_pos)
-	print("DistancePintu:", distance_pintu)
+	#print("DistancePintu:", distance_pintu)
 	#var sprite_global_pos = sprite.global_position
 	if distance_pintu < 600:
 		text_edit_5.visible = true
@@ -59,6 +61,9 @@ func _physics_process(delta):
 	
 	if (player_global_pos.x <= instruction.global_position.x + 150) && (player_global_pos.x >= instruction.global_position.x - 150):
 		instruction.visible = true
+		if Input.is_action_just_pressed("talk"):
+			instruction.text = "“Baiklah,\nsepertinya ini tidak akan terlalu buruk”"
+		
 	else:
 		instruction.visible = false
 
