@@ -44,10 +44,13 @@ func _physics_process(delta):
 		print("Distance:", distance)
 		
 		if distance_a >= 250 || distance_a <= 0 :
-			print("False")
+			#print("False")
 			text_gudang.visible = false
 		else:
 			text_gudang.visible = true
+			if Input.is_action_just_pressed("talk"):
+				text_gudang.text = "Ini sia sia, pintunya terkunci,\naku harus mencari cara keluar lain!"
+			
 		
 		# Check if the distance is within a certain range
 		if distance <= 250 && !animation_played:

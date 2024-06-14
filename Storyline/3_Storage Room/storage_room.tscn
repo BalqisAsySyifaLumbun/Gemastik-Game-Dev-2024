@@ -30,6 +30,12 @@
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/MainCharacterGudang.gd" id="28_ramj0"]
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/DarkIn.gd" id="29_dbkcw"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lked"]
+size = Vector2(5812, 293.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4vqc"]
+size = Vector2(170.5, 1513)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_6j02s"]
 animations = [{
 "frames": [{
@@ -107,93 +113,81 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lked"]
-size = Vector2(7600, 302.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4vqc"]
-size = Vector2(170.5, 1513)
-
 [node name="Main2" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -3823.0
-offset_top = -256.0
-offset_right = 3780.0
-offset_bottom = 824.0
+offset_left = -2002.0
+offset_top = -208.0
+offset_right = 3572.0
+offset_bottom = 1192.0
 texture = ExtResource("2_dn7qr")
-stretch_mode = 1
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="TextureRect"]
-position = Vector2(1908, 650)
-scale = Vector2(1.08886, 1.21667)
-sprite_frames = SubResource("SpriteFrames_6j02s")
-autoplay = "default"
-
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="TextureRect"]
-position = Vector2(5686, 657)
-scale = Vector2(1.08886, 1.21667)
-sprite_frames = SubResource("SpriteFrames_6j02s")
-autoplay = "default"
 
 [node name="LeftWall" type="Sprite2D" parent="."]
-position = Vector2(-4538.56, 498.5)
+position = Vector2(-2657, 507)
 scale = Vector2(1.19261, 2.2563)
 texture = ExtResource("1_is3rv")
 
 [node name="RightWall" type="Sprite2D" parent="."]
-position = Vector2(4886.75, 495.5)
+position = Vector2(4683, 549)
 scale = Vector2(1.85208, 2.23556)
 texture = ExtResource("1_is3rv")
 
 [node name="Floor" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2(-26, 862.25)
+position = Vector2(852, 1202.63)
 shape = SubResource("RectangleShape2D_4lked")
 
 [node name="Sprite2D" type="Sprite2D" parent="Floor"]
-position = Vector2(-36, 878)
-scale = Vector2(6.33667, 0.22)
+position = Vector2(876, 1238)
+scale = Vector2(4.80417, 0.22)
 texture = ExtResource("1_is3rv")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Floor"]
-position = Vector2(3881, 479)
+position = Vector2(3593, 509)
 shape = SubResource("RectangleShape2D_w4vqc")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor"]
-position = Vector2(-3770.75, 495.5)
+position = Vector2(-1923, 462)
 shape = SubResource("RectangleShape2D_w4vqc")
 
 [node name="Kotak" parent="." instance=ExtResource("26_073ue")]
-position = Vector2(3311, 621)
+position = Vector2(3375, 965)
 
 [node name="MC" parent="." instance=ExtResource("27_2hg52")]
-position = Vector2(3018, 231)
+position = Vector2(2994, 614)
 script = ExtResource("28_ramj0")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(793, 535)
+scale = Vector2(1.65429, 1.42037)
+sprite_frames = SubResource("SpriteFrames_6j02s")
+autoplay = "default"
+frame_progress = 0.696502
 
 [node name="RichTextLabel2" type="TextEdit" parent="."]
 visible = false
-offset_left = 497.0
-offset_top = 218.0
-offset_right = 982.0
-offset_bottom = 329.0
+offset_left = 353.0
+offset_top = 584.0
+offset_right = 838.0
+offset_bottom = 695.0
 theme_override_font_sizes/font_size = 20
 text = "Ayo kita susun isi kotaknya lagi.
 
 - Ketik x untuk membereskan!-"
 
 [node name="RichTextLabel" type="TextEdit" parent="."]
-visible = false
-offset_left = 2218.0
-offset_top = 222.0
-offset_right = 2703.0
-offset_bottom = 310.0
+offset_left = 2268.0
+offset_top = 473.0
+offset_right = 2761.0
+offset_bottom = 668.0
 theme_override_font_sizes/font_size = 20
-text = "						OH TIDAK!
-Otan telah menipu kita - ini bukan ruang guru!"
+text = "Oh, anak tadi pasti membohongiku.
+Pintunya terkunci, aku tidak bisa keluar. 
+
+TOLONG!!"
 
 [node name="DarkIn" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1904, 494.25)
 scale = Vector2(3.17, 2.22444)
 texture = ExtResource("1_is3rv")
