@@ -38,18 +38,22 @@ func _physics_process(delta):
 		
 		
 		# Calculate the distance between the characters
-		var distance_a = player_global_pos.distance_to(text_gudang_global_pos)
+		var distance_a = player_global_pos.x - text_gudang_global_pos.x
 		print("DistanceA:", distance_a)
 		var distance = player_global_pos.distance_to(sprite2_global_pos)
 		print("Distance:", distance)
 		
-		if distance_a <= 400:
-			text_gudang.visible = true
-		else:
+		if distance_a >= 250 || distance_a <= 0 :
+			#print("False")
 			text_gudang.visible = false
+		else:
+			text_gudang.visible = true
+			if Input.is_action_just_pressed("talk"):
+				text_gudang.text = "Ini sia sia, pintunya terkunci,\naku harus mencari cara keluar lain!"
+			
 		
 		# Check if the distance is within a certain range
-		if distance <= 400 && !animation_played:
+		if distance <= 250 && !animation_played:
 			kotak.animation = "dropped"  # Set animation on AnimatedSprite node
 			animation_played = true
 			delay_counter = 0  # Reset delay counter
@@ -69,6 +73,9 @@ func _physics_process(delta):
 						text_gudang2.visible = false
 					else:
 						text_gudang2.visible = true
+						if Input.is_action_just_pressed("talk"):
+							get_tree().change_scene_to_file("res://Storyline/4_Task 1/box_drag_drop.tscn")
+						
 				
 				# Increment text delay counter
 				text_delay_counter += 1

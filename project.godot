@@ -14,7 +14,7 @@ config/name="Game"
 run/main_scene="res://Storyline/1_Main Menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 boot_splash/show_image=false
-config/icon="res://icon.svg"
+config/icon="res://Sprites/Main Characters/sketch.png"
 
 [display]
 
