@@ -196,7 +196,6 @@ autoplay = "default"
 script = ExtResource("27_wfeku")
 
 [node name="Dark" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(973.929, 543.966)
 scale = Vector2(1.62329, 1.61196)
 texture = ExtResource("33_ym33a")

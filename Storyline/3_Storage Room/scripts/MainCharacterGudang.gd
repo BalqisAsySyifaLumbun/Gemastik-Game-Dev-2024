@@ -10,7 +10,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _physics_process(delta):
-	
+	sprite_2d.scale.x = 0.75
+	sprite_2d.scale.y = 0.75
 	var player_global_pos = sprite_2d.global_position
 	
 	#print("DistancePintu:", distance_pintu)
