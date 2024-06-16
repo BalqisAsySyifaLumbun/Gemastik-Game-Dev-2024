@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://c34yxgbpvfxx6"]
+
+[ext_resource type="Texture2D" uid="uid://bdaadupd5i20y" path="res://Sprites/Tasks/Task 1/Boxes/Bola off.png" id="1_jv2f0"]
+[ext_resource type="Texture2D" uid="uid://bkyutlelr2mp2" path="res://Sprites/Tasks/Task 1/Boxes/Bola on.png" id="2_eshdf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jexdr"]
+atlas = ExtResource("1_jv2f0")
+region = Rect2(0, 0, 421, 362)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvgvr"]
+atlas = ExtResource("2_eshdf")
+region = Rect2(0, 0, 483, 423)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_shjtw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jexdr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvgvr")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i0pja"]
+size = Vector2(416.5, 359)
+
+[node name="BoxBola" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(445, 398)
+sprite_frames = SubResource("SpriteFrames_shjtw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(444.75, 397.5)
+shape = SubResource("RectangleShape2D_i0pja")

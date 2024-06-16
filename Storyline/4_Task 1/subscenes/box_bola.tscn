@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4l210mx7csop"]
+[gd_scene load_steps=7 format=3 uid="uid://bjvyn75knvjtq"]
 
 [ext_resource type="Texture2D" uid="uid://bdaadupd5i20y" path="res://Sprites/Tasks/Task 1/Boxes/Bola off.png" id="1_i112j"]
 [ext_resource type="Texture2D" uid="uid://bkyutlelr2mp2" path="res://Sprites/Tasks/Task 1/Boxes/Bola on.png" id="2_ceue3"]
@@ -33,12 +33,12 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i0pja"]
 size = Vector2(416.5, 359)
 
-[node name="BoxBola" type="Area2D"]
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(445, 398)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_shjtw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(444.75, 397.5)
+[node name="BoxBola" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoxBola"]
+visible = false
 shape = SubResource("RectangleShape2D_i0pja")
