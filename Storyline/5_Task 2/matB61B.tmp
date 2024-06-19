@@ -1,0 +1,228 @@
+[gd_scene load_steps=27 format=3 uid="uid://smfc8hv6l2ov"]
+
+[ext_resource type="Texture2D" uid="uid://dc13e8nef1r1b" path="res://Sprites/Tasks/Task 2/base bg.jpg" id="1_t7ycm"]
+[ext_resource type="Texture2D" uid="uid://bqqsgfob6qsjh" path="res://Sprites/Tasks/Task 2/base light.png" id="2_ictew"]
+[ext_resource type="Texture2D" uid="uid://elbv5dbv0ulh" path="res://Sprites/Tasks/Task 2/guide 3.jpg" id="2_v4abn"]
+[ext_resource type="Texture2D" uid="uid://u4h4e2v6c47u" path="res://Sprites/Tasks/Task 2/1.png" id="6_i6rlp"]
+[ext_resource type="Script" path="res://Storyline/5_Task 2/scripts/collision_click.gd" id="6_sq51c"]
+[ext_resource type="Texture2D" uid="uid://17cfvc7gctbe" path="res://Sprites/Tasks/Task 2/1 on.png" id="7_qq86c"]
+[ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="8_2d2vg"]
+[ext_resource type="Texture2D" uid="uid://o632sw8x5osg" path="res://Sprites/Tasks/Task 2/2.png" id="8_qcsgi"]
+[ext_resource type="Texture2D" uid="uid://btpq6ygsbw2t4" path="res://Sprites/Tasks/Task 2/2 on.png" id="9_at3d0"]
+[ext_resource type="Texture2D" uid="uid://b3f8606umedt7" path="res://Sprites/Tasks/Task 2/3.png" id="10_d0r3f"]
+[ext_resource type="Texture2D" uid="uid://bhtwlo2hvdhet" path="res://Sprites/Tasks/Task 2/3 on.png" id="11_5o2hj"]
+[ext_resource type="Script" path="res://Storyline/5_Task 2/scripts/CollisionClick2.gd" id="11_ws6kj"]
+[ext_resource type="Texture2D" uid="uid://bjubhjojn0ubn" path="res://Sprites/Tasks/Task 2/4.png" id="12_0dcyf"]
+[ext_resource type="Script" path="res://Storyline/5_Task 2/scripts/hover_question.gd" id="13_eor1r"]
+[ext_resource type="Texture2D" uid="uid://duhb4o0cln3ls" path="res://Sprites/Tasks/Task 2/4 on.png" id="13_skhnx"]
+[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="14_rjky4"]
+[ext_resource type="Script" path="res://Storyline/5_Task 2/scripts/CollisionClick3.gd" id="14_t8n1v"]
+[ext_resource type="Texture2D" uid="uid://sn3wng6xnpel" path="res://Sprites/Tasks/Task 2/cek.png" id="15_38yn4"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkIn.gd" id="15_puprp"]
+[ext_resource type="Script" path="res://Storyline/5_Task 2/scripts/CollisionClick4.gd" id="17_d2osf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0kri"]
+size = Vector2(409.5, 142.75)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n3288"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_i6rlp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_qq86c")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qo5qc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_qcsgi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_at3d0")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i52k6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_d0r3f")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_5o2hj")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5p2t5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_0dcyf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_skhnx")
+}],
+"loop": true,
+"name": &"hover",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcii2"]
+size = Vector2(406, 132)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1922.0
+offset_bottom = 1095.0
+texture = ExtResource("1_t7ycm")
+
+[node name="BaseLight" type="Sprite2D" parent="TextureRect"]
+visible = false
+modulate = Color(1, 1, 1, 0.847059)
+position = Vector2(959.5, 552)
+scale = Vector2(1.00677, 1.02778)
+texture = ExtResource("2_ictew")
+
+[node name="Guide3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(961, 537)
+texture = ExtResource("2_v4abn")
+
+[node name="DarkIn" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(961.062, 544.219)
+scale = Vector2(1.6049, 1.62898)
+texture = ExtResource("14_rjky4")
+script = ExtResource("15_puprp")
+
+[node name="Question_1" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question_1"]
+position = Vector2(980, 170)
+shape = SubResource("RectangleShape2D_q0kri")
+script = ExtResource("6_sq51c")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Question_1"]
+position = Vector2(983, 168)
+sprite_frames = SubResource("SpriteFrames_n3288")
+autoplay = "default"
+script = ExtResource("13_eor1r")
+
+[node name="Answer1" type="LineEdit" parent="Question_1"]
+offset_left = 1212.0
+offset_top = 128.0
+offset_right = 1312.0
+offset_bottom = 220.0
+theme_override_fonts/font = ExtResource("8_2d2vg")
+theme_override_font_sizes/font_size = 30
+alignment = 1
+
+[node name="Question_2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question_2"]
+position = Vector2(981, 420)
+shape = SubResource("RectangleShape2D_q0kri")
+script = ExtResource("11_ws6kj")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Question_2"]
+position = Vector2(983, 420)
+sprite_frames = SubResource("SpriteFrames_qo5qc")
+autoplay = "default"
+script = ExtResource("13_eor1r")
+
+[node name="Answer2" type="LineEdit" parent="Question_2"]
+offset_left = 1211.0
+offset_top = 377.0
+offset_right = 1311.0
+offset_bottom = 469.0
+theme_override_fonts/font = ExtResource("8_2d2vg")
+theme_override_font_sizes/font_size = 30
+alignment = 1
+
+[node name="Question_3" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question_3"]
+position = Vector2(979, 665)
+shape = SubResource("RectangleShape2D_q0kri")
+script = ExtResource("14_t8n1v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Question_3"]
+position = Vector2(979, 669)
+sprite_frames = SubResource("SpriteFrames_i52k6")
+autoplay = "default"
+script = ExtResource("13_eor1r")
+
+[node name="Answer3" type="LineEdit" parent="Question_3"]
+offset_left = 1207.0
+offset_top = 628.0
+offset_right = 1307.0
+offset_bottom = 720.0
+theme_override_fonts/font = ExtResource("8_2d2vg")
+theme_override_font_sizes/font_size = 30
+alignment = 1
+
+[node name="Question_4" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Question_4"]
+position = Vector2(977, 914)
+shape = SubResource("RectangleShape2D_q0kri")
+script = ExtResource("17_d2osf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Question_4"]
+position = Vector2(979, 916)
+sprite_frames = SubResource("SpriteFrames_5p2t5")
+autoplay = "default"
+script = ExtResource("13_eor1r")
+
+[node name="Answer4" type="LineEdit" parent="Question_4"]
+offset_left = 1209.0
+offset_top = 875.0
+offset_right = 1309.0
+offset_bottom = 967.0
+theme_override_fonts/font = ExtResource("8_2d2vg")
+theme_override_font_sizes/font_size = 30
+alignment = 1
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1673, 1000)
+shape = SubResource("RectangleShape2D_gcii2")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(1674, 1001)
+texture = ExtResource("15_38yn4")

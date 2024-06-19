@@ -28,7 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://bdayto4slwus3" path="res://Storyline/3_Storage Room/subscenes/kotak.tscn" id="26_073ue"]
 [ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="27_2hg52"]
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/MainCharacterGudang.gd" id="28_ramj0"]
-[ext_resource type="FontFile" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="29_acw8g"]
+[ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="29_acw8g"]
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/DarkIn.gd" id="29_dbkcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lked"]

@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkTransition.gd" id="7_6jvkr"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkIn.gd" id="8_1q0l7"]
 [ext_resource type="Texture2D" uid="uid://drftnag4vycph" path="res://Sprites/Background/tangga ke atas.png" id="9_lr4cp"]
-[ext_resource type="FontFile" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="10_qf50b"]
+[ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="10_qf50b"]
 [ext_resource type="Texture2D" uid="uid://wk1qw5h2n3a7" path="res://Sprites/Menu/naik.png" id="13_bcx6w"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Naik.gd" id="13_ytrrr"]
 [ext_resource type="Texture2D" uid="uid://bwbwkiyip4gv6" path="res://Sprites/Menu/turun.png" id="14_jrdmi"]
