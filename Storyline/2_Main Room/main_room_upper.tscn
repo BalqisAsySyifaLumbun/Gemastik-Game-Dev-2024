@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://csnmq10jkcgn4"]
+[gd_scene load_steps=14 format=3 uid="uid://csnmq10jkcgn4"]
 
 [ext_resource type="Texture2D" uid="uid://boopa0hjyduwr" path="res://Sprites/Background/lantai_atas.jpg" id="1_lltar"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_7l11l"]
 [ext_resource type="PackedScene" uid="uid://bwmhkvebg3qd7" path="res://Storyline/2_Main Room/subscenes/Door.tscn" id="3_tkhyt"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/GoDoor.gd" id="4_ux5e6"]
+[ext_resource type="FontFile" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="5_b81ai"]
 [ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="5_qr6gu"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/MainCharacterUpper.gd" id="6_xnkex"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Turun.gd" id="7_q8p83"]
@@ -80,6 +81,7 @@ offset_left = 2670.0
 offset_top = -921.0
 offset_right = 2881.0
 offset_bottom = -868.0
+theme_override_fonts/font = ExtResource("5_b81ai")
 theme_override_font_sizes/font_size = 20
 text = "Bukan ini pintunya."
 metadata/_edit_use_anchors_ = true
@@ -89,6 +91,7 @@ offset_left = 7129.0
 offset_top = -918.0
 offset_right = 7340.0
 offset_bottom = -865.0
+theme_override_fonts/font = ExtResource("5_b81ai")
 theme_override_font_sizes/font_size = 20
 text = "Bukan ini pintunya."
 metadata/_edit_use_anchors_ = true
@@ -113,6 +116,7 @@ offset_left = 450.0
 offset_top = -930.0
 offset_right = 721.0
 offset_bottom = -856.0
+theme_override_fonts/font = ExtResource("5_b81ai")
 text = "Pintu biru ini terkunci.
 Mungkinkah ada pintu biru lain?"
 

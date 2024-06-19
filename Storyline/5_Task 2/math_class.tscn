@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://smfc8hv6l2ov"]
+
+[ext_resource type="Texture2D" uid="uid://dc13e8nef1r1b" path="res://Sprites/Tasks/Task 2/base bg.jpg" id="1_t7ycm"]
+[ext_resource type="Texture2D" uid="uid://bqqsgfob6qsjh" path="res://Sprites/Tasks/Task 2/base light.png" id="2_ictew"]
+[ext_resource type="Texture2D" uid="uid://elbv5dbv0ulh" path="res://Sprites/Tasks/Task 2/guide 3.jpg" id="2_v4abn"]
+[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="14_rjky4"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkIn.gd" id="15_puprp"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1922.0
+offset_bottom = 1095.0
+texture = ExtResource("1_t7ycm")
+
+[node name="BaseLight" type="Sprite2D" parent="TextureRect"]
+visible = false
+modulate = Color(1, 1, 1, 0.847059)
+position = Vector2(959.5, 552)
+scale = Vector2(1.00677, 1.02778)
+texture = ExtResource("2_ictew")
+
+[node name="Guide3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(961, 537)
+texture = ExtResource("2_v4abn")
+
+[node name="DarkIn" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(961.062, 544.219)
+scale = Vector2(1.6049, 1.62898)
+texture = ExtResource("14_rjky4")
+script = ExtResource("15_puprp")

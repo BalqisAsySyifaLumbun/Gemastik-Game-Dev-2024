@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b77x7v4aobjrx"]
+[gd_scene load_steps=17 format=3 uid="uid://b77x7v4aobjrx"]
 
 [ext_resource type="Texture2D" uid="uid://gfkqemsg4xfw" path="res://Sprites/Background/lantai bawah.jpg" id="1_iwbfb"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_fruwq"]
@@ -8,12 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://cxk2rq4wf7bs8" path="res://Sprites/lighting animasi/lighting_lantai_bawah_5.png" id="4_e8bg8"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/MainCharacterLower.gd" id="4_juv2l"]
 [ext_resource type="Texture2D" uid="uid://dp7p1a87qmu5r" path="res://Sprites/lighting animasi/lighting_lantai_bawah_0.png" id="4_xrcjp"]
+[ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="5_egu37"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Naik.gd" id="7_77qn6"]
 [ext_resource type="Texture2D" uid="uid://wk1qw5h2n3a7" path="res://Sprites/Menu/naik.png" id="8_qlkve"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkIn.gd" id="11_8w4t3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ciuos"]
 size = Vector2(5322, 351)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jdmep"]
+size = Vector2(691, 1362)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_27hj6"]
 radius = 77.3175
@@ -101,6 +105,10 @@ texture = ExtResource("2_fruwq")
 position = Vector2(2688, 1186.5)
 shape = SubResource("RectangleShape2D_ciuos")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(-216, 671)
+shape = SubResource("RectangleShape2D_jdmep")
+
 [node name="Go_Door7" parent="." instance=ExtResource("3_x44p8")]
 position = Vector2(913, 446)
 script = ExtResource("4_60s17")
@@ -110,6 +118,7 @@ offset_left = 1214.0
 offset_top = 382.0
 offset_right = 1569.0
 offset_bottom = 556.0
+theme_override_fonts/font = ExtResource("5_egu37")
 theme_override_font_sizes/font_size = 20
 text = "Umm.. suasananya
 sedikit menakutkan.
@@ -141,7 +150,7 @@ autoplay = "default"
 frame_progress = 0.770689
 
 [node name="DarkIn" type="Sprite2D" parent="."]
-position = Vector2(2573, 623)
-scale = Vector2(4.71146, 1.85518)
+position = Vector2(2573, 609.562)
+scale = Vector2(4.71146, 1.895)
 texture = ExtResource("2_fruwq")
 script = ExtResource("11_8w4t3")

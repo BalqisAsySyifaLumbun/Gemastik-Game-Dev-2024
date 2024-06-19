@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://2dpf4vwnxdxn"]
+[gd_scene load_steps=34 format=3 uid="uid://2dpf4vwnxdxn"]
 
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_is3rv"]
 [ext_resource type="Texture2D" uid="uid://bytou1d4kln6e" path="res://Sprites/Background/base.jpg" id="2_dn7qr"]
@@ -28,6 +28,7 @@
 [ext_resource type="PackedScene" uid="uid://bdayto4slwus3" path="res://Storyline/3_Storage Room/subscenes/kotak.tscn" id="26_073ue"]
 [ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="27_2hg52"]
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/MainCharacterGudang.gd" id="28_ramj0"]
+[ext_resource type="FontFile" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="29_acw8g"]
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/DarkIn.gd" id="29_dbkcw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lked"]
@@ -171,6 +172,7 @@ offset_left = 353.0
 offset_top = 584.0
 offset_right = 838.0
 offset_bottom = 695.0
+theme_override_fonts/font = ExtResource("29_acw8g")
 theme_override_font_sizes/font_size = 20
 text = "Ayo kita susun isi kotaknya lagi.
 
@@ -181,6 +183,7 @@ offset_left = 2268.0
 offset_top = 473.0
 offset_right = 2761.0
 offset_bottom = 668.0
+theme_override_fonts/font = ExtResource("29_acw8g")
 theme_override_font_sizes/font_size = 20
 text = "Oh, anak tadi pasti membohongiku.
 Pintunya terkunci, aku tidak bisa keluar. 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://rir5f88uh8k0"]
+[gd_scene load_steps=21 format=3 uid="uid://rir5f88uh8k0"]
 
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_b6san"]
 [ext_resource type="PackedScene" uid="uid://dnyv5ckw26ug8" path="res://Characters/Otan/otan.tscn" id="2_b88js"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkTransition.gd" id="7_6jvkr"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkIn.gd" id="8_1q0l7"]
 [ext_resource type="Texture2D" uid="uid://drftnag4vycph" path="res://Sprites/Background/tangga ke atas.png" id="9_lr4cp"]
+[ext_resource type="FontFile" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="10_qf50b"]
 [ext_resource type="Texture2D" uid="uid://wk1qw5h2n3a7" path="res://Sprites/Menu/naik.png" id="13_bcx6w"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Naik.gd" id="13_ytrrr"]
 [ext_resource type="Texture2D" uid="uid://bwbwkiyip4gv6" path="res://Sprites/Menu/turun.png" id="14_jrdmi"]
@@ -93,6 +94,7 @@ offset_left = 1999.0
 offset_top = 371.0
 offset_right = 2417.0
 offset_bottom = 542.0
+theme_override_fonts/font = ExtResource("10_qf50b")
 theme_override_font_sizes/font_size = 20
 text = "Clawns & Paws Haven
 merupakan sekolah dan panti asuhan
@@ -105,6 +107,7 @@ offset_left = 3611.0
 offset_top = 496.0
 offset_right = 4107.0
 offset_bottom = 686.0
+theme_override_fonts/font = ExtResource("10_qf50b")
 theme_override_font_sizes/font_size = 20
 text = "???
 
@@ -143,6 +146,7 @@ offset_left = 2826.0
 offset_top = 573.0
 offset_right = 3037.0
 offset_bottom = 626.0
+theme_override_fonts/font = ExtResource("10_qf50b")
 theme_override_font_sizes/font_size = 20
 text = "Bukan ini pintunya."
 
@@ -151,6 +155,7 @@ offset_left = 7195.0
 offset_top = 603.0
 offset_right = 7406.0
 offset_bottom = 656.0
+theme_override_fonts/font = ExtResource("10_qf50b")
 theme_override_font_sizes/font_size = 20
 text = "Bukan ini pintunya."
 
@@ -159,6 +164,7 @@ offset_left = 8513.0
 offset_top = 585.0
 offset_right = 8724.0
 offset_bottom = 638.0
+theme_override_fonts/font = ExtResource("10_qf50b")
 theme_override_font_sizes/font_size = 20
 text = "Bukan ini pintunya."
 
