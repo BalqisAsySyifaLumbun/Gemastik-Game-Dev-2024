@@ -33,11 +33,6 @@ radius = 71.7844
 
 [node name="Boundaries" type="Node" parent="."]
 
-[node name="Koridor" type="Sprite2D" parent="Boundaries"]
-z_index = -1
-position = Vector2(5207, 465)
-texture = ExtResource("3_xtttp")
-
 [node name="Floor" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(1197, 1040)
 
@@ -85,6 +80,11 @@ texture = ExtResource("1_b6san")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Boundaries/LeftWall"]
 position = Vector2(598, -19)
 shape = SubResource("WorldBoundaryShape2D_ebfbm")
+
+[node name="Koridor" type="Sprite2D" parent="Boundaries"]
+z_index = -1
+position = Vector2(5207, 465)
+texture = ExtResource("3_xtttp")
 
 [node name="MC" parent="." instance=ExtResource("3_qissp")]
 position = Vector2(878, 469)
