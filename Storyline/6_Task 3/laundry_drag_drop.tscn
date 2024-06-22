@@ -1,10 +1,11 @@
-[gd_scene load_steps=35 format=3 uid="uid://h77xo65cf3pd"]
+[gd_scene load_steps=36 format=3 uid="uid://h77xo65cf3pd"]
 
 [ext_resource type="Script" path="res://Storyline/6_Task 3/laundry_drag_drop.gd" id="1_a60vq"]
 [ext_resource type="Texture2D" uid="uid://cfhakvfsejlwx" path="res://Sprites/Tasks/Task 3/base.jpg" id="1_wlkuy"]
 [ext_resource type="Texture2D" uid="uid://df6xo6oegxpdp" path="res://Sprites/Tasks/Task 3/Boxes/box 1 off.png" id="3_wadf8"]
 [ext_resource type="Texture2D" uid="uid://bo0yp54kne22f" path="res://Sprites/Tasks/Task 3/Boxes/box 1 on.png" id="4_yv4vp"]
 [ext_resource type="Texture2D" uid="uid://boxhshpdvu8yx" path="res://Sprites/Tasks/Task 3/Boxes/box 2 off.png" id="5_a6ehi"]
+[ext_resource type="Script" path="res://Storyline/6_Task 3/BoxBajuPutih.gd" id="5_hdsrn"]
 [ext_resource type="Texture2D" uid="uid://ba28kbx31ha2o" path="res://Sprites/Tasks/Task 3/Boxes/box 2 on.png" id="6_gxi8s"]
 [ext_resource type="Texture2D" uid="uid://cgi0u25megqiv" path="res://Sprites/Tasks/Task 3/Boxes/box 3 off.png" id="7_tcmkt"]
 [ext_resource type="Texture2D" uid="uid://daj4ymweh2esj" path="res://Sprites/Tasks/Task 3/Boxes/box 3 on.png" id="8_o8qtb"]
@@ -120,6 +121,7 @@ unique_name_in_owner = true
 position = Vector2(450, 350)
 scale = Vector2(0.77, 0.77)
 sprite_frames = SubResource("SpriteFrames_0cab8")
+script = ExtResource("5_hdsrn")
 
 [node name="BoxBola" type="Area2D" parent="BoxBajuPutih"]
 visible = false

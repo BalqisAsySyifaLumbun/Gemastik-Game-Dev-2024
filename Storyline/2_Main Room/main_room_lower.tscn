@@ -107,6 +107,7 @@ shape = SubResource("RectangleShape2D_ciuos")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Floor"]
 position = Vector2(2688, 1012)
+rotation = -1.57079
 shape = SubResource("WorldBoundaryShape2D_ynt2h")
 
 [node name="LWall" type="StaticBody2D" parent="."]

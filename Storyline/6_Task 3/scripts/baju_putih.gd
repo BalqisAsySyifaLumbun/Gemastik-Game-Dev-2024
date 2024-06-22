@@ -24,7 +24,7 @@ func _on_area_2d_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click"):
 		selected = true
 		box_baju_putih.animation = "hover"
-		z_index = node.get_new_highest_z_index()  # Set to a new highest z-index
+		z_index = node.get_new_highest_z_index()
 		
 		
 func _physics_process(delta):

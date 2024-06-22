@@ -15,7 +15,6 @@ func _ready():
 		rest_point = rest_nodes[ball_index].global_position
 	else:
 		rest_point = rest_nodes[0].global_position
-	#rest_point = rest_nodes[1].global_position
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click"):

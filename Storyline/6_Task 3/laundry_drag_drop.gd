@@ -2,7 +2,6 @@ extends Node2D
 
 var dropped_items_count = 0
 var highest_z_index = 0
-@onready var box_baju_putih = %BoxBajuPutih
 @onready var finish = %Finish
 
 func increment_count():
