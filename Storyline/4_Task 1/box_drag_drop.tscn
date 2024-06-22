@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bkyutlelr2mp2" path="res://Sprites/Tasks/Task 1/Boxes/Bola on.png" id="4_gkisb"]
 [ext_resource type="Texture2D" uid="uid://c1pkqwb5mdm55" path="res://Sprites/Tasks/Task 1/Items/bola_1.png" id="5_fq8g2"]
 [ext_resource type="Texture2D" uid="uid://ccjmv1m76ms24" path="res://Sprites/Tasks/Task 1/Boxes/boneka off.png" id="5_hg56w"]
-[ext_resource type="Texture2D" uid="uid://ciy8qjbxwyvhe" path="res://Sprites/Tasks/Task 1/Items/bola_3.png" id="6_040il"]
 [ext_resource type="Texture2D" uid="uid://b77n6jdvaakau" path="res://Sprites/Tasks/Task 1/Boxes/boneka on.png" id="6_cv7u0"]
 [ext_resource type="Texture2D" uid="uid://d33nl3fqqst0y" path="res://Sprites/Tasks/Task 1/Boxes/buku off.png" id="7_47rpb"]
 [ext_resource type="Script" path="res://Storyline/4_Task 1/scripts/Bola.gd" id="7_b58jc"]
@@ -19,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dutps5njwhrrc" path="res://Sprites/Tasks/Task 1/Items/buku_3.png" id="12_f3qtf"]
 [ext_resource type="Texture2D" uid="uid://dbxyh77x45tek" path="res://Sprites/Tasks/Task 1/Items/bola_2.png" id="13_8s645"]
 [ext_resource type="Script" path="res://Storyline/4_Task 1/scripts/Boneka.gd" id="15_ed32d"]
+[ext_resource type="Texture2D" uid="uid://6bmp3hecp3tx" path="res://Sprites/Tasks/Task 1/Items/bola_3.png" id="18_b4x4x"]
 [ext_resource type="Script" path="res://Storyline/4_Task 1/scripts/Buku.gd" id="19_l6mh1"]
 [ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/backsound quest loop.mp3" id="21_1nsql"]
 [ext_resource type="AudioStream" uid="uid://dnps4av0mxtdo" path="res://Sounds/correct answer.mp3" id="22_5ekfc"]
@@ -272,7 +272,7 @@ shape = SubResource("RectangleShape2D_cyt2f")
 
 [node name="Bola3" type="Sprite2D" parent="."]
 scale = Vector2(0.598446, 0.598446)
-texture = ExtResource("6_040il")
+texture = ExtResource("18_b4x4x")
 script = ExtResource("7_b58jc")
 
 [node name="Area2D" type="Area2D" parent="Bola3"]
