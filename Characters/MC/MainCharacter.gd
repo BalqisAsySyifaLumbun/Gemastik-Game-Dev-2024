@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED = 300.0
+const SPEED = 500.0
 const JUMP_VELOCITY = -400.0
 @onready var sprite_2d = $Sprite2D
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -40,9 +40,13 @@ func _physics_process(delta):
 	
 	if player_global_pos.distance_to(turun_global_pos) <= 650:
 		if Input.is_action_just_pressed("talk"):
+			TransitionScreen.transition_between()
+			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room_lower.tscn")
 	if player_global_pos.distance_to(naik_global_pos) <= 650:
 		if Input.is_action_just_pressed("talk"):
+			TransitionScreen.transition_between()
+			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room_upper.tscn")
 			
 	var wrong_open = false

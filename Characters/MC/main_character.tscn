@@ -75,9 +75,10 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ieknj"]
 custom_solver_bias = 0.168
-size = Vector2(269.333, 10.0001)
+size = Vector2(320, 463.667)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+z_index = 5
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 1)
@@ -92,10 +93,10 @@ scale = Vector2(0.548, 0.588)
 sprite_frames = SubResource("SpriteFrames_38lki")
 animation = &"walk"
 autoplay = "idle"
-frame_progress = 0.735492
+frame_progress = 0.357553
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(42, 442)
-scale = Vector2(0.75, 0.75)
+position = Vector2(47, 273)
+scale = Vector2(0.435505, 0.481128)
 shape = SubResource("RectangleShape2D_ieknj")

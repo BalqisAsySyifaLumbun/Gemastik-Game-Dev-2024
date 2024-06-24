@@ -12,3 +12,5 @@ scale = Vector2(1.5, 1.5)
 stream = ExtResource("2_nlvdb")
 autoplay = true
 script = ExtResource("3_6p770")
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]

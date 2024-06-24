@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b77x7v4aobjrx"]
+[gd_scene load_steps=16 format=3 uid="uid://d27chi846yccw"]
 
 [ext_resource type="Texture2D" uid="uid://gfkqemsg4xfw" path="res://Sprites/Background/lantai bawah.jpg" id="1_iwbfb"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_fruwq"]
@@ -16,8 +16,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ciuos"]
 size = Vector2(5322, 351)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jdmep"]
-size = Vector2(691, 1362)
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ynt2h"]
+normal = Vector2(1, 0)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_27hj6"]
 radius = 77.3175
@@ -102,12 +102,29 @@ scale = Vector2(4.475, 0.627407)
 texture = ExtResource("2_fruwq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Floor"]
+visible = false
 position = Vector2(2688, 1186.5)
 shape = SubResource("RectangleShape2D_ciuos")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2(-216, 671)
-shape = SubResource("RectangleShape2D_jdmep")
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Floor"]
+position = Vector2(2688, 1012)
+rotation = -1.57079
+shape = SubResource("WorldBoundaryShape2D_ynt2h")
+
+[node name="LWall" type="StaticBody2D" parent="."]
+position = Vector2(199, 0)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="LWall"]
+position = Vector2(8, 635)
+shape = SubResource("WorldBoundaryShape2D_ynt2h")
+
+[node name="RWall" type="StaticBody2D" parent="."]
+position = Vector2(-625, 0)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="RWall"]
+position = Vector2(5409, 630)
+rotation = 3.14159
+shape = SubResource("WorldBoundaryShape2D_ynt2h")
 
 [node name="Go_Door7" parent="." instance=ExtResource("3_x44p8")]
 position = Vector2(913, 446)
@@ -150,7 +167,8 @@ autoplay = "default"
 frame_progress = 0.770689
 
 [node name="DarkIn" type="Sprite2D" parent="."]
-position = Vector2(2573, 609.562)
-scale = Vector2(4.71146, 1.895)
+visible = false
+position = Vector2(2573, 623)
+scale = Vector2(4.71146, 1.85518)
 texture = ExtResource("2_fruwq")
 script = ExtResource("11_8w4t3")

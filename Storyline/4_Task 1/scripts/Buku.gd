@@ -7,6 +7,8 @@ var rest_nodes = []
 @onready var box_boneka = %BoxBoneka
 @onready var box_buku = %BoxBuku
 @onready var node = $".."
+@onready var correct = %Correct
+@onready var wrong = %Wrong
 
 func _ready():
 	rest_nodes = get_tree().get_nodes_in_group("zone")
@@ -43,10 +45,8 @@ func _input(event):
 					if child.is_in_group("box_buku"):
 						queue_free()
 						node.increment_count()
-					#elif child.is_in_group("rest_zone"):
-						#rest_point = child.global_position
-						#shortest_dist = distance
-					else:
-						pass
+						correct.play()
+					elif child.is_in_group("box_ball") or child.is_in_group("box_boneka"):
+						wrong.play()
 
 

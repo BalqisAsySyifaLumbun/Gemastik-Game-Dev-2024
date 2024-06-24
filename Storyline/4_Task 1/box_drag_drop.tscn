@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://biaqrikmnejos"]
+[gd_scene load_steps=41 format=3 uid="uid://biaqrikmnejos"]
 
 [ext_resource type="Texture2D" uid="uid://bqdl4kk2kqg3c" path="res://Sprites/Tasks/Task 1/Background.jpg" id="1_jvm5v"]
 [ext_resource type="Script" path="res://Storyline/4_Task 1/box_drag_drop.gd" id="1_sdlly"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://bkyutlelr2mp2" path="res://Sprites/Tasks/Task 1/Boxes/Bola on.png" id="4_gkisb"]
 [ext_resource type="Texture2D" uid="uid://c1pkqwb5mdm55" path="res://Sprites/Tasks/Task 1/Items/bola_1.png" id="5_fq8g2"]
 [ext_resource type="Texture2D" uid="uid://ccjmv1m76ms24" path="res://Sprites/Tasks/Task 1/Boxes/boneka off.png" id="5_hg56w"]
-[ext_resource type="Texture2D" uid="uid://ciy8qjbxwyvhe" path="res://Sprites/Tasks/Task 1/Items/bola_3.png" id="6_040il"]
 [ext_resource type="Texture2D" uid="uid://b77n6jdvaakau" path="res://Sprites/Tasks/Task 1/Boxes/boneka on.png" id="6_cv7u0"]
 [ext_resource type="Texture2D" uid="uid://d33nl3fqqst0y" path="res://Sprites/Tasks/Task 1/Boxes/buku off.png" id="7_47rpb"]
 [ext_resource type="Script" path="res://Storyline/4_Task 1/scripts/Bola.gd" id="7_b58jc"]
@@ -18,9 +17,13 @@
 [ext_resource type="Texture2D" uid="uid://di5g3kg0gdxbo" path="res://Sprites/Tasks/Task 1/Items/buku_2.png" id="11_gtk5y"]
 [ext_resource type="Texture2D" uid="uid://dutps5njwhrrc" path="res://Sprites/Tasks/Task 1/Items/buku_3.png" id="12_f3qtf"]
 [ext_resource type="Texture2D" uid="uid://dbxyh77x45tek" path="res://Sprites/Tasks/Task 1/Items/bola_2.png" id="13_8s645"]
-[ext_resource type="PackedScene" uid="uid://b7kgnyec7hva8" path="res://Storyline/4_Task 1/subscenes/drop_zone.tscn" id="15_12sj2"]
 [ext_resource type="Script" path="res://Storyline/4_Task 1/scripts/Boneka.gd" id="15_ed32d"]
+[ext_resource type="Texture2D" uid="uid://6bmp3hecp3tx" path="res://Sprites/Tasks/Task 1/Items/bola_3.png" id="18_b4x4x"]
 [ext_resource type="Script" path="res://Storyline/4_Task 1/scripts/Buku.gd" id="19_l6mh1"]
+[ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/backsound quest loop.mp3" id="21_1nsql"]
+[ext_resource type="AudioStream" uid="uid://dnps4av0mxtdo" path="res://Sounds/correct answer.mp3" id="22_5ekfc"]
+[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/task finish.mp3" id="23_l06b5"]
+[ext_resource type="AudioStream" uid="uid://brsij0rmv2oii" path="res://Sounds/wrong answer.mp3" id="24_fn84d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jexdr"]
 atlas = ExtResource("3_diier")
@@ -173,31 +176,31 @@ shape = SubResource("RectangleShape2D_sin8u")
 
 [node name="DropZones" type="Node2D" parent="."]
 
-[node name="DropZone" parent="DropZones" groups=["rest_zone"] instance=ExtResource("15_12sj2")]
+[node name="DropZone" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
 position = Vector2(694, 893)
 
-[node name="DropZone2" parent="DropZones" groups=["rest_zone"] instance=ExtResource("15_12sj2")]
+[node name="DropZone2" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
 position = Vector2(369, 981)
 
-[node name="DropZone3" parent="DropZones" groups=["rest_zone"] instance=ExtResource("15_12sj2")]
+[node name="DropZone3" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
 position = Vector2(893, 1005)
 
-[node name="DropZone4" parent="DropZones" groups=["rest_zone"] instance=ExtResource("15_12sj2")]
+[node name="DropZone4" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
 position = Vector2(486, 822)
 
-[node name="DropZone5" parent="DropZones" groups=["rest_zone"] instance=ExtResource("15_12sj2")]
+[node name="DropZone5" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
 position = Vector2(1456, 877)
 
-[node name="DropZone6" parent="DropZones" groups=["rest_zone"] instance=ExtResource("15_12sj2")]
+[node name="DropZone6" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
 position = Vector2(1262, 806)
 
-[node name="DropZone7" parent="DropZones" groups=["rest_zone"] instance=ExtResource("15_12sj2")]
+[node name="DropZone7" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
 position = Vector2(1328, 979)
 
-[node name="DropZone8" parent="DropZones" groups=["rest_zone"] instance=ExtResource("15_12sj2")]
+[node name="DropZone8" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
 position = Vector2(1093, 903)
 
-[node name="DropZone9" parent="DropZones" groups=["rest_zone"] instance=ExtResource("15_12sj2")]
+[node name="DropZone9" type="Marker2D" parent="DropZones" groups=["rest_zone", "zone"]]
 position = Vector2(883, 808)
 
 [node name="Bola1" type="Sprite2D" parent="."]
@@ -269,7 +272,7 @@ shape = SubResource("RectangleShape2D_cyt2f")
 
 [node name="Bola3" type="Sprite2D" parent="."]
 scale = Vector2(0.598446, 0.598446)
-texture = ExtResource("6_040il")
+texture = ExtResource("18_b4x4x")
 script = ExtResource("7_b58jc")
 
 [node name="Area2D" type="Area2D" parent="Bola3"]
@@ -301,6 +304,28 @@ position = Vector2(-14.2857, -4.28572)
 rotation = 1.0472
 scale = Vector2(8.92556, 4.41503)
 shape = SubResource("RectangleShape2D_k53q2")
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="Backsound" type="AudioStreamPlayer2D" parent="Sounds"]
+stream = ExtResource("21_1nsql")
+autoplay = true
+bus = &"Music"
+
+[node name="Correct" type="AudioStreamPlayer2D" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("22_5ekfc")
+bus = &"SFX"
+
+[node name="Finish" type="AudioStreamPlayer2D" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("23_l06b5")
+bus = &"SFX"
+
+[node name="Wrong" type="AudioStreamPlayer2D" parent="Sounds"]
+unique_name_in_owner = true
+stream = ExtResource("24_fn84d")
+bus = &"SFX"
 
 [connection signal="input_event" from="Bola1/Area2D" to="Bola1" method="_on_area_2d_input_event"]
 [connection signal="input_event" from="Boneka1/Area2D" to="Boneka1" method="_on_area_2d_input_event"]

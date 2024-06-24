@@ -5,6 +5,8 @@ var rest_point
 var rest_nodes = []
 @onready var box_bola = %BoxBola
 @onready var node = $".."
+@onready var correct = %Correct
+@onready var wrong = %Wrong
 
 func _ready():
 	rest_nodes = get_tree().get_nodes_in_group("zone")
@@ -13,7 +15,6 @@ func _ready():
 		rest_point = rest_nodes[ball_index].global_position
 	else:
 		rest_point = rest_nodes[0].global_position
-	#rest_point = rest_nodes[1].global_position
 
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click"):
@@ -41,10 +42,8 @@ func _input(event):
 					if child.is_in_group("box_ball"):
 						queue_free()
 						node.increment_count()
-					#elif child.is_in_group("rest_zone"):
-						#rest_point = child.global_position
-						#shortest_dist = distance
-					else:
-						pass
+						correct.play()
+					elif child.is_in_group("box_boneka") or child.is_in_group("box_buku"):
+						wrong.play()
 
 

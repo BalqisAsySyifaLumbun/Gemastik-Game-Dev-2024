@@ -191,6 +191,7 @@ Pintunya terkunci, aku tidak bisa keluar.
 TOLONG!!"
 
 [node name="DarkIn" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1904, 494.25)
 scale = Vector2(3.17, 2.22444)
 texture = ExtResource("1_is3rv")
