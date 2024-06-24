@@ -14,6 +14,7 @@ extends Area2D
 @onready var salah2 = $Salah2
 @onready var salah3 = $Salah3
 @onready var salah4 = $Salah4
+@onready var finish = $"../Finish_Sound"
 
 var collect = [0,0,0,0]
 
@@ -65,3 +66,4 @@ func _on_input_event(viewport, event, shape_idx):
 				print("Benar semua!")
 				base.visible = true
 				berhasil.visible = true
+				finish.play()
