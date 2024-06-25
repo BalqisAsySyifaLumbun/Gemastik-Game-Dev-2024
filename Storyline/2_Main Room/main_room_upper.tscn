@@ -97,7 +97,7 @@ text = "Bukan ini pintunya."
 metadata/_edit_use_anchors_ = true
 
 [node name="MC" parent="." instance=ExtResource("5_qr6gu")]
-position = Vector2(1230, -985)
+position = Vector2(5409, -926)
 script = ExtResource("6_xnkex")
 
 [node name="IconTurun" type="CharacterBody2D" parent="."]
