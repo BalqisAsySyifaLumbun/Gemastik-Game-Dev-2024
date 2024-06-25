@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d27chi846yccw"]
+[gd_scene load_steps=17 format=3 uid="uid://d27chi846yccw"]
 
 [ext_resource type="Texture2D" uid="uid://gfkqemsg4xfw" path="res://Sprites/Background/lantai bawah.jpg" id="1_iwbfb"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_fruwq"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cxk2rq4wf7bs8" path="res://Sprites/lighting animasi/lighting_lantai_bawah_5.png" id="4_e8bg8"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/MainCharacterLower.gd" id="4_juv2l"]
 [ext_resource type="Texture2D" uid="uid://dp7p1a87qmu5r" path="res://Sprites/lighting animasi/lighting_lantai_bawah_0.png" id="4_xrcjp"]
+[ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="5_egu37"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Naik.gd" id="7_77qn6"]
 [ext_resource type="Texture2D" uid="uid://wk1qw5h2n3a7" path="res://Sprites/Menu/naik.png" id="8_qlkve"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkIn.gd" id="11_8w4t3"]
@@ -134,6 +135,7 @@ offset_left = 1214.0
 offset_top = 382.0
 offset_right = 1569.0
 offset_bottom = 556.0
+theme_override_fonts/font = ExtResource("5_egu37")
 theme_override_font_sizes/font_size = 20
 text = "Umm.. suasananya
 sedikit menakutkan.
