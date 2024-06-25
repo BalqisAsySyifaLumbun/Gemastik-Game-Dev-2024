@@ -1,7 +1,6 @@
-[gd_scene load_steps=24 format=3 uid="uid://rir5f88uh8k0"]
+[gd_scene load_steps=20 format=3 uid="uid://rir5f88uh8k0"]
 
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_b6san"]
-[ext_resource type="Script" path="res://Storyline/2_Main Room/main_room.gd" id="1_c0m0q"]
 [ext_resource type="PackedScene" uid="uid://dnyv5ckw26ug8" path="res://Characters/Otan/otan.tscn" id="2_b88js"]
 [ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="3_qissp"]
 [ext_resource type="Texture2D" uid="uid://ctoeicjtiy6it" path="res://Sprites/Background/lantai_dasar.jpg" id="3_xtttp"]
@@ -15,7 +14,6 @@
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Naik.gd" id="13_ytrrr"]
 [ext_resource type="Texture2D" uid="uid://bwbwkiyip4gv6" path="res://Sprites/Menu/turun.png" id="14_jrdmi"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Turun.gd" id="15_0cpgp"]
-[ext_resource type="Script" path="res://Storyline/2_Main Room/pintu.gd" id="16_bnxp0"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8lvg4"]
 
@@ -31,31 +29,20 @@ radius = 77.3175
 [sub_resource type="CircleShape2D" id="CircleShape2D_gx3gq"]
 radius = 71.7844
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mm3ow"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n583p"]
-size = Vector2(92.9198, 108.478)
-
 [node name="Main" type="Node2D"]
-script = ExtResource("1_c0m0q")
 
-[node name="MapLayout" type="Node" parent="."]
+[node name="Boundaries" type="Node" parent="."]
 
-[node name="Koridor" type="Sprite2D" parent="MapLayout"]
-z_index = -1
-position = Vector2(5207, 465)
-texture = ExtResource("3_xtttp")
-
-[node name="Floor" type="StaticBody2D" parent="MapLayout"]
+[node name="Floor" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(1197, 1040)
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="MapLayout/Floor"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boundaries/Floor"]
 shape = SubResource("WorldBoundaryShape2D_8lvg4")
 
-[node name="RightWall" type="StaticBody2D" parent="MapLayout"]
+[node name="RightWall" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(11232, 464)
 
-[node name="TextureRect2" type="TextureRect" parent="MapLayout/RightWall"]
+[node name="TextureRect2" type="TextureRect" parent="Boundaries/RightWall"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -69,14 +56,14 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_b6san")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/RightWall"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/RightWall"]
 position = Vector2(-627, 0)
 shape = SubResource("WorldBoundaryShape2D_gycvm")
 
-[node name="LeftWall" type="StaticBody2D" parent="MapLayout"]
+[node name="LeftWall" type="StaticBody2D" parent="Boundaries"]
 position = Vector2(-791, 454)
 
-[node name="TextureRect2" type="TextureRect" parent="MapLayout/LeftWall"]
+[node name="TextureRect2" type="TextureRect" parent="Boundaries/LeftWall"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -90,9 +77,14 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_b6san")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="MapLayout/LeftWall"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Boundaries/LeftWall"]
 position = Vector2(598, -19)
 shape = SubResource("WorldBoundaryShape2D_ebfbm")
+
+[node name="Koridor" type="Sprite2D" parent="Boundaries"]
+z_index = -1
+position = Vector2(5207, 465)
+texture = ExtResource("3_xtttp")
 
 [node name="MC" parent="." instance=ExtResource("3_qissp")]
 position = Vector2(878, 469)
@@ -119,10 +111,11 @@ offset_top = 496.0
 offset_right = 4107.0
 offset_bottom = 686.0
 theme_override_font_sizes/font_size = 20
-text = "
+text = "???
 
---Tekan tombol Enter untuk memulai dialog--"
-wrap_mode = 1
+Hei, Halo!
+
+				- Tekan 'x' untuk berkenalan! -"
 
 [node name="TanggaKeAtas" type="Sprite2D" parent="."]
 visible = false
@@ -206,24 +199,3 @@ texture = ExtResource("14_jrdmi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IconTurun"]
 shape = SubResource("CircleShape2D_gx3gq")
-
-[node name="AreaPapan" type="Area2D" parent="."]
-position = Vector2(1826, 1016)
-scale = Vector2(2.75993, 0.391684)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPapan"]
-scale = Vector2(5.33181, 8.9392)
-shape = SubResource("RectangleShape2D_mm3ow")
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(768, 676)
-script = ExtResource("16_bnxp0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-scale = Vector2(4.69222, 6.13947)
-shape = SubResource("RectangleShape2D_n583p")
-
-[connection signal="body_entered" from="AreaPapan" to="." method="_on_area_papan_body_entered"]
-[connection signal="body_exited" from="AreaPapan" to="." method="_on_area_papan_body_exited"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -3,8 +3,10 @@ extends CharacterBody2D
 const SPEED = 500.0
 const JUMP_VELOCITY = -400.0
 @onready var sprite_2d = $Sprite2D
+
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
 #@onready var sprite = get_parent().get_node('Badak/CollisionShape2D')
 @onready var otan = get_parent().get_node('Otan/CollisionShape2D')
 @onready var text_edit = get_parent().get_node('TextEdit4')
@@ -38,6 +40,7 @@ func _physics_process(delta):
 	var naik_global_pos = naik.global_position
 	var sprite_global_pos = otan.global_position
 	
+#region CHANGE SCENE TO UPPER / LOWER ROOM
 	if player_global_pos.distance_to(turun_global_pos) <= 650:
 		if Input.is_action_just_pressed("talk"):
 			TransitionScreen.transition_between()
@@ -48,7 +51,9 @@ func _physics_process(delta):
 			TransitionScreen.transition_between()
 			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room_upper.tscn")
-			
+#endregion =================================
+
+#region GOING TO PINTU
 	var wrong_open = false
 		
 	if player_global_pos.distance_to(label_pintu4.global_position) < 600:
@@ -74,7 +79,9 @@ func _physics_process(delta):
 	else:
 		wrong_open = false
 		text_edit_door_6.visible = false
+#endregion =============================================================
 	
+#region ANIMATION AND MOVEMENT MECHANICS
 	if (velocity.x > 1 || velocity.x < -1):
 		sprite_2d.animation = "walk"
 	else:
@@ -99,30 +106,35 @@ func _physics_process(delta):
 	move_and_slide()
 	var isleft = velocity.x < 0
 	sprite_2d.flip_h = isleft
+#endregion =============================================
 	
+#region INSTRUCTION TEXT
 	if (player_global_pos.x <= instruction.global_position.x + 150) && (player_global_pos.x >= instruction.global_position.x - 150):
 		instruction.visible = true
 		if Input.is_action_just_pressed("talk"):
 			instruction.text = "“Baiklah, sepertinya ini\ntidak akan terlalu buruk.”"
-		
 	else:
 		instruction.text = "Clawns & Paws Haven\nmerupakan sekolah dan panti asuhan\nuntuk semua putra-putri kalangan satwa.\nKami memberikan cinta\ndan kasih kepada siapapun” "
 		instruction.visible = false
 
 	if (player_global_pos.x <= sprite_global_pos.x + 400) && (player_global_pos.x >= sprite_global_pos.x - 400):
 		text_edit.visible = true
-		if Input.is_action_just_pressed("talk") and not dialog_in_progress:
-			text_edit.text = "\n\n--Tekan tombol Enter untuk melanjutkan dialog--"
+		if not dialog_in_progress:
 			dialog_in_progress = true
 	else:
 		text_edit.visible = false
+#endregion =====================================================================
 
+#region DIALOG WITH OTAN
 	if dialog_in_progress and Input.is_action_just_pressed("dialog"):
-		var array = ["Orangutan\n\nHai, apakah kau penghuni baru?", "Orangutan\n\nNamaku Otan!\nCobalah cari ruangan tak terkunci\ndengan pintu warna biru!", "Ucing\n\nApakah itu ruang guru?", "Otan\n\nCari saja~!\nKamu pasti akan menyukainya!!!"]
-		if count < array.size():
-			text_edit.text = array[count]
-			count += 1
-		else:
-			text_edit.text = "Otan\n\nHihihi.."
-			dialog_in_progress = false
-			count = 0
+		Dialogic.start("main_room")
+		dialog_in_progress = false
+		#var array = ["Orangutan\n\nHai, apakah kau penghuni baru?", "Orangutan\n\nNamaku Otan!\nCobalah cari ruangan tak terkunci\ndengan pintu warna biru!", "Ucing\n\nApakah itu ruang guru?", "Otan\n\nCari saja~!\nKamu pasti akan menyukainya!!!"]
+		#if count < array.size():
+			#text_edit.text = array[count]
+			#count += 1
+		#else:
+			#text_edit.text = "Otan\n\nHihihi.."
+			#dialog_in_progress = false
+			#count = 0
+#endregion

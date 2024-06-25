@@ -25,11 +25,15 @@ Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 [dialogic]
 
 directories/dch_directory={
+"Otan": "res://Dialogue/Characters/Otan.dch",
 "Ucing": "res://Dialogue/Characters/Ucing.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
-"main_room": "res://Dialogue/Timelines/main_room.dtl"
+"empty_timeline": "res://Dialogue/Timelines/empty_timeline.dtl",
+"intro_main_room": "res://Dialogue/Timelines/intro_main_room.dtl",
+"main_room": "res://Dialogue/Timelines/main_room.dtl",
+"wrong_door": "res://Dialogue/Timelines/wrong_door.dtl"
 }
 layout/style_list=["res://Dialogue/speaker_textbox.tres"]
 layout/default_style="res://Dialogue/speaker_textbox.tres"

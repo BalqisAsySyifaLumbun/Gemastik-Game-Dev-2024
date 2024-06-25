@@ -75,7 +75,7 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ieknj"]
 custom_solver_bias = 0.168
-size = Vector2(320, 463.667)
+size = Vector2(327.49, 537.918)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 z_index = 5
@@ -84,7 +84,6 @@ z_index = 5
 position = Vector2(1, 1)
 rotation = 1.31249
 scale = Vector2(3, -1.649)
-zoom = Vector2(1.25, 1.042)
 position_smoothing_enabled = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
@@ -98,5 +97,5 @@ flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(47, 273)
-scale = Vector2(0.435505, 0.481128)
+scale = Vector2(0.439709, 0.598604)
 shape = SubResource("RectangleShape2D_ieknj")

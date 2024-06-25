@@ -23,7 +23,6 @@ func _process(delta):
 	var mc_global_pos = global_position
 	var distance = player_global_pos.distance_to(mc_global_pos)
 
-	#print("Turun ",distance)
 	if distance <= 750:
 		current_time += delta
 	else:

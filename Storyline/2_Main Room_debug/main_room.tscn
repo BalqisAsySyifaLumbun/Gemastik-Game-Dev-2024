@@ -1,21 +1,19 @@
-[gd_scene load_steps=24 format=3 uid="uid://rir5f88uh8k0"]
+[gd_scene load_steps=20 format=3 uid="uid://53nqepf5nmgw"]
 
-[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_b6san"]
-[ext_resource type="Script" path="res://Storyline/2_Main Room/main_room.gd" id="1_c0m0q"]
-[ext_resource type="PackedScene" uid="uid://dnyv5ckw26ug8" path="res://Characters/Otan/otan.tscn" id="2_b88js"]
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="3_qissp"]
-[ext_resource type="Texture2D" uid="uid://ctoeicjtiy6it" path="res://Sprites/Background/lantai_dasar.jpg" id="3_xtttp"]
-[ext_resource type="Script" path="res://Characters/MC/MainCharacter.gd" id="4_xucuy"]
-[ext_resource type="PackedScene" uid="uid://bwmhkvebg3qd7" path="res://Storyline/2_Main Room/subscenes/Door.tscn" id="5_kfx8v"]
-[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/GoDoor.gd" id="6_nry5r"]
-[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkTransition.gd" id="7_6jvkr"]
-[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkIn.gd" id="8_1q0l7"]
-[ext_resource type="Texture2D" uid="uid://drftnag4vycph" path="res://Sprites/Background/tangga ke atas.png" id="9_lr4cp"]
-[ext_resource type="Texture2D" uid="uid://wk1qw5h2n3a7" path="res://Sprites/Menu/naik.png" id="13_bcx6w"]
-[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Naik.gd" id="13_ytrrr"]
-[ext_resource type="Texture2D" uid="uid://bwbwkiyip4gv6" path="res://Sprites/Menu/turun.png" id="14_jrdmi"]
-[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Turun.gd" id="15_0cpgp"]
-[ext_resource type="Script" path="res://Storyline/2_Main Room/pintu.gd" id="16_bnxp0"]
+[ext_resource type="Texture2D" uid="uid://ctoeicjtiy6it" path="res://Sprites/Background/lantai_dasar.jpg" id="1_vjr33"]
+[ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_sdb2s"]
+[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="3_3e0g1"]
+[ext_resource type="Script" path="res://Characters/MC/MainCharacter.gd" id="4_0sscu"]
+[ext_resource type="PackedScene" uid="uid://dnyv5ckw26ug8" path="res://Characters/Otan/otan.tscn" id="5_emb3e"]
+[ext_resource type="Texture2D" uid="uid://drftnag4vycph" path="res://Sprites/Background/tangga ke atas.png" id="6_n2f5h"]
+[ext_resource type="PackedScene" uid="uid://bwmhkvebg3qd7" path="res://Storyline/2_Main Room/subscenes/Door.tscn" id="7_nr0d6"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/GoDoor.gd" id="8_b6d27"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkIn.gd" id="9_v3ito"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkTransition.gd" id="10_f6cex"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Naik.gd" id="11_d1sjn"]
+[ext_resource type="Texture2D" uid="uid://wk1qw5h2n3a7" path="res://Sprites/Menu/naik.png" id="12_3u2vt"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Turun.gd" id="13_jfswb"]
+[ext_resource type="Texture2D" uid="uid://bwbwkiyip4gv6" path="res://Sprites/Menu/turun.png" id="14_tjvxe"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8lvg4"]
 
@@ -31,20 +29,14 @@ radius = 77.3175
 [sub_resource type="CircleShape2D" id="CircleShape2D_gx3gq"]
 radius = 71.7844
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mm3ow"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n583p"]
-size = Vector2(92.9198, 108.478)
-
 [node name="Main" type="Node2D"]
-script = ExtResource("1_c0m0q")
 
 [node name="MapLayout" type="Node" parent="."]
 
 [node name="Koridor" type="Sprite2D" parent="MapLayout"]
 z_index = -1
 position = Vector2(5207, 465)
-texture = ExtResource("3_xtttp")
+texture = ExtResource("1_vjr33")
 
 [node name="Floor" type="StaticBody2D" parent="MapLayout"]
 position = Vector2(1197, 1040)
@@ -67,7 +59,7 @@ offset_right = 626.5
 offset_bottom = 648.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_b6san")
+texture = ExtResource("2_sdb2s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MapLayout/RightWall"]
 position = Vector2(-627, 0)
@@ -88,17 +80,17 @@ offset_right = 600.0
 offset_bottom = 644.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_b6san")
+texture = ExtResource("2_sdb2s")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="MapLayout/LeftWall"]
 position = Vector2(598, -19)
 shape = SubResource("WorldBoundaryShape2D_ebfbm")
 
-[node name="MC" parent="." instance=ExtResource("3_qissp")]
+[node name="MC" parent="." instance=ExtResource("3_3e0g1")]
 position = Vector2(878, 469)
-script = ExtResource("4_xucuy")
+script = ExtResource("4_0sscu")
 
-[node name="Otan" parent="." instance=ExtResource("2_b88js")]
+[node name="Otan" parent="." instance=ExtResource("5_emb3e")]
 position = Vector2(4151, 799)
 
 [node name="TextEdit3" type="TextEdit" parent="."]
@@ -127,24 +119,24 @@ wrap_mode = 1
 [node name="TanggaKeAtas" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(4071, -3003)
-texture = ExtResource("9_lr4cp")
+texture = ExtResource("6_n2f5h")
 
 [node name="TanggaKeAtas2" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(5857, 496)
-texture = ExtResource("9_lr4cp")
+texture = ExtResource("6_n2f5h")
 
-[node name="Go_Door4" parent="." instance=ExtResource("5_kfx8v")]
+[node name="Go_Door4" parent="." instance=ExtResource("7_nr0d6")]
 position = Vector2(2935, 460)
-script = ExtResource("6_nry5r")
+script = ExtResource("8_b6d27")
 
-[node name="Go_Door5" parent="." instance=ExtResource("5_kfx8v")]
+[node name="Go_Door5" parent="." instance=ExtResource("7_nr0d6")]
 position = Vector2(7295, 476)
-script = ExtResource("6_nry5r")
+script = ExtResource("8_b6d27")
 
-[node name="Go_Door6" parent="." instance=ExtResource("5_kfx8v")]
+[node name="Go_Door6" parent="." instance=ExtResource("7_nr0d6")]
 position = Vector2(8607, 460)
-script = ExtResource("6_nry5r")
+script = ExtResource("8_b6d27")
 
 [node name="TextEditDoor4" type="TextEdit" parent="."]
 offset_left = 2826.0
@@ -174,23 +166,23 @@ text = "Bukan ini pintunya."
 visible = false
 position = Vector2(5475, 434)
 scale = Vector2(9.08959, 1.85518)
-texture = ExtResource("1_b6san")
-script = ExtResource("8_1q0l7")
+texture = ExtResource("2_sdb2s")
+script = ExtResource("9_v3ito")
 
 [node name="DarkLeave" type="Sprite2D" parent="."]
 visible = false
 position = Vector2(3897.03, -858)
 scale = Vector2(7.32995, 1.67427)
-texture = ExtResource("1_b6san")
-script = ExtResource("7_6jvkr")
+texture = ExtResource("2_sdb2s")
+script = ExtResource("10_f6cex")
 
 [node name="IconNaik" type="CharacterBody2D" parent="."]
 position = Vector2(5458, 437)
-script = ExtResource("13_ytrrr")
+script = ExtResource("11_d1sjn")
 
 [node name="Naik" type="Sprite2D" parent="IconNaik"]
 position = Vector2(-1, -4)
-texture = ExtResource("13_bcx6w")
+texture = ExtResource("12_3u2vt")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IconNaik"]
 position = Vector2(3, 2)
@@ -198,32 +190,11 @@ shape = SubResource("CircleShape2D_5r8tb")
 
 [node name="IconTurun" type="CharacterBody2D" parent="."]
 position = Vector2(6201, 424)
-script = ExtResource("15_0cpgp")
+script = ExtResource("13_jfswb")
 
 [node name="Turun" type="Sprite2D" parent="IconTurun"]
 position = Vector2(2, -4)
-texture = ExtResource("14_jrdmi")
+texture = ExtResource("14_tjvxe")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IconTurun"]
 shape = SubResource("CircleShape2D_gx3gq")
-
-[node name="AreaPapan" type="Area2D" parent="."]
-position = Vector2(1826, 1016)
-scale = Vector2(2.75993, 0.391684)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaPapan"]
-scale = Vector2(5.33181, 8.9392)
-shape = SubResource("RectangleShape2D_mm3ow")
-
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2(768, 676)
-script = ExtResource("16_bnxp0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-scale = Vector2(4.69222, 6.13947)
-shape = SubResource("RectangleShape2D_n583p")
-
-[connection signal="body_entered" from="AreaPapan" to="." method="_on_area_papan_body_entered"]
-[connection signal="body_exited" from="AreaPapan" to="." method="_on_area_papan_body_exited"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
