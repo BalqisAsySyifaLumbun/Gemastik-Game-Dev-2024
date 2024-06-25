@@ -32,7 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://1yo8mdebatl1" path="res://Sprites/Tasks/Task 5/Trash item/27.png" id="30_6natb"]
 [ext_resource type="Texture2D" uid="uid://crt5nap6fwec2" path="res://Sprites/Tasks/Task 5/Trash item/28.png" id="31_70cwt"]
 [ext_resource type="Texture2D" uid="uid://d0ufrn1q2q545" path="res://Sprites/Tasks/Task 5/Trash item/29.png" id="32_pxrd2"]
-[ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/backsound quest loop.mp3" id="33_33423"]
+[ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/Task/backsound quest loop.mp3" id="33_33423"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l57g8"]
 

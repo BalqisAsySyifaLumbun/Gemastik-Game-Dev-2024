@@ -84,10 +84,11 @@ z_index = 5
 position = Vector2(1, 1)
 rotation = 1.31249
 scale = Vector2(3, -1.649)
+zoom = Vector2(1.1, 1.1)
 position_smoothing_enabled = true
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(36, 309)
+position = Vector2(36, 252)
 scale = Vector2(0.548, 0.588)
 sprite_frames = SubResource("SpriteFrames_38lki")
 animation = &"walk"
@@ -96,6 +97,6 @@ frame_progress = 0.357553
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(47, 273)
+position = Vector2(47, 216)
 scale = Vector2(0.439709, 0.598604)
 shape = SubResource("RectangleShape2D_ieknj")
