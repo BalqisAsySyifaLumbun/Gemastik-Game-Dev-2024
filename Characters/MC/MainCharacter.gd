@@ -9,7 +9,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 @onready var otan = get_parent().get_node('Otan/CollisionShape2D')
 @onready var text_edit = get_parent().get_node('TextEdit4')
-
+@onready var ikon_naik = $"../GuideIcon/IconNaik"
+@onready var ikon_turun = $"../GuideIcon/IconTurun"
 
 var count = 0
 var dialog_in_progress = false
@@ -20,6 +21,9 @@ func _physics_process(delta):
 	
 	var player_global_pos = sprite_2d.global_position
 	var sprite_global_pos = otan.global_position
+	var naik_global_pos = ikon_naik.global_position
+	var turun_global_pos = ikon_turun.global_position
+	
 	
 	
 #region ANIMATION AND MOVEMENT MECHANICS
@@ -52,14 +56,31 @@ func _physics_process(delta):
 #region INSTRUCTION TEXT
 	if (player_global_pos.x <= sprite_global_pos.x + 400) && (player_global_pos.x >= sprite_global_pos.x - 400):
 		text_edit.visible = true
+		#region DIALOG WITH OTAN
+		if dialog_in_progress and Input.is_action_just_pressed("talk"):
+			Dialogic.start("main_room")
+			dialog_in_progress = false
+#endregion
 		if not dialog_in_progress:
 			dialog_in_progress = true
 	else:
 		text_edit.visible = false
 #endregion =====================================================================
+	
+	if (player_global_pos.x - naik_global_pos.x <= 100) && (player_global_pos.x - naik_global_pos.x >= -100):
+		if Input.is_action_just_pressed("talk"):
+			Dialogic.start("ke_atas")
+			Dialogic.signal_event.connect(DialogicSignal)
+	
+	if (player_global_pos.x - turun_global_pos.x <= 100) && (player_global_pos.x - turun_global_pos.x >= -100):
+		if Input.is_action_just_pressed("talk"):
+			Dialogic.start("ke_bawah")
+			Dialogic.signal_event.connect(DialogicSignal2)
 
-#region DIALOG WITH OTAN
-	if dialog_in_progress and Input.is_action_just_pressed("talk"):
-		Dialogic.start("main_room")
-		dialog_in_progress = false
-#endregion
+func DialogicSignal(argument:String):
+	if argument == "Ya":
+		get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room_upper.tscn")
+
+func DialogicSignal2(argument:String):
+	if argument == "Ya":
+		get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room_lower.tscn")

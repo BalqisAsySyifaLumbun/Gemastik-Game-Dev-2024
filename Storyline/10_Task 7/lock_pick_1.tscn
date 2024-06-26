@@ -12,8 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://bo321xj27hex6" path="res://Sprites/Tasks/Task 7/Level 1/opsi 2.png" id="7_r1kfp"]
 [ext_resource type="Texture2D" uid="uid://mkshvy6qi51o" path="res://Sprites/Tasks/Task 7/Level 1/opsi 3.png" id="8_pgvlk"]
 [ext_resource type="Texture2D" uid="uid://cg6xwk634j2j1" path="res://Sprites/Tasks/Task 7/Level 1/opsi 4.png" id="9_4fnnl"]
-[ext_resource type="AudioStream" uid="uid://bbydlh8fksxrj" path="res://Sounds/Task/correct answer.mp3" id="13_ckwyx"]
-[ext_resource type="AudioStream" uid="uid://dijynhoke17vf" path="res://Sounds/Task/wrong answer.mp3" id="14_k4q2w"]
+[ext_resource type="AudioStream" uid="uid://dnps4av0mxtdo" path="res://Sounds/Task/correct answer.mp3" id="13_ckwyx"]
+[ext_resource type="AudioStream" uid="uid://brsij0rmv2oii" path="res://Sounds/Task/wrong answer.mp3" id="14_k4q2w"]
 [ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/Task/backsound quest loop.mp3" id="15_kltgp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nw812"]

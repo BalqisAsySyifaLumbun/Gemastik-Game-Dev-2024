@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=3 uid="uid://rir5f88uh8k0"]
+[gd_scene load_steps=75 format=3 uid="uid://rir5f88uh8k0"]
 
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_b6san"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/main_room.gd" id="1_c0m0q"]
@@ -54,6 +54,7 @@
 [ext_resource type="Texture2D" uid="uid://byf3ekhx4kh5j" path="res://Sprites/Guide Icon/turun tangga/turun_0012.png" id="42_np5oh"]
 [ext_resource type="Texture2D" uid="uid://be3i63il8su0n" path="res://Sprites/Guide Icon/turun tangga/turun_0013.png" id="43_q0d2o"]
 [ext_resource type="Texture2D" uid="uid://brbvky5b6ogpw" path="res://Sprites/Guide Icon/turun tangga/turun_0014.png" id="44_8byjk"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkIn.gd" id="55_odhb6"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8lvg4"]
 
@@ -444,7 +445,7 @@ position = Vector2(598, -19)
 shape = SubResource("WorldBoundaryShape2D_ebfbm")
 
 [node name="MC" parent="." instance=ExtResource("3_qissp")]
-position = Vector2(1152, 628)
+position = Vector2(5698, 641)
 script = ExtResource("4_xucuy")
 
 [node name="Otan" parent="." instance=ExtResource("2_b88js")]
@@ -539,6 +540,14 @@ position = Vector2(7285, 672)
 [node name="Pintu4" parent="GuideIcon" instance=ExtResource("17_dy5op")]
 position = Vector2(8599, 665)
 
+[node name="DarkIn" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(3441, 448)
+scale = Vector2(4.71146, 1.85518)
+texture = ExtResource("1_b6san")
+script = ExtResource("55_odhb6")
+
+[connection signal="area_entered" from="GuideIcon/IconNaik" to="GuideIcon/IconNaik" method="_on_area_entered"]
 [connection signal="body_entered" from="GuideIcon/IconNaik" to="GuideIcon/IconNaik" method="_on_body_entered"]
 [connection signal="body_exited" from="GuideIcon/IconNaik" to="GuideIcon/IconNaik" method="_on_body_exited"]
 [connection signal="body_entered" from="GuideIcon/IconTurun" to="GuideIcon/IconTurun" method="_on_body_entered"]

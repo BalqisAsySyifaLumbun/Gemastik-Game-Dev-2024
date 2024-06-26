@@ -32,6 +32,8 @@ directories/dch_directory={
 directories/dtl_directory={
 "empty_timeline": "res://Dialogue/Timelines/empty_timeline.dtl",
 "intro_main_room": "res://Dialogue/Timelines/intro_main_room.dtl",
+"ke_atas": "res://Dialogue/Timelines/ke_atas.dtl",
+"ke_bawah": "res://Dialogue/Timelines/ke_bawah.dtl",
 "main_room": "res://Dialogue/Timelines/main_room.dtl",
 "wrong_door": "res://Dialogue/Timelines/wrong_door.dtl"
 }

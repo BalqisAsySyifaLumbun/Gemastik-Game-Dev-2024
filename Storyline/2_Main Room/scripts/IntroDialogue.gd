@@ -16,9 +16,9 @@ func _input(event):
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 				TransitionScreen.transition_between()
 				await TransitionScreen.on_transition_finished
-				get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room.tscn")
+				get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room_first.tscn")
 
 func _on_finished():
 	TransitionScreen.transition_between()
 	await TransitionScreen.on_transition_finished
-	get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room.tscn")
+	get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room_first.tscn")
