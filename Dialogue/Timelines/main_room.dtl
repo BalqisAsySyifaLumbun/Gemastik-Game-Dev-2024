@@ -1,8 +1,17 @@
 Ucing: Hei, Halo!
+[wait time="1.0"]
 Otan: Hai, apakah kau penghuni baru?
-Otan: Namaku Otan
+[wait time="1.0"]
+- Ya
+- Tidak
+Otan: Namaku Otan!
+[wait time="1.0"]
 Otan: Cobalah cari ruangan tak terkunci dengan pintu warna biru!
+[wait time="1.0"]
 Ucing: Apakah itu ruang guru?
+[wait time="1.0"]
 Otan: Cari saja~!
+[wait time="1.0"]
 Otan: Kamu pasti akan menyukainya!!!
+[wait time="1.0"]
 Otan: Hihihi..

@@ -110,8 +110,10 @@ func _physics_process(delta):
 	
 #region INSTRUCTION TEXT
 	if (player_global_pos.x <= instruction.global_position.x + 150) && (player_global_pos.x >= instruction.global_position.x - 150):
-		instruction.visible = true
+		#Dialogic.start("intro_main_room")
+		instruction.visible = false
 		if Input.is_action_just_pressed("talk"):
+			
 			instruction.text = "“Baiklah, sepertinya ini\ntidak akan terlalu buruk.”"
 	else:
 		instruction.text = "Clawns & Paws Haven\nmerupakan sekolah dan panti asuhan\nuntuk semua putra-putri kalangan satwa.\nKami memberikan cinta\ndan kasih kepada siapapun” "

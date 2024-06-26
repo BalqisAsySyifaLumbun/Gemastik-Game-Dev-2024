@@ -95,6 +95,7 @@ script = ExtResource("4_owffb")
 position = Vector2(4151, 799)
 
 [node name="TextEdit3" type="TextEdit" parent="."]
+visible = false
 offset_left = 1999.0
 offset_top = 371.0
 offset_right = 2417.0
