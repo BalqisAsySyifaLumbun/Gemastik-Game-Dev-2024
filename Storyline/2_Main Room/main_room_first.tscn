@@ -541,7 +541,6 @@ position = Vector2(7285, 672)
 position = Vector2(8599, 665)
 
 [node name="DarkIn" type="Sprite2D" parent="GuideIcon"]
-visible = false
 position = Vector2(2551, 445)
 scale = Vector2(4.71146, 1.85518)
 texture = ExtResource("1_b6san")

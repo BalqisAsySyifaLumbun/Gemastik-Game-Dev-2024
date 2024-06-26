@@ -131,17 +131,13 @@ position = Vector2(913, 446)
 script = ExtResource("4_60s17")
 
 [node name="TextEdit5" type="TextEdit" parent="."]
+visible = false
 offset_left = 1214.0
 offset_top = 382.0
 offset_right = 1569.0
 offset_bottom = 556.0
 theme_override_fonts/font = ExtResource("5_egu37")
 theme_override_font_sizes/font_size = 20
-text = "Umm.. suasananya
-sedikit menakutkan.
-Tapi aku akan masuk!
-
-   - ketik 'X' untuk membuka pintu!-"
 
 [node name="MC" parent="." instance=ExtResource("2_imv5t")]
 position = Vector2(2575, 517)
@@ -167,7 +163,6 @@ autoplay = "default"
 frame_progress = 0.770689
 
 [node name="DarkIn" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(2573, 623)
 scale = Vector2(4.71146, 1.85518)
 texture = ExtResource("2_fruwq")

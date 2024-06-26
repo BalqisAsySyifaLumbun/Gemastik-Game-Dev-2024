@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://2dpf4vwnxdxn"]
+[gd_scene load_steps=52 format=3 uid="uid://2dpf4vwnxdxn"]
 
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_is3rv"]
 [ext_resource type="Texture2D" uid="uid://bytou1d4kln6e" path="res://Sprites/Background/base.jpg" id="2_dn7qr"]
@@ -30,6 +30,23 @@
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/MainCharacterGudang.gd" id="28_ramj0"]
 [ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="29_acw8g"]
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/DarkIn.gd" id="29_dbkcw"]
+[ext_resource type="PackedScene" uid="uid://bwmhkvebg3qd7" path="res://Storyline/2_Main Room/subscenes/Door.tscn" id="30_s5e5u"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/GoDoor.gd" id="31_7y1nw"]
+[ext_resource type="Texture2D" uid="uid://btj25e02din7a" path="res://Sprites/Guide Icon/task/quest_0000.png" id="33_xgxwe"]
+[ext_resource type="Texture2D" uid="uid://bxnqjtap5cx4u" path="res://Sprites/Guide Icon/task/quest_0001.png" id="34_74cox"]
+[ext_resource type="Texture2D" uid="uid://bg4dbr1lespa3" path="res://Sprites/Guide Icon/task/quest_0002.png" id="35_xwduo"]
+[ext_resource type="Texture2D" uid="uid://oypsfdgcb0n8" path="res://Sprites/Guide Icon/task/quest_0003.png" id="36_hfuk1"]
+[ext_resource type="Texture2D" uid="uid://bhl30ppc7qh40" path="res://Sprites/Guide Icon/task/quest_0004.png" id="37_plr3y"]
+[ext_resource type="Texture2D" uid="uid://cbgpmt0ffgvpa" path="res://Sprites/Guide Icon/task/quest_0005.png" id="38_jel1d"]
+[ext_resource type="Texture2D" uid="uid://b8id1sontk83e" path="res://Sprites/Guide Icon/task/quest_0006.png" id="39_a8rub"]
+[ext_resource type="Texture2D" uid="uid://cojpola0st64e" path="res://Sprites/Guide Icon/task/quest_0007.png" id="40_avtfc"]
+[ext_resource type="Texture2D" uid="uid://xywls7hfm4g5" path="res://Sprites/Guide Icon/task/quest_0008.png" id="41_12hjo"]
+[ext_resource type="Texture2D" uid="uid://d3ys5jqyxaxwe" path="res://Sprites/Guide Icon/task/quest_0009.png" id="42_f6vu3"]
+[ext_resource type="Texture2D" uid="uid://ttdjdextivc6" path="res://Sprites/Guide Icon/task/quest_0010.png" id="43_72vrm"]
+[ext_resource type="Texture2D" uid="uid://c1xoih3k1fv6c" path="res://Sprites/Guide Icon/task/quest_0011.png" id="44_ndadc"]
+[ext_resource type="Texture2D" uid="uid://bmr1wkfmfhi6j" path="res://Sprites/Guide Icon/task/quest_0012.png" id="45_msyea"]
+[ext_resource type="Texture2D" uid="uid://ct1xu5nhmy2uv" path="res://Sprites/Guide Icon/task/quest_0014.png" id="46_b6dt4"]
+[ext_resource type="Texture2D" uid="uid://c13qur6g5vpvx" path="res://Sprites/Guide Icon/task/quest_0013.png" id="47_e6mup"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4lked"]
 size = Vector2(5812, 293.25)
@@ -114,6 +131,59 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_vyeiv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_xgxwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_74cox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_xwduo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_hfuk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_plr3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_jel1d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_a8rub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_avtfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_12hjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_f6vu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_72vrm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_ndadc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_msyea")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_b6dt4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_e6mup")
+}],
+"loop": true,
+"name": &"default",
+"speed": 16.0
+}]
+
 [node name="Main2" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -152,19 +222,19 @@ shape = SubResource("RectangleShape2D_w4vqc")
 position = Vector2(-1923, 462)
 shape = SubResource("RectangleShape2D_w4vqc")
 
-[node name="Kotak" parent="." instance=ExtResource("26_073ue")]
-position = Vector2(3375, 965)
-
-[node name="MC" parent="." instance=ExtResource("27_2hg52")]
-position = Vector2(2994, 614)
-script = ExtResource("28_ramj0")
-
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 position = Vector2(793, 535)
 scale = Vector2(1.65429, 1.42037)
 sprite_frames = SubResource("SpriteFrames_6j02s")
 autoplay = "default"
 frame_progress = 0.696502
+
+[node name="Kotak" parent="." instance=ExtResource("26_073ue")]
+position = Vector2(3375, 965)
+
+[node name="MC" parent="." instance=ExtResource("27_2hg52")]
+position = Vector2(2994, 614)
+script = ExtResource("28_ramj0")
 
 [node name="RichTextLabel2" type="TextEdit" parent="."]
 visible = false
@@ -174,24 +244,31 @@ offset_right = 838.0
 offset_bottom = 695.0
 theme_override_fonts/font = ExtResource("29_acw8g")
 theme_override_font_sizes/font_size = 20
-text = "Ayo kita susun isi kotaknya lagi.
-
-- Ketik x untuk membereskan!-"
 
 [node name="RichTextLabel" type="TextEdit" parent="."]
+visible = false
 offset_left = 2268.0
 offset_top = 473.0
 offset_right = 2761.0
 offset_bottom = 668.0
 theme_override_fonts/font = ExtResource("29_acw8g")
 theme_override_font_sizes/font_size = 20
-text = "Oh, anak tadi pasti membohongiku.
-Pintunya terkunci, aku tidak bisa keluar. 
 
-TOLONG!!"
+[node name="Go_Door" parent="." instance=ExtResource("30_s5e5u")]
+position = Vector2(2906, 425)
+script = ExtResource("31_7y1nw")
 
 [node name="DarkIn" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1904, 494.25)
 scale = Vector2(3.17, 2.22444)
 texture = ExtResource("1_is3rv")
 script = ExtResource("29_dbkcw")
+
+[node name="Task1" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(595, 308)
+scale = Vector2(0.525, 0.581)
+sprite_frames = SubResource("SpriteFrames_vyeiv")
+autoplay = "default"
+frame_progress = 0.786333

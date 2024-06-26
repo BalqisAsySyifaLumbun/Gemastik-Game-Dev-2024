@@ -10,6 +10,8 @@ const TEXT_DELAY_FRAMES = 10 * 60  # 10 seconds at 60 FPS
 @onready var main_char = get_parent().get_node('MC/CollisionShape2D')
 @onready var text_gudang = get_parent().get_node('RichTextLabel')
 @onready var text_gudang2 = get_parent().get_node('RichTextLabel2')
+@onready var pintu = get_parent().get_node('Go_Door')
+@onready var task = get_parent().get_node('Task1')
 
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -34,23 +36,28 @@ func _physics_process(delta):
 	if main_char != null and kotak != null:
 		var player_global_pos = main_char.global_position
 		var text_gudang_global_pos = text_gudang.global_position
-		var sprite2_global_pos = kotak2.global_position
+		var pintu_global_pos = pintu.global_position
+		var kotak2_global_pos = kotak2.global_position
 		
 		
 		# Calculate the distance between the characters
-		var distance_a = player_global_pos.x - text_gudang_global_pos.x
+		var distance_a = player_global_pos.x - pintu_global_pos.x
 		print("DistanceA:", distance_a)
-		var distance = player_global_pos.distance_to(sprite2_global_pos)
+		var distance = player_global_pos.x - kotak2_global_pos.x
 		print("Distance:", distance)
 		
-		if distance_a >= 250 || distance_a <= 0 :
-			#print("False")
-			text_gudang.visible = false
+		
+		if (distance_a >= -250 || distance_a <= 250) && Input.is_action_just_pressed("talk"):
+			if task.visible == false:
+				Dialogic.start("terjebak")
+				await Dialogic.timeline_ended
 		else:
-			text_gudang.visible = true
-			if Input.is_action_just_pressed("talk"):
-				text_gudang.text = "Ini sia sia, pintunya terkunci,\naku harus mencari cara keluar lain!"
-			
+			pass
+		
+		if task.visible == true:
+			if (distance >= -250 || distance <= 250) && Input.is_action_just_pressed("talk"):
+				Dialogic.start("susun_kotak")
+				Dialogic.signal_event.connect(DialogicSignal)
 		
 		# Check if the distance is within a certain range
 		if distance <= 250 && !animation_played:
@@ -62,23 +69,10 @@ func _physics_process(delta):
 			delay_counter += 1
 			if delay_counter >= DELAY_FRAMES:
 				kotak.animation = "mess"  # Set animation on AnimatedSprite node
-				
-				# Show text and reset text delay counter if not shown already
-				if !text2_shown && text_delay_counter <= TEXT_DELAY_FRAMES:
-					text_gudang2.visible = true
-					text2_shown = true
-					text_delay_counter = 0  # Reset text delay counter
-				else:
-					if distance >= 400:
-						text_gudang2.visible = false
-					else:
-						text_gudang2.visible = true
-						if Input.is_action_just_pressed("talk"):
-							get_tree().change_scene_to_file("res://Storyline/4_Task 1/box_drag_drop.tscn")
-						
-				
-				# Increment text delay counter
-				text_delay_counter += 1
+				if kotak.animation == "mess":
+					task.visible = true
+					
+					
 		else:
 			# Reset animation state when the characters are not in range
 			kotak.animation = "idle"  # Set idle animation
@@ -86,3 +80,8 @@ func _physics_process(delta):
 	else:
 		pass
 		#print("Nodes not properly initialized.")
+		
+func DialogicSignal(argument:String):
+	if argument == "Ya":
+		print("HORAS")
+		get_tree().change_scene_to_file("res://Storyline/4_Task 1/box_drag_drop.tscn")

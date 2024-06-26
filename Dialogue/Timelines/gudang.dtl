@@ -1,0 +1,5 @@
+Ucing: Umm.. suasananya sedikit menakutkan.
+Ucing: Tapi hanya pintu ini yang bisa terbuka.
+Ucing: ..
+- Aku akan masuk!
+	[signal arg="Ya"]

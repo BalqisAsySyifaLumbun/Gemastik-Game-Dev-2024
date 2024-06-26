@@ -22,31 +22,20 @@ func _physics_process(delta):
 	
 	if player_global_pos.distance_to(turun_global_pos) <= 650:
 		if Input.is_action_just_pressed("talk"):
-			get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room.tscn")
+			Dialogic.start("ke_koridor_utama")
+			Dialogic.signal_event.connect(DialogicSignal)
 	
 	if player_global_pos.distance_to(label_pintu2.global_position) < 600:
-		if Input.is_action_just_pressed("talk") && wrong_open == false:
-			wrong_open = true
-			text_edit_door_2.visible = true
-	else:
-		wrong_open = false
-		text_edit_door_2.visible = false
-	
+		if Input.is_action_just_pressed("talk"):
+			Dialogic.start("wrong_door")
+			
 	if player_global_pos.distance_to(label_pintu3.global_position) < 600:
-		if Input.is_action_just_pressed("talk") && wrong_open == false:
-			wrong_open = true
-			text_edit_door_3.visible = true
-	else:
-		wrong_open = false
-		text_edit_door_3.visible = false
+		if Input.is_action_just_pressed("talk"):
+			Dialogic.start("wrong_door")
 	
 	if player_global_pos.distance_to(label_pintu7.global_position) < 600:
-		if Input.is_action_just_pressed("talk") && wrong_open == false:
-			wrong_open = true
-			text_edit_door_7.visible = true
-	else:
-		wrong_open = false
-		text_edit_door_7.visible = false
+		if Input.is_action_just_pressed("talk"):
+			Dialogic.start("wrong_door")
 	
 	if (velocity.x > 1 || velocity.x < -1):
 		sprite_2d.animation = "walk"
@@ -72,3 +61,7 @@ func _physics_process(delta):
 	move_and_slide()
 	var isleft = velocity.x < 0
 	sprite_2d.flip_h = isleft
+
+func DialogicSignal(argument:String):
+	if argument == "Ya":
+		get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room.tscn")

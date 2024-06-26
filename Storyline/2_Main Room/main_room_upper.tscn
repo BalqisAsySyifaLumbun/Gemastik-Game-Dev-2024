@@ -77,6 +77,7 @@ position = Vector2(587, -1022)
 script = ExtResource("4_ux5e6")
 
 [node name="TextEditDoor2" type="TextEdit" parent="."]
+visible = false
 offset_left = 2670.0
 offset_top = -921.0
 offset_right = 2881.0
@@ -87,6 +88,7 @@ text = "Bukan ini pintunya."
 metadata/_edit_use_anchors_ = true
 
 [node name="TextEditDoor3" type="TextEdit" parent="."]
+visible = false
 offset_left = 7129.0
 offset_top = -918.0
 offset_right = 7340.0
@@ -112,6 +114,7 @@ texture = ExtResource("8_1d88j")
 shape = SubResource("CircleShape2D_t2qqr")
 
 [node name="TextEditDoor7" type="TextEdit" parent="."]
+visible = false
 offset_left = 450.0
 offset_top = -930.0
 offset_right = 721.0
@@ -121,6 +124,7 @@ text = "Pintu biru ini terkunci.
 Mungkinkah ada pintu biru lain?"
 
 [node name="DarkIn" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(4660, -969)
 scale = Vector2(9.08959, 1.85518)
 texture = ExtResource("2_7l11l")
