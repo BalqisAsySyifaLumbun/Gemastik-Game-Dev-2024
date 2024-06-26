@@ -21,10 +21,10 @@
 [ext_resource type="Script" path="res://Storyline/6_Task 3/scripts/kaos_kaki.gd" id="18_1sh4h"]
 [ext_resource type="Texture2D" uid="uid://b12e8h6awcei2" path="res://Sprites/Tasks/Task 3/Items/c_item_2.png" id="19_wrxog"]
 [ext_resource type="Texture2D" uid="uid://tivqgu3qtmdg" path="res://Sprites/Tasks/Task 3/Items/c_item_3.png" id="20_3q147"]
-[ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/backsound quest loop.mp3" id="21_8nuvf"]
-[ext_resource type="AudioStream" uid="uid://dnps4av0mxtdo" path="res://Sounds/correct answer.mp3" id="22_6jfs5"]
-[ext_resource type="AudioStream" uid="uid://brsij0rmv2oii" path="res://Sounds/wrong answer.mp3" id="23_k5qv4"]
-[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/task finish.mp3" id="23_sprcl"]
+[ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/Task/backsound quest loop.mp3" id="21_8nuvf"]
+[ext_resource type="AudioStream" uid="uid://bbydlh8fksxrj" path="res://Sounds/Task/correct answer.mp3" id="22_6jfs5"]
+[ext_resource type="AudioStream" uid="uid://dijynhoke17vf" path="res://Sounds/Task/wrong answer.mp3" id="23_k5qv4"]
+[ext_resource type="AudioStream" uid="uid://bibfig1oef4j8" path="res://Sounds/Task/task finish.mp3" id="23_sprcl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uw8ym"]
 atlas = ExtResource("3_wadf8")

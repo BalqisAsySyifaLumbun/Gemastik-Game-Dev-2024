@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bwmhkvebg3qd7"]
 
-[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Menu/door.png" id="1_4xlf7"]
+[ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door.png" id="1_4xlf7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_6dljo"]
 radius = 136.439

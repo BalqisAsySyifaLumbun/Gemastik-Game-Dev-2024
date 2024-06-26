@@ -17,12 +17,10 @@ func _physics_process(_delta):
 		if direction_to_player.x < 0:
 			# If player is to the left, flip character sprite
 			if sprite:
-				sprite.scale.x = -1.25
-				sprite.scale.y = 1.25
+				sprite.flip_h = true
 		else:
 			# If player is to the right, reset character sprite
 			if sprite:
-				sprite.scale.x = 1.25
-				sprite.scale.y = 1.25
+				sprite.flip_h = false
 	else:
 		print("Player node not found!")

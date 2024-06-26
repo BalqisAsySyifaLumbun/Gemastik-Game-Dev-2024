@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bt33mlac5vv28"]
+[gd_scene load_steps=21 format=3 uid="uid://blwjcvwdvfsjf"]
 
 [ext_resource type="Texture2D" uid="uid://ctoeicjtiy6it" path="res://Sprites/Background/lantai_dasar.jpg" id="1_dhymt"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_bgc2p"]
