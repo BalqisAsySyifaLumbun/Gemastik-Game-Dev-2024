@@ -40,6 +40,9 @@ directories/dtl_directory={
 "senter_nyala": "res://Dialogue/Timelines/senter_nyala.dtl",
 "susun_kotak": "res://Dialogue/Timelines/susun_kotak.dtl",
 "terjebak": "res://Dialogue/Timelines/terjebak.dtl",
+"otan": "res://Dialogue/Timelines/main_room.dtl",
+"papan_tulis": "res://Dialogue/Timelines/intro_main_room.dtl",
+"unable_door": "res://Dialogue/Timelines/unable_door.dtl",
 "wrong_door": "res://Dialogue/Timelines/wrong_door.dtl"
 }
 layout/style_list=["res://Dialogue/speaker_textbox.tres"]

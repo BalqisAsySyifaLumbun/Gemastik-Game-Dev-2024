@@ -18,7 +18,7 @@ func _ready():
 	else:
 		rest_point = rest_nodes[0].global_position
 		
-		
+#region DRAGGING MECHANISM
 @warning_ignore("unused_parameter")
 func _on_area_2d_input_event(viewport, event, shape_idx):
 	if Input.is_action_just_pressed("click"):
@@ -34,7 +34,7 @@ func _physics_process(delta):
 	else:
 		global_position = lerp(global_position, rest_point, 10 * delta)
 		rotation = lerp_angle(rotation, 0, 10 * delta)
-		
+#endregion =================================
 		
 func _input(event):
 	if event is InputEventMouseButton:

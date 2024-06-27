@@ -1,26 +1,31 @@
-extends CharacterBody2D
+extends Area2D
 
-@onready var player = get_parent().get_node('MC/CollisionShape2D')
-@onready var sprite = $Sprite2D
-
-func _ready():
-	# Assign the sprite node when the scene is ready
-	if sprite == null:
-		print("Sprite node not found!")
+@export var player: CharacterBody2D
+@onready var otan = $Sprite2D
 
 func _physics_process(_delta):
 	if player:
 		# Calculate the direction to the player
 		var direction_to_player = player.global_position - global_position
 
-		# Flip the character sprite horizontally based on the direction
+		# Flip the character otan horizontally based on the direction
 		if direction_to_player.x < 0:
-			# If player is to the left, flip character sprite
-			if sprite:
-				sprite.flip_h = true
+			# If player is to the left, flip character otan
+			if otan:
+				otan.flip_h = true
 		else:
-			# If player is to the right, reset character sprite
-			if sprite:
-				sprite.flip_h = false
+			# If player is to the right, reset character otan
+			if otan:
+				otan.flip_h = false
 	else:
 		print("Player node not found!")
+
+
+func _on_body_entered(body):
+	if body.name == "MC":
+		$InstructionBox.set_visible(true)
+
+
+func _on_body_exited(body):
+	if body.name == "MC":
+		$InstructionBox.set_visible(false)

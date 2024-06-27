@@ -4,6 +4,8 @@ var style: DialogicStyle = load("res://Dialogue/speaker_textbox.tres")
 
 var dialogue_is_running := false
 var door_dialogue := false
+var on_otan := false
+var on_door := false
 
 func _ready():
 # PRELOAD TIMELINE TO REDUCE LAG
@@ -11,29 +13,46 @@ func _ready():
 	Dialogic.preload_timeline("res://Dialogue/Timelines/empty_timeline.dtl")
 
 
-func _on_area_papan_body_entered(body):
+#region DIALOGUE MANAGER
+func _dialogue_start(body, dialogue: String):
 	if body.name == "MC" and !dialogue_is_running:
-		dialogue_is_running = true
-		print("MC MASUK NIH")
-		Dialogic.start("intro_main_room")
-		await Dialogic.timeline_ended
-		dialogue_is_running = false
+		if dialogue == "papan_tulis":
+			dialogue_starter(dialogue)
+	if dialogue == "otan":
+		on_otan = true
+	elif dialogue == "wrong_door":
+		on_door = true
 
+func _input(event):
+	if !dialogue_is_running:
+		if event.is_action_pressed("talk") and on_otan:
+			dialogue_starter("otan")
+			door_dialogue = true
+		if event.is_action_pressed("talk") and on_door:
+			if door_dialogue:
+				dialogue_starter("wrong_door")
+			else:
+				dialogue_starter("unable_door")
 
-func _on_area_papan_body_exited(body):
+func _dialogue_stop(body, dialogue: String):
 	if body.name == "MC":
-		print("MC KELUAR")
-		Dialogic.end_timeline()
-		dialogue_is_running = false
+		if dialogue_is_running:
+			dialogue_stopper()
+		if dialogue == "otan":
+			on_otan = false
+		elif dialogue == "wrong_door":
+			on_door = false
+#endregion ===========================
 
 
-func _on_area_2d_body_entered(body):
-	if body.name == "MC" and !dialogue_is_running:
-		if door_dialogue:
-			Dialogic.start("wrong_door")
-			await Dialogic.timeline_ended
-			dialogue_is_running = false
+#region DIALOGUE DRIVER
+func dialogue_starter(dialogue: String):
+	dialogue_is_running = true
+	Dialogic.start(dialogue)
+	await Dialogic.timeline_ended
+	dialogue_is_running = false
 
-
-func _on_area_2d_body_exited(body):
-	pass # Replace with function body.
+func dialogue_stopper():
+	Dialogic.end_timeline()
+	dialogue_is_running = false
+#endregion ===========================
