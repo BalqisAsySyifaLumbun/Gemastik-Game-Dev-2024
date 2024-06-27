@@ -6,22 +6,21 @@ var flag = 0
 @onready var finish = %Finish
 @onready var nyala = %Nyala
 
-var tapme = [KEY_D, KEY_A, KEY_D, KEY_U]
-var animate = ['1', '2', '3', '4']
+var tapme = [KEY_J, KEY_A, KEY_G, KEY_U, KEY_N, KEY_G]
+var animate = ['1', '2', '3', '4', '5', '6']
 var finished = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	self.animation = 'default'  
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
-
-
+	
 func _input(event):
-	if flag < 4: 
+	if flag < 6: 
 		if Input.is_anything_pressed():
 			if Input.is_key_pressed(tapme[flag]):
 				self.animation = animate[flag]  # Update animatio
@@ -31,11 +30,14 @@ func _input(event):
 			else:
 				wrong.play()
 				print("Mumun")
-	elif flag == 4 && !finished:
+	elif flag >= 6 && !finished:
 		finish.play()
 		finished = true
 		nyala.visible = true
 		flag+=1
-	elif flag == 5 && Input.is_anything_pressed():
-		get_tree().change_scene_to_file("res://Storyline/11_Task 8/senter_game_2.tscn")
+	elif flag == 7 && Input.is_anything_pressed():
+		get_tree().change_scene_to_file("res://Storyline/11_Task 8/senter_game_3.tscn")
 	
+	
+	
+

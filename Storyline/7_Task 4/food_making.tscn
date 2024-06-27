@@ -16,8 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://cwtev3qsjnm67" path="res://Sprites/Tasks/Task 4/Animations/ebi_on.png" id="13_su83x"]
 [ext_resource type="Script" path="res://Storyline/7_Task 4/scripts/main_plate.gd" id="14_o6pmo"]
 [ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/Task/backsound quest loop.mp3" id="15_775vy"]
-[ext_resource type="AudioStream" uid="uid://bibfig1oef4j8" path="res://Sounds/Task/task finish.mp3" id="16_37pr4"]
-[ext_resource type="AudioStream" uid="uid://bbydlh8fksxrj" path="res://Sounds/Task/correct answer.mp3" id="17_e0676"]
+[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/Task/task finish.mp3" id="16_37pr4"]
+[ext_resource type="AudioStream" uid="uid://dnps4av0mxtdo" path="res://Sounds/Task/correct answer.mp3" id="17_e0676"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vokk5"]
 
