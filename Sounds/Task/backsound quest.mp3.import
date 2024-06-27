@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cq7madi4gaq6j"
+path="res://.godot/imported/backsound quest.mp3-8f69a8d2c09875a431bba88b270922a8.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Task/backsound quest.mp3"
+dest_files=["res://.godot/imported/backsound quest.mp3-8f69a8d2c09875a431bba88b270922a8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

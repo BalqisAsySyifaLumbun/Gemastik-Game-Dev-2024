@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 500.0
 const JUMP_VELOCITY = -400.0
 @onready var sprite_2d = $Sprite2D
-
+@onready var walking_sound = $Walk
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+
 
 
 func _physics_process(delta):
@@ -41,3 +42,10 @@ func _physics_process(delta):
 	move_and_slide()
 	var isleft = velocity.x < 0
 	sprite_2d.flip_h = isleft
+	
+	if direction != 0 and is_on_floor():
+		if not walking_sound.playing:
+			walking_sound.play()
+	else:
+		if walking_sound.playing:
+			walking_sound.stop()

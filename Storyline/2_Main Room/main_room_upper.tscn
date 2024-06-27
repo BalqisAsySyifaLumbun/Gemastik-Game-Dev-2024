@@ -1,21 +1,88 @@
-[gd_scene load_steps=14 format=3 uid="uid://dfxrhn4v0j7we"]
+[gd_scene load_steps=29 format=3 uid="uid://dfxrhn4v0j7we"]
 
 [ext_resource type="Texture2D" uid="uid://boopa0hjyduwr" path="res://Sprites/Background/lantai_atas.jpg" id="1_lltar"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_7l11l"]
 [ext_resource type="PackedScene" uid="uid://bwmhkvebg3qd7" path="res://Storyline/2_Main Room/subscenes/Door.tscn" id="3_tkhyt"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/GoDoor.gd" id="4_ux5e6"]
 [ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="5_b81ai"]
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="5_qr6gu"]
+[ext_resource type="PackedScene" uid="uid://btanw10j2puw" path="res://Characters/MC/main_character.tscn" id="5_qr6gu"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/MainCharacterUpper.gd" id="6_xnkex"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Turun.gd" id="7_q8p83"]
-[ext_resource type="Texture2D" uid="uid://bwbwkiyip4gv6" path="res://Sprites/Menu/turun.png" id="8_1d88j"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkIn.gd" id="9_i5dcp"]
+[ext_resource type="Texture2D" uid="uid://btv868ryts30" path="res://Sprites/Guide Icon/turun tangga/turun_0000.png" id="9_jwyso"]
+[ext_resource type="Texture2D" uid="uid://m4li7ysy55fo" path="res://Sprites/Guide Icon/turun tangga/turun_0001.png" id="10_ehdp2"]
+[ext_resource type="Texture2D" uid="uid://tacr1j30seha" path="res://Sprites/Guide Icon/turun tangga/turun_0002.png" id="11_abqrp"]
+[ext_resource type="Texture2D" uid="uid://fj3gkeyx6t54" path="res://Sprites/Guide Icon/turun tangga/turun_0003.png" id="12_83eun"]
+[ext_resource type="Texture2D" uid="uid://qu1f2rdbce11" path="res://Sprites/Guide Icon/turun tangga/turun_0004.png" id="13_qqy1n"]
+[ext_resource type="Texture2D" uid="uid://b24e5wgius8ob" path="res://Sprites/Guide Icon/turun tangga/turun_0005.png" id="14_x5koo"]
+[ext_resource type="Texture2D" uid="uid://c7e8rukh7adjb" path="res://Sprites/Guide Icon/turun tangga/turun_0006.png" id="15_bfkan"]
+[ext_resource type="Texture2D" uid="uid://br4g3yr1o3ywb" path="res://Sprites/Guide Icon/turun tangga/turun_0007.png" id="16_pg7xo"]
+[ext_resource type="Texture2D" uid="uid://bhtd0554b1kcf" path="res://Sprites/Guide Icon/turun tangga/turun_0008.png" id="17_demit"]
+[ext_resource type="Texture2D" uid="uid://bvdgo7ih0ertl" path="res://Sprites/Guide Icon/turun tangga/turun_0009.png" id="18_113sf"]
+[ext_resource type="Texture2D" uid="uid://d4hj6q2hfqr4m" path="res://Sprites/Guide Icon/turun tangga/turun_0010.png" id="19_edvp8"]
+[ext_resource type="Texture2D" uid="uid://dj8rix648c343" path="res://Sprites/Guide Icon/turun tangga/turun_0011.png" id="20_k2uhv"]
+[ext_resource type="Texture2D" uid="uid://byf3ekhx4kh5j" path="res://Sprites/Guide Icon/turun tangga/turun_0012.png" id="21_ek5qa"]
+[ext_resource type="Texture2D" uid="uid://brbvky5b6ogpw" path="res://Sprites/Guide Icon/turun tangga/turun_0014.png" id="22_0xfbv"]
+[ext_resource type="Texture2D" uid="uid://be3i63il8su0n" path="res://Sprites/Guide Icon/turun tangga/turun_0013.png" id="23_8nukb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8nob2"]
 size = Vector2(297, 1196.88)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xk6jc"]
 size = Vector2(8184, 123)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ehc2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_jwyso")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ehdp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_abqrp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_83eun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qqy1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_x5koo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_bfkan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_pg7xo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_demit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_113sf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_edvp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_k2uhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ek5qa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0xfbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_8nukb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t2qqr"]
 radius = 71.7844
@@ -77,6 +144,7 @@ position = Vector2(587, -1022)
 script = ExtResource("4_ux5e6")
 
 [node name="TextEditDoor2" type="TextEdit" parent="."]
+visible = false
 offset_left = 2670.0
 offset_top = -921.0
 offset_right = 2881.0
@@ -87,6 +155,7 @@ text = "Bukan ini pintunya."
 metadata/_edit_use_anchors_ = true
 
 [node name="TextEditDoor3" type="TextEdit" parent="."]
+visible = false
 offset_left = 7129.0
 offset_top = -918.0
 offset_right = 7340.0
@@ -104,14 +173,17 @@ script = ExtResource("6_xnkex")
 position = Vector2(5946, -990)
 script = ExtResource("7_q8p83")
 
-[node name="Turun" type="Sprite2D" parent="IconTurun"]
-position = Vector2(2, -4)
-texture = ExtResource("8_1d88j")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="IconTurun"]
+position = Vector2(0, 10)
+scale = Vector2(0.366, 0.362)
+sprite_frames = SubResource("SpriteFrames_2ehc2")
+autoplay = "default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IconTurun"]
 shape = SubResource("CircleShape2D_t2qqr")
 
 [node name="TextEditDoor7" type="TextEdit" parent="."]
+visible = false
 offset_left = 450.0
 offset_top = -930.0
 offset_right = 721.0

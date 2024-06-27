@@ -1,12 +1,13 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+const SPEED = 500.0
 const JUMP_VELOCITY = -400.0
 @onready var sprite_2d = $Sprite2D
 @onready var label_pintu = get_parent().get_node('Go_Door7')
 @onready var text_edit_5 = get_parent().get_node('TextEdit5')
 @onready var naik = get_parent().get_node('IconNaik')
+@onready var walking_sound = $Walk
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
@@ -21,12 +22,15 @@ func _physics_process(delta):
 	
 	if player_global_pos.distance_to(naik_global_pos) <= 650:
 		if Input.is_action_just_pressed("talk"):
-			get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room.tscn")
+			Dialogic.start("ke_koridor_utama")
+			Dialogic.signal_event.connect(DialogicSignal)
 			
 	if distance_pintu < 600:
-		text_edit_5.visible = true
+		#text_edit_5.visible = true
 		if Input.is_action_just_pressed("talk"):
-			get_tree().change_scene_to_file("res://Storyline/3_Storage Room/storage_room.tscn")
+			Dialogic.start("gudang")
+			Dialogic.signal_event.connect(DialogicSignal2)
+			
 	else:
 		text_edit_5.visible = false
 	
@@ -54,3 +58,22 @@ func _physics_process(delta):
 	move_and_slide()
 	var isleft = velocity.x < 0
 	sprite_2d.flip_h = isleft
+	
+	if direction != 0 and is_on_floor():
+		if not walking_sound.playing:
+			walking_sound.play()
+	else:
+		if walking_sound.playing:
+			walking_sound.stop()
+
+
+func DialogicSignal(argument:String):
+	if argument == "Ya":
+		get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room.tscn")
+
+func DialogicSignal2(argument:String):
+	if argument == "Ya":
+		get_tree().change_scene_to_file("res://Storyline/3_Storage Room/storage_room.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Storyline/3_Storage Room/storage_room.tscn")
+		

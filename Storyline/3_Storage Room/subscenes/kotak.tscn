@@ -117,5 +117,5 @@ animation = &"dropped"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2753, -106)
+position = Vector2(-2788, 163)
 shape = SubResource("RectangleShape2D_6d3xw")

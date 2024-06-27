@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bytou1d4kln6e" path="res://Sprites/Background/base.jpg" id="1_ed5t6"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_tbjwe"]
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="3_kq8qm"]
+[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/ucing.tscn" id="3_kq8qm"]
 [ext_resource type="PackedScene" uid="uid://f718ufaumg8q" path="res://Unused/kotak.tscn" id="3_pk2tj"]
 [ext_resource type="Script" path="res://Unused/Scenes/CharacterBody2D.gd" id="3_q43x6"]
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/DarkIn.gd" id="29_f5thq"]
