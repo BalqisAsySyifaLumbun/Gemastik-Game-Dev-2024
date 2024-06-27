@@ -34,8 +34,6 @@ func _process(delta):
 	# Adjust sprite visibility based on distance
 	if distance <= 600:
 		sprite.visible = true
-		if Input.is_action_just_pressed("talk"):
-			Dialogic.start("wrong_door")
 	else:
 		sprite.visible = false
 

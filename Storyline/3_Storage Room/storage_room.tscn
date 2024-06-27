@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://bmo2rt177o7qj" path="res://Sprites/lighting animasi/lighting animation_0021.png" id="24_qh5hu"]
 [ext_resource type="Texture2D" uid="uid://ciuak1n5osc2" path="res://Sprites/lighting animasi/lighting animation_0022.png" id="25_bahit"]
 [ext_resource type="PackedScene" uid="uid://bdayto4slwus3" path="res://Storyline/3_Storage Room/subscenes/kotak.tscn" id="26_073ue"]
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/ucing.tscn" id="27_2hg52"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="27_2hg52"]
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/MainCharacterGudang.gd" id="28_ramj0"]
 [ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="29_acw8g"]
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/DarkIn.gd" id="29_dbkcw"]
@@ -259,7 +259,6 @@ position = Vector2(2906, 425)
 script = ExtResource("31_7y1nw")
 
 [node name="DarkIn" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(1904, 494.25)
 scale = Vector2(3.17, 2.22444)
 texture = ExtResource("1_is3rv")

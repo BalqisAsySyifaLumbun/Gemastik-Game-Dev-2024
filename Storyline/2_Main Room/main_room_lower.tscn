@@ -1,17 +1,32 @@
-[gd_scene load_steps=17 format=3 uid="uid://d27chi846yccw"]
+[gd_scene load_steps=33 format=3 uid="uid://d27chi846yccw"]
 
 [ext_resource type="Texture2D" uid="uid://gfkqemsg4xfw" path="res://Sprites/Background/lantai bawah.jpg" id="1_iwbfb"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_fruwq"]
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/ucing.tscn" id="2_imv5t"]
+[ext_resource type="PackedScene" uid="uid://btanw10j2puw" path="res://Characters/MC/main_character.tscn" id="2_imv5t"]
 [ext_resource type="PackedScene" uid="uid://bwmhkvebg3qd7" path="res://Storyline/2_Main Room/subscenes/Door.tscn" id="3_x44p8"]
-[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/GoDoor.gd" id="4_60s17"]
 [ext_resource type="Texture2D" uid="uid://cxk2rq4wf7bs8" path="res://Sprites/lighting animasi/lighting_lantai_bawah_5.png" id="4_e8bg8"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/MainCharacterLower.gd" id="4_juv2l"]
 [ext_resource type="Texture2D" uid="uid://dp7p1a87qmu5r" path="res://Sprites/lighting animasi/lighting_lantai_bawah_0.png" id="4_xrcjp"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/GoDoorGudang.gd" id="4_yywgd"]
 [ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="5_egu37"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Naik.gd" id="7_77qn6"]
-[ext_resource type="Texture2D" uid="uid://wk1qw5h2n3a7" path="res://Sprites/Menu/naik.png" id="8_qlkve"]
+[ext_resource type="Texture2D" uid="uid://brhnnc311i2mc" path="res://Sprites/Guide Icon/naik tangga/naik_0000.png" id="9_1tb0w"]
+[ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="10_0jnlb"]
+[ext_resource type="Texture2D" uid="uid://r3k61iw08nyf" path="res://Sprites/Guide Icon/naik tangga/naik_0001.png" id="10_5y5qs"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkIn.gd" id="11_8w4t3"]
+[ext_resource type="Texture2D" uid="uid://dxvq7ha07maey" path="res://Sprites/Guide Icon/naik tangga/naik_0002.png" id="11_kkvxh"]
+[ext_resource type="Texture2D" uid="uid://dn00tjv1dhhbj" path="res://Sprites/Guide Icon/naik tangga/naik_0003.png" id="12_npj3g"]
+[ext_resource type="Texture2D" uid="uid://cx25ulkbva4re" path="res://Sprites/Guide Icon/naik tangga/naik_0004.png" id="13_tb5ip"]
+[ext_resource type="Texture2D" uid="uid://cqw2bbm4g8q8h" path="res://Sprites/Guide Icon/naik tangga/naik_0005.png" id="14_jqiqw"]
+[ext_resource type="Texture2D" uid="uid://b0dm6klf20p3v" path="res://Sprites/Guide Icon/naik tangga/naik_0006.png" id="15_ew1f3"]
+[ext_resource type="Texture2D" uid="uid://djh6f4dnvir0c" path="res://Sprites/Guide Icon/naik tangga/naik_0007.png" id="16_gghbe"]
+[ext_resource type="Texture2D" uid="uid://1wrknikbioje" path="res://Sprites/Guide Icon/naik tangga/naik_0008.png" id="17_51kq5"]
+[ext_resource type="Texture2D" uid="uid://bnmw4mdtruvpm" path="res://Sprites/Guide Icon/naik tangga/naik_0009.png" id="18_u3qgg"]
+[ext_resource type="Texture2D" uid="uid://bylouphokir6p" path="res://Sprites/Guide Icon/naik tangga/naik_0010.png" id="19_7qml0"]
+[ext_resource type="Texture2D" uid="uid://b056duqnaatre" path="res://Sprites/Guide Icon/naik tangga/naik_0011.png" id="20_b6lif"]
+[ext_resource type="Texture2D" uid="uid://c5w1sm2mbym6a" path="res://Sprites/Guide Icon/naik tangga/naik_0012.png" id="21_1u17l"]
+[ext_resource type="Texture2D" uid="uid://kkylcm7at74w" path="res://Sprites/Guide Icon/naik tangga/naik_0013.png" id="22_8xpus"]
+[ext_resource type="Texture2D" uid="uid://cgyxdmwbd3m84" path="res://Sprites/Guide Icon/naik tangga/naik_0014.png" id="23_42hhr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ciuos"]
 size = Vector2(5322, 351)
@@ -21,6 +36,59 @@ normal = Vector2(1, 0)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_27hj6"]
 radius = 77.3175
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_uaiho"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_1tb0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_5y5qs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kkvxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_npj3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_tb5ip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jqiqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_ew1f3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_gghbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_51kq5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_u3qgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_7qml0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_b6lif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_1u17l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_42hhr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_8xpus")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_884v1"]
 animations = [{
@@ -128,7 +196,7 @@ shape = SubResource("WorldBoundaryShape2D_ynt2h")
 
 [node name="Go_Door7" parent="." instance=ExtResource("3_x44p8")]
 position = Vector2(913, 446)
-script = ExtResource("4_60s17")
+script = ExtResource("4_yywgd")
 
 [node name="TextEdit5" type="TextEdit" parent="."]
 visible = false
@@ -147,15 +215,23 @@ script = ExtResource("4_juv2l")
 position = Vector2(3142, 330)
 script = ExtResource("7_77qn6")
 
-[node name="Naik" type="Sprite2D" parent="IconNaik"]
-position = Vector2(-1, -4)
-texture = ExtResource("8_qlkve")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="IconNaik"]
 position = Vector2(3, 2)
 shape = SubResource("CircleShape2D_27hj6")
 
+[node name="PopSound" type="AudioStreamPlayer2D" parent="IconNaik"]
+unique_name_in_owner = true
+stream = ExtResource("10_0jnlb")
+bus = &"SFX"
+
+[node name="Naik2" type="AnimatedSprite2D" parent="IconNaik"]
+position = Vector2(-3, 12)
+scale = Vector2(0.502, 0.468)
+sprite_frames = SubResource("SpriteFrames_uaiho")
+autoplay = "default"
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 position = Vector2(2700.5, 583)
 scale = Vector2(1.0758, 1.246)
 sprite_frames = SubResource("SpriteFrames_884v1")
@@ -163,7 +239,7 @@ autoplay = "default"
 frame_progress = 0.770689
 
 [node name="DarkIn" type="Sprite2D" parent="."]
-position = Vector2(2573, 623)
+position = Vector2(2573, 583)
 scale = Vector2(4.71146, 1.85518)
 texture = ExtResource("2_fruwq")
 script = ExtResource("11_8w4t3")

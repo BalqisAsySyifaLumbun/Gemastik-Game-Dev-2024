@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_b6san"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/main_room.gd" id="1_c0m0q"]
 [ext_resource type="PackedScene" uid="uid://dnyv5ckw26ug8" path="res://Characters/Otan/otan.tscn" id="2_b88js"]
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="3_qissp"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="3_qissp"]
 [ext_resource type="Texture2D" uid="uid://ctoeicjtiy6it" path="res://Sprites/Background/lantai_dasar.jpg" id="3_xtttp"]
-[ext_resource type="Script" path="res://Characters/MC/MainCharacter.gd" id="4_xucuy"]
+[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="5_mgbv4"]
 [ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="10_qf50b"]
 [ext_resource type="Texture2D" uid="uid://brhnnc311i2mc" path="res://Sprites/Guide Icon/naik tangga/naik_0000.png" id="15_64nkg"]
 [ext_resource type="Texture2D" uid="uid://r3k61iw08nyf" path="res://Sprites/Guide Icon/naik tangga/naik_0001.png" id="16_bmcjw"]
@@ -446,7 +446,7 @@ shape = SubResource("WorldBoundaryShape2D_ebfbm")
 
 [node name="MC" parent="." instance=ExtResource("3_qissp")]
 position = Vector2(639, 550)
-script = ExtResource("4_xucuy")
+script = ExtResource("5_mgbv4")
 
 [node name="Otan" parent="." instance=ExtResource("2_b88js")]
 position = Vector2(4155, 777)

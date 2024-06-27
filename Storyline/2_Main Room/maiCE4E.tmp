@@ -471,7 +471,7 @@ shape = SubResource("RectangleShape2D_mw7tb")
 self_modulate = Color(1, 1, 1, 0)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_buqwo")
-animation = &"icon_naik"
+animation = &"icon_turun"
 autoplay = "icon_naik"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="GuideIcon/IconNaik"]
@@ -548,8 +548,8 @@ position = Vector2(7285, 672)
 position = Vector2(8599, 665)
 
 [node name="DarkIn" type="Sprite2D" parent="."]
-position = Vector2(4124, 456)
-scale = Vector2(4.94573, 1.85518)
+position = Vector2(3441, 448)
+scale = Vector2(4.71146, 1.85518)
 texture = ExtResource("1_b6san")
 script = ExtResource("55_odhb6")
 
