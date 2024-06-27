@@ -1,12 +1,12 @@
-[gd_scene load_steps=74 format=3 uid="uid://rir5f88uh8k0"]
+[gd_scene load_steps=77 format=3 uid="uid://rir5f88uh8k0"]
 
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_b6san"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/main_room.gd" id="1_c0m0q"]
 [ext_resource type="PackedScene" uid="uid://dnyv5ckw26ug8" path="res://Characters/Otan/otan.tscn" id="2_b88js"]
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="3_qissp"]
+[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/ucing.tscn" id="3_qissp"]
 [ext_resource type="Texture2D" uid="uid://ctoeicjtiy6it" path="res://Sprites/Background/lantai_dasar.jpg" id="3_xtttp"]
-[ext_resource type="Script" path="res://Characters/MC/MainCharacter.gd" id="4_xucuy"]
-[ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="10_qf50b"]
+[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="4_xucuy"]
+[ext_resource type="PackedScene" uid="uid://dfxrhn4v0j7we" path="res://Storyline/2_Main Room/main_room_upper.tscn" id="8_kfg7d"]
 [ext_resource type="Texture2D" uid="uid://brhnnc311i2mc" path="res://Sprites/Guide Icon/naik tangga/naik_0000.png" id="15_64nkg"]
 [ext_resource type="Texture2D" uid="uid://r3k61iw08nyf" path="res://Sprites/Guide Icon/naik tangga/naik_0001.png" id="16_bmcjw"]
 [ext_resource type="PackedScene" uid="uid://isxs47e8ehsm" path="res://Storyline/2_Main Room/subscenes/pintu.tscn" id="17_dy5op"]
@@ -49,11 +49,14 @@
 [ext_resource type="Texture2D" uid="uid://br4g3yr1o3ywb" path="res://Sprites/Guide Icon/turun tangga/turun_0007.png" id="37_u6s8y"]
 [ext_resource type="Texture2D" uid="uid://bhtd0554b1kcf" path="res://Sprites/Guide Icon/turun tangga/turun_0008.png" id="38_ggr1r"]
 [ext_resource type="Texture2D" uid="uid://bvdgo7ih0ertl" path="res://Sprites/Guide Icon/turun tangga/turun_0009.png" id="39_2c4m1"]
+[ext_resource type="PackedScene" uid="uid://d27chi846yccw" path="res://Storyline/2_Main Room/main_room_lower.tscn" id="40_4pxot"]
 [ext_resource type="Texture2D" uid="uid://d4hj6q2hfqr4m" path="res://Sprites/Guide Icon/turun tangga/turun_0010.png" id="40_hnyao"]
 [ext_resource type="Texture2D" uid="uid://dj8rix648c343" path="res://Sprites/Guide Icon/turun tangga/turun_0011.png" id="41_rvmrk"]
 [ext_resource type="Texture2D" uid="uid://byf3ekhx4kh5j" path="res://Sprites/Guide Icon/turun tangga/turun_0012.png" id="42_np5oh"]
 [ext_resource type="Texture2D" uid="uid://be3i63il8su0n" path="res://Sprites/Guide Icon/turun tangga/turun_0013.png" id="43_q0d2o"]
 [ext_resource type="Texture2D" uid="uid://brbvky5b6ogpw" path="res://Sprites/Guide Icon/turun tangga/turun_0014.png" id="44_8byjk"]
+[ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="54_mfs8a"]
+[ext_resource type="AudioStream" uid="uid://chc2gh27gxb1m" path="res://Sounds/Room background/asrama.mp3" id="57_nv6wi"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8lvg4"]
 
@@ -447,25 +450,16 @@ shape = SubResource("WorldBoundaryShape2D_ebfbm")
 position = Vector2(1152, 628)
 script = ExtResource("4_xucuy")
 
-[node name="Otan" parent="." instance=ExtResource("2_b88js")]
+[node name="Otan" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_b88js")]
 position = Vector2(4151, 799)
-
-[node name="TextEdit4" type="TextEdit" parent="."]
-offset_left = 3611.0
-offset_top = 537.0
-offset_right = 3962.0
-offset_bottom = 645.0
-theme_override_fonts/font = ExtResource("10_qf50b")
-theme_override_font_sizes/font_size = 20
-text = "
---Tekan X untuk memulai dialog--"
-wrap_mode = 1
+player = NodePath("../MC")
 
 [node name="GuideIcon" type="Node" parent="."]
 
 [node name="IconNaik" type="Area2D" parent="GuideIcon"]
 position = Vector2(5458, 437)
 script = ExtResource("17_knp1a")
+upper_room = ExtResource("8_kfg7d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GuideIcon/IconNaik"]
 position = Vector2(-151, 422)
@@ -485,9 +479,14 @@ libraries = {
 "": SubResource("AnimationLibrary_sb0x0")
 }
 
+[node name="PopSound" type="AudioStreamPlayer2D" parent="GuideIcon/IconNaik"]
+stream = ExtResource("54_mfs8a")
+bus = &"SFX"
+
 [node name="IconTurun" type="Area2D" parent="GuideIcon"]
 position = Vector2(6284, 437)
 script = ExtResource("17_knp1a")
+lower_room = ExtResource("40_4pxot")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GuideIcon/IconTurun"]
 position = Vector2(-151, 422)
@@ -505,6 +504,10 @@ autoplay = "icon_turun"
 libraries = {
 "": SubResource("AnimationLibrary_jggo0")
 }
+
+[node name="PopSound" type="AudioStreamPlayer2D" parent="GuideIcon/IconTurun"]
+stream = ExtResource("54_mfs8a")
+bus = &"SFX"
 
 [node name="AreaPapan" type="Area2D" parent="GuideIcon"]
 position = Vector2(1868, 914)
@@ -527,6 +530,10 @@ libraries = {
 "": SubResource("AnimationLibrary_ck3iv")
 }
 
+[node name="PopSound" type="AudioStreamPlayer2D" parent="GuideIcon/AreaPapan"]
+stream = ExtResource("54_mfs8a")
+bus = &"SFX"
+
 [node name="Pintu1" parent="GuideIcon" instance=ExtResource("17_dy5op")]
 position = Vector2(775, 657)
 
@@ -539,13 +546,26 @@ position = Vector2(7285, 672)
 [node name="Pintu4" parent="GuideIcon" instance=ExtResource("17_dy5op")]
 position = Vector2(8599, 665)
 
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("57_nv6wi")
+autoplay = true
+bus = &"Music"
+
+[connection signal="body_entered" from="Otan" to="." method="_dialogue_start" binds= ["otan"]]
+[connection signal="body_exited" from="Otan" to="." method="_dialogue_stop" binds= ["otan"]]
 [connection signal="body_entered" from="GuideIcon/IconNaik" to="GuideIcon/IconNaik" method="_on_body_entered"]
 [connection signal="body_exited" from="GuideIcon/IconNaik" to="GuideIcon/IconNaik" method="_on_body_exited"]
 [connection signal="body_entered" from="GuideIcon/IconTurun" to="GuideIcon/IconTurun" method="_on_body_entered"]
 [connection signal="body_exited" from="GuideIcon/IconTurun" to="GuideIcon/IconTurun" method="_on_body_exited"]
-[connection signal="body_entered" from="GuideIcon/AreaPapan" to="." method="_on_area_papan_body_entered"]
 [connection signal="body_entered" from="GuideIcon/AreaPapan" to="GuideIcon/AreaPapan" method="_on_body_entered"]
-[connection signal="body_exited" from="GuideIcon/AreaPapan" to="." method="_on_area_papan_body_exited"]
+[connection signal="body_entered" from="GuideIcon/AreaPapan" to="." method="_dialogue_start" binds= ["papan_tulis"]]
 [connection signal="body_exited" from="GuideIcon/AreaPapan" to="GuideIcon/AreaPapan" method="_on_body_exited"]
-[connection signal="body_entered" from="GuideIcon/Pintu1" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="GuideIcon/Pintu1" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_exited" from="GuideIcon/AreaPapan" to="." method="_dialogue_stop" binds= ["papan_tulis"]]
+[connection signal="body_entered" from="GuideIcon/Pintu1" to="." method="_dialogue_start" binds= ["wrong_door"]]
+[connection signal="body_exited" from="GuideIcon/Pintu1" to="." method="_dialogue_stop" binds= ["wrong_door"]]
+[connection signal="body_entered" from="GuideIcon/Pintu2" to="." method="_dialogue_start" binds= ["wrong_door"]]
+[connection signal="body_exited" from="GuideIcon/Pintu2" to="." method="_dialogue_stop" binds= ["wrong_door"]]
+[connection signal="body_entered" from="GuideIcon/Pintu3" to="." method="_dialogue_start" binds= ["wrong_door"]]
+[connection signal="body_exited" from="GuideIcon/Pintu3" to="." method="_dialogue_stop" binds= ["wrong_door"]]
+[connection signal="body_entered" from="GuideIcon/Pintu4" to="." method="_dialogue_start" binds= ["wrong_door"]]
+[connection signal="body_exited" from="GuideIcon/Pintu4" to="." method="_dialogue_stop" binds= ["wrong_door"]]

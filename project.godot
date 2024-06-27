@@ -31,8 +31,9 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "empty_timeline": "res://Dialogue/Timelines/empty_timeline.dtl",
-"intro_main_room": "res://Dialogue/Timelines/intro_main_room.dtl",
-"main_room": "res://Dialogue/Timelines/main_room.dtl",
+"otan": "res://Dialogue/Timelines/main_room.dtl",
+"papan_tulis": "res://Dialogue/Timelines/intro_main_room.dtl",
+"unable_door": "res://Dialogue/Timelines/unable_door.dtl",
 "wrong_door": "res://Dialogue/Timelines/wrong_door.dtl"
 }
 layout/style_list=["res://Dialogue/speaker_textbox.tres"]

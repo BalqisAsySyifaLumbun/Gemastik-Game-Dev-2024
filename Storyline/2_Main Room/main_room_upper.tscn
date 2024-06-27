@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bwmhkvebg3qd7" path="res://Storyline/2_Main Room/subscenes/Door.tscn" id="3_tkhyt"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/GoDoor.gd" id="4_ux5e6"]
 [ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="5_b81ai"]
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="5_qr6gu"]
+[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/ucing.tscn" id="5_qr6gu"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/MainCharacterUpper.gd" id="6_xnkex"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/Turun.gd" id="7_q8p83"]
 [ext_resource type="Texture2D" uid="uid://bwbwkiyip4gv6" path="res://Sprites/Menu/turun.png" id="8_1d88j"]
@@ -121,6 +121,7 @@ text = "Pintu biru ini terkunci.
 Mungkinkah ada pintu biru lain?"
 
 [node name="DarkIn" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(4660, -969)
 scale = Vector2(9.08959, 1.85518)
 texture = ExtResource("2_7l11l")

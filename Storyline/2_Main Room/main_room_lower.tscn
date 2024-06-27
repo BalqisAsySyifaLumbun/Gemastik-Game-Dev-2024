@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://gfkqemsg4xfw" path="res://Sprites/Background/lantai bawah.jpg" id="1_iwbfb"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_fruwq"]
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/main_character.tscn" id="2_imv5t"]
+[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/ucing.tscn" id="2_imv5t"]
 [ext_resource type="PackedScene" uid="uid://bwmhkvebg3qd7" path="res://Storyline/2_Main Room/subscenes/Door.tscn" id="3_x44p8"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/GoDoor.gd" id="4_60s17"]
 [ext_resource type="Texture2D" uid="uid://cxk2rq4wf7bs8" path="res://Sprites/lighting animasi/lighting_lantai_bawah_5.png" id="4_e8bg8"]
