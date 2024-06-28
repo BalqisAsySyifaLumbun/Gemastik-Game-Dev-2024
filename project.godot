@@ -20,8 +20,8 @@ config/icon="res://Sprites/Main Characters/sketch.png"
 
 ZIndexManager="*res://Utility/ZIndexManager.gd"
 TransitionScreen="*res://Utility/transition_screen.tscn"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 GameStateManager="*res://Utility/GameStateManager.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
@@ -67,7 +67,7 @@ text/autopauses={}
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
-window/size/mode=2
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [editor_plugins]

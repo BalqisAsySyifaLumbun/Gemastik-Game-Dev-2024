@@ -24,13 +24,13 @@ shape = SubResource("RectangleShape2D_4s1hg")
 [node name="InstructionBox" type="TextEdit" parent="."]
 visible = false
 offset_left = -505.0
-offset_top = -142.0
+offset_top = -227.0
 offset_right = -154.0
-offset_bottom = -34.0
+offset_bottom = -119.0
 theme_override_fonts/font = ExtResource("3_78e6i")
 theme_override_font_sizes/font_size = 20
 text = "
---Tekan X untuk memulai dialog--"
+--Tekan X untuk berinteraksi--"
 wrap_mode = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
