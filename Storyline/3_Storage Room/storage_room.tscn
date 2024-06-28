@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://bi4apu8sx6oot" path="res://Sprites/lighting animasi/lighting animation_0020.png" id="23_gw6c8"]
 [ext_resource type="Texture2D" uid="uid://bmo2rt177o7qj" path="res://Sprites/lighting animasi/lighting animation_0021.png" id="24_qh5hu"]
 [ext_resource type="Texture2D" uid="uid://ciuak1n5osc2" path="res://Sprites/lighting animasi/lighting animation_0022.png" id="25_bahit"]
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/ucing.tscn" id="27_2hg52"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="27_2hg52"]
 [ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/Box.gd" id="28_gjxsm"]
 [ext_resource type="Texture2D" uid="uid://chvw4yn6sdnum" path="res://Sprites/lighting animasi/box jatuh_0000.png" id="29_injsf"]
 [ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="29_vyccd"]
