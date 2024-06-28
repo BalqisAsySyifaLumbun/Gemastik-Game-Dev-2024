@@ -425,8 +425,8 @@ shape = SubResource("RectangleShape2D_1asot")
 self_modulate = Color(1, 1, 1, 0)
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_amve7")
-animation = &"icon_turun"
-autoplay = "icon_turun"
+animation = &"icon_naik"
+autoplay = "icon_naik"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="IconGuide/IconToMain"]
 libraries = {

@@ -69,3 +69,6 @@ func disable_movement():
 
 func enable_movement():
 	movement_enabled = true
+
+
+
