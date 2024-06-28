@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/main_room_upper.gd" id="1_dka7d"]
 [ext_resource type="Texture2D" uid="uid://boopa0hjyduwr" path="res://Sprites/Background/lantai_atas.jpg" id="1_lltar"]
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="2_7l11l"]
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/ucing.tscn" id="5_qr6gu"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="5_qr6gu"]
 [ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/guide_icon.gd" id="6_f7bmq"]
 [ext_resource type="Texture2D" uid="uid://brhnnc311i2mc" path="res://Sprites/Guide Icon/naik tangga/naik_0000.png" id="7_m166u"]
 [ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="7_pwahd"]

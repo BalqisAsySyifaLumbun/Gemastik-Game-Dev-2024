@@ -21,9 +21,9 @@
 [ext_resource type="Texture2D" uid="uid://6bmp3hecp3tx" path="res://Sprites/Tasks/Task 1/Items/bola_3.png" id="18_b4x4x"]
 [ext_resource type="Script" path="res://Storyline/4_Task 1/scripts/Buku.gd" id="19_l6mh1"]
 [ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/Task/backsound quest loop.mp3" id="21_1nsql"]
-[ext_resource type="AudioStream" uid="uid://bbydlh8fksxrj" path="res://Sounds/Task/correct answer.mp3" id="22_5ekfc"]
-[ext_resource type="AudioStream" uid="uid://bibfig1oef4j8" path="res://Sounds/Task/task finish.mp3" id="23_l06b5"]
-[ext_resource type="AudioStream" uid="uid://dijynhoke17vf" path="res://Sounds/Task/wrong answer.mp3" id="24_fn84d"]
+[ext_resource type="AudioStream" uid="uid://dnps4av0mxtdo" path="res://Sounds/Task/correct answer.mp3" id="22_5ekfc"]
+[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/Task/task finish.mp3" id="23_l06b5"]
+[ext_resource type="AudioStream" uid="uid://brsij0rmv2oii" path="res://Sounds/Task/wrong answer.mp3" id="24_fn84d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jexdr"]
 atlas = ExtResource("3_diier")

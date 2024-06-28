@@ -20,24 +20,32 @@ config/icon="res://Sprites/Main Characters/sketch.png"
 
 ZIndexManager="*res://Utility/ZIndexManager.gd"
 TransitionScreen="*res://Utility/transition_screen.tscn"
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 GameStateManager="*res://Utility/GameStateManager.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
 directories/dch_directory={
+"Buba": "res://Dialogue/Characters/Buba.dch",
+"Characters/Maung": "res://Dialogue/Characters/Maung.dch",
 "Otan": "res://Dialogue/Characters/Otan.dch",
 "Ucing": "res://Dialogue/Characters/Ucing.dch",
+"character": "res://Characters/Maung/character.dch",
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
 "box_jatuh": "res://Dialogue/Timelines/box_jatuh.dtl",
 "box_selesai": "res://Dialogue/Timelines/box_selesai.dtl",
+"dialog_trio_hutan": "res://Dialogue/Timelines/dialog_trio_hutan.dtl",
 "empty_timeline": "res://Dialogue/Timelines/empty_timeline.dtl",
 "gudang": "res://Dialogue/Timelines/gudang.dtl",
+"ke_atas": "res://Dialogue/Timelines/ke_atas.dtl",
+"ke_bawah": "res://Dialogue/Timelines/ke_bawah.dtl",
+"ke_koridor_utama": "res://Dialogue/Timelines/ke_koridor_utama.dtl",
 "locked_door": "res://Dialogue/Timelines/locked_door.dtl",
 "otan": "res://Dialogue/Timelines/main_room.dtl",
 "papan_tulis": "res://Dialogue/Timelines/intro_main_room.dtl",
+"scary": "res://Dialogue/Timelines/scary.dtl",
 "senter_nyala": "res://Dialogue/Timelines/senter_nyala.dtl",
 "susun_kotak": "res://Dialogue/Timelines/susun_kotak.dtl",
 "terjebak": "res://Dialogue/Timelines/terjebak.dtl",
