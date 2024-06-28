@@ -77,3 +77,4 @@ func DialogicSignal2(argument:String):
 	else:
 		get_tree().change_scene_to_file("res://Storyline/3_Storage Room/storage_room.tscn")
 		
+

@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://isxs47e8ehsm"]
 
-[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/fade.gd" id="1_ccmal"]
+[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/guide_icon.gd" id="1_ccmal"]
 [ext_resource type="Texture2D" uid="uid://dfhfuvxrgb7bq" path="res://Sprites/Guide Icon/door.png" id="2_pln22"]
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="3_poik3"]
 

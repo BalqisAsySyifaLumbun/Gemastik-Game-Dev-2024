@@ -73,3 +73,4 @@ func _physics_process(delta):
 func DialogicSignal(argument:String):
 	if argument == "Ya":
 		get_tree().change_scene_to_file("res://Storyline/2_Main Room/main_room.tscn")
+

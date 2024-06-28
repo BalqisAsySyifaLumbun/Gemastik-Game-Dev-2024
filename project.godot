@@ -21,6 +21,7 @@ config/icon="res://Sprites/Main Characters/sketch.png"
 ZIndexManager="*res://Utility/ZIndexManager.gd"
 TransitionScreen="*res://Utility/transition_screen.tscn"
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+GameStateManager="*res://Utility/GameStateManager.gd"
 
 [dialogic]
 
@@ -30,13 +31,11 @@ directories/dch_directory={
 "unit_test_character": "res://Tests/Resources/unit_test_character.dch"
 }
 directories/dtl_directory={
+"box_jatuh": "res://Dialogue/Timelines/box_jatuh.dtl",
+"box_selesai": "res://Dialogue/Timelines/box_selesai.dtl",
 "empty_timeline": "res://Dialogue/Timelines/empty_timeline.dtl",
 "gudang": "res://Dialogue/Timelines/gudang.dtl",
-"intro_main_room": "res://Dialogue/Timelines/intro_main_room.dtl",
-"ke_atas": "res://Dialogue/Timelines/ke_atas.dtl",
-"ke_bawah": "res://Dialogue/Timelines/ke_bawah.dtl",
-"ke_koridor_utama": "res://Dialogue/Timelines/ke_koridor_utama.dtl",
-"main_room": "res://Dialogue/Timelines/main_room.dtl",
+"locked_door": "res://Dialogue/Timelines/locked_door.dtl",
 "otan": "res://Dialogue/Timelines/main_room.dtl",
 "papan_tulis": "res://Dialogue/Timelines/intro_main_room.dtl",
 "senter_nyala": "res://Dialogue/Timelines/senter_nyala.dtl",
