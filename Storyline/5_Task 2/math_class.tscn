@@ -310,6 +310,7 @@ text = "Hari ini aku mendapat
 100 untuk matematika."
 
 [node name="DarkIn" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(961.062, 544.219)
 scale = Vector2(1.6049, 1.62898)
 texture = ExtResource("14_rjky4")

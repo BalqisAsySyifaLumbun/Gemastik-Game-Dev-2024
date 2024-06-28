@@ -39,6 +39,7 @@ directories/dtl_directory={
 "dialog_trio_hutan": "res://Dialogue/Timelines/dialog_trio_hutan.dtl",
 "empty_timeline": "res://Dialogue/Timelines/empty_timeline.dtl",
 "gudang": "res://Dialogue/Timelines/gudang.dtl",
+"gudang_buba": "res://Dialogue/Timelines/gudang_buba.dtl",
 "intro_main_room": "res://Dialogue/Timelines/intro_main_room.dtl",
 "ke_atas": "res://Dialogue/Timelines/ke_atas.dtl",
 "ke_bawah": "res://Dialogue/Timelines/ke_bawah.dtl",
