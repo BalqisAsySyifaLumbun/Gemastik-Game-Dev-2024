@@ -18,39 +18,15 @@ var text2_shown = false
 var delay_counter = 0
 var text_delay_counter = 0
 
-func _ready():
-	if kotak != null:
-		print("Kotak node path:", kotak.get_path())
-	else:
-		print("Kotak node is null")
-
-	if main_char != null:
-		print("Main character node path:", main_char.get_path())
-	else:
-		print("Main character node is null")
 
 func _physics_process(delta):
 	# Check if nodes are properly initialized
 	if main_char != null and kotak != null:
 		var player_global_pos = main_char.global_position
-		var text_gudang_global_pos = text_gudang.global_position
 		var sprite2_global_pos = kotak2.global_position
 		
-		
 		# Calculate the distance between the characters
-		var distance_a = player_global_pos.x - text_gudang_global_pos.x
-		print("DistanceA:", distance_a)
 		var distance = player_global_pos.distance_to(sprite2_global_pos)
-		print("Distance:", distance)
-		
-		if distance_a >= 250 || distance_a <= 0 :
-			#print("False")
-			text_gudang.visible = false
-		else:
-			text_gudang.visible = true
-			if Input.is_action_just_pressed("talk"):
-				text_gudang.text = "Ini sia sia, pintunya terkunci,\naku harus mencari cara keluar lain!"
-			
 		
 		# Check if the distance is within a certain range
 		if distance <= 250 && !animation_played:
@@ -85,4 +61,3 @@ func _physics_process(delta):
 			animation_played = false
 	else:
 		pass
-		#print("Nodes not properly initialized.")

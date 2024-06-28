@@ -106,5 +106,4 @@ shape = SubResource("RectangleShape2D_ieknj")
 position = Vector2(52, 204)
 stream = ExtResource("13_ts65y")
 volume_db = -8.387
-stream_paused = true
 bus = &"SFX"

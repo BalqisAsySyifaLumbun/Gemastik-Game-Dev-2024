@@ -18,10 +18,19 @@ func _dialogue_start(body, dialogue: String):
 	if body.name == "MC" and !dialogue_is_running:
 		if dialogue == "papan_tulis":
 			dialogue_starter(dialogue)
-	if dialogue == "otan":
-		on_otan = true
-	elif dialogue == "wrong_door":
-		on_door = true
+		if dialogue == "otan":
+			on_otan = true
+		elif dialogue == "wrong_door":
+			on_door = true
+
+func _dialogue_stop(body, dialogue: String):
+	if body.name == "MC":
+		if dialogue_is_running:
+			dialogue_stopper()
+		if dialogue == "otan":
+			on_otan = false
+		elif dialogue == "wrong_door":
+			on_door = false
 
 func _input(event):
 	if !dialogue_is_running:
@@ -33,15 +42,6 @@ func _input(event):
 				dialogue_starter("wrong_door")
 			else:
 				dialogue_starter("unable_door")
-
-func _dialogue_stop(body, dialogue: String):
-	if body.name == "MC":
-		if dialogue_is_running:
-			dialogue_stopper()
-		if dialogue == "otan":
-			on_otan = false
-		elif dialogue == "wrong_door":
-			on_door = false
 #endregion ===========================
 
 

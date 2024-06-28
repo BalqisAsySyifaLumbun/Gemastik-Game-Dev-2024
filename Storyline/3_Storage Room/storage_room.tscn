@@ -1,6 +1,7 @@
-[gd_scene load_steps=34 format=3 uid="uid://2dpf4vwnxdxn"]
+[gd_scene load_steps=51 format=3 uid="uid://2dpf4vwnxdxn"]
 
 [ext_resource type="Texture2D" uid="uid://by86b4xsevb1v" path="res://Sprites/dark.png" id="1_is3rv"]
+[ext_resource type="Script" path="res://Storyline/3_Storage Room/storage_room.gd" id="1_qp5mm"]
 [ext_resource type="Texture2D" uid="uid://bytou1d4kln6e" path="res://Sprites/Background/base.jpg" id="2_dn7qr"]
 [ext_resource type="Texture2D" uid="uid://r6uyc6w0rqk5" path="res://Sprites/lighting animasi/lighting animation_0000.png" id="3_clcht"]
 [ext_resource type="Texture2D" uid="uid://dxpkblquk0k7m" path="res://Sprites/lighting animasi/lighting animation_0001.png" id="4_sbou6"]
@@ -25,17 +26,24 @@
 [ext_resource type="Texture2D" uid="uid://bi4apu8sx6oot" path="res://Sprites/lighting animasi/lighting animation_0020.png" id="23_gw6c8"]
 [ext_resource type="Texture2D" uid="uid://bmo2rt177o7qj" path="res://Sprites/lighting animasi/lighting animation_0021.png" id="24_qh5hu"]
 [ext_resource type="Texture2D" uid="uid://ciuak1n5osc2" path="res://Sprites/lighting animasi/lighting animation_0022.png" id="25_bahit"]
-[ext_resource type="PackedScene" uid="uid://bdayto4slwus3" path="res://Storyline/3_Storage Room/subscenes/kotak.tscn" id="26_073ue"]
 [ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/ucing.tscn" id="27_2hg52"]
-[ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/MainCharacterGudang.gd" id="28_ramj0"]
-[ext_resource type="FontFile" uid="uid://cjoe4k533onnt" path="res://Sprites/Font/NewTegomin-Regular.ttf" id="29_acw8g"]
-[ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/DarkIn.gd" id="29_dbkcw"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lked"]
-size = Vector2(5812, 293.25)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w4vqc"]
-size = Vector2(170.5, 1513)
+[ext_resource type="Script" path="res://Storyline/3_Storage Room/scripts/Box.gd" id="28_gjxsm"]
+[ext_resource type="Texture2D" uid="uid://chvw4yn6sdnum" path="res://Sprites/lighting animasi/box jatuh_0000.png" id="29_injsf"]
+[ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="29_vyccd"]
+[ext_resource type="Texture2D" uid="uid://b3y1dyoa4hq6f" path="res://Sprites/lighting animasi/box jatuh_0001.png" id="30_1oqi7"]
+[ext_resource type="Texture2D" uid="uid://hc6n0iucrdan" path="res://Sprites/lighting animasi/box jatuh_0002.png" id="31_l4hrt"]
+[ext_resource type="Texture2D" uid="uid://hdwds2cgwhc2" path="res://Sprites/lighting animasi/box jatuh_0003.png" id="32_5673p"]
+[ext_resource type="Texture2D" uid="uid://644uvfa8gooy" path="res://Sprites/lighting animasi/box jatuh_0004.png" id="33_h1eqg"]
+[ext_resource type="Texture2D" uid="uid://1dc5sednmma8" path="res://Sprites/lighting animasi/box jatuh_0005.png" id="34_uvobn"]
+[ext_resource type="Texture2D" uid="uid://4t8btidyeqt" path="res://Sprites/lighting animasi/box jatuh_0006.png" id="35_lymjm"]
+[ext_resource type="Texture2D" uid="uid://bgtrs82edumib" path="res://Sprites/lighting animasi/box jatuh_0007.png" id="36_2noam"]
+[ext_resource type="Texture2D" uid="uid://ce1wmhna4ntsu" path="res://Sprites/lighting animasi/box jatuh_0008.png" id="37_yg3ib"]
+[ext_resource type="Texture2D" uid="uid://cerorxydwubcm" path="res://Sprites/lighting animasi/box jatuh_0009.png" id="38_x017k"]
+[ext_resource type="Texture2D" uid="uid://btk08lqdktfix" path="res://Sprites/lighting animasi/box jatuh_0010.png" id="39_jmost"]
+[ext_resource type="Texture2D" uid="uid://dj2x7bvb1mhke" path="res://Sprites/lighting animasi/box jatuh_0011.png" id="40_42jci"]
+[ext_resource type="Texture2D" uid="uid://dpge87hv3t26f" path="res://Sprites/lighting animasi/box jatuh_0012.png" id="41_amnve"]
+[ext_resource type="Texture2D" uid="uid://coghkn3tlqtrb" path="res://Sprites/animasi jatuh/box jatuh_0000.png" id="42_kf0wf"]
+[ext_resource type="AudioStream" uid="uid://db2towxbm2i5" path="res://Sounds/Room background/gudang.mp3" id="44_u1iqs"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6j02s"]
 animations = [{
@@ -114,84 +122,174 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Main2" type="Node2D"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qon2x"]
 
-[node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -2002.0
-offset_top = -208.0
-offset_right = 3572.0
-offset_bottom = 1192.0
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_hwl7q"]
+normal = Vector2(-1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3ncbp"]
+normal = Vector2(1, 0)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a055b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_injsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_1oqi7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_l4hrt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_5673p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_h1eqg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_uvobn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_lymjm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_2noam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_yg3ib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_x017k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_jmost")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_42jci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}],
+"loop": false,
+"name": &"dropped",
+"speed": 9.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_kf0wf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_amnve")
+}],
+"loop": true,
+"name": &"mess",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6d3xw"]
+size = Vector2(47.5101, 8.52518)
+
+[node name="StorageRoom" type="Node2D"]
+script = ExtResource("1_qp5mm")
+
+[node name="MapLayout" type="Node2D" parent="."]
+
+[node name="Gudang" type="TextureRect" parent="MapLayout"]
+offset_right = 3780.0
+offset_bottom = 1080.0
 texture = ExtResource("2_dn7qr")
 
-[node name="LeftWall" type="Sprite2D" parent="."]
-position = Vector2(-2657, 507)
+[node name="LightAnimation" type="AnimatedSprite2D" parent="MapLayout"]
+position = Vector2(1872, 538)
+sprite_frames = SubResource("SpriteFrames_6j02s")
+autoplay = "default"
+frame_progress = 0.990728
+
+[node name="LeftWall" type="Sprite2D" parent="MapLayout"]
+position = Vector2(-581, 377)
 scale = Vector2(1.19261, 2.2563)
 texture = ExtResource("1_is3rv")
 
-[node name="RightWall" type="Sprite2D" parent="."]
-position = Vector2(4683, 549)
+[node name="RightWall" type="Sprite2D" parent="MapLayout"]
+position = Vector2(4733, 544)
 scale = Vector2(1.85208, 2.23556)
 texture = ExtResource("1_is3rv")
 
-[node name="Floor" type="StaticBody2D" parent="."]
+[node name="Collisions" type="StaticBody2D" parent="MapLayout"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
-position = Vector2(852, 1202.63)
-shape = SubResource("RectangleShape2D_4lked")
+[node name="FloorCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(2078, 992)
+shape = SubResource("WorldBoundaryShape2D_qon2x")
 
-[node name="Sprite2D" type="Sprite2D" parent="Floor"]
-position = Vector2(876, 1238)
+[node name="RightCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(3610, 546)
+shape = SubResource("WorldBoundaryShape2D_hwl7q")
+
+[node name="LeftCollision" type="CollisionShape2D" parent="MapLayout/Collisions"]
+position = Vector2(135, 505)
+shape = SubResource("WorldBoundaryShape2D_3ncbp")
+
+[node name="Sprite2D" type="Sprite2D" parent="MapLayout/Collisions"]
+position = Vector2(1618, 1138)
 scale = Vector2(4.80417, 0.22)
 texture = ExtResource("1_is3rv")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Floor"]
-position = Vector2(3593, 509)
-shape = SubResource("RectangleShape2D_w4vqc")
+[node name="Box" type="Area2D" parent="." node_paths=PackedStringArray("ucing")]
+position = Vector2(1789, 584)
+script = ExtResource("28_gjxsm")
+ucing = NodePath("../MC")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Floor"]
-position = Vector2(-1923, 462)
-shape = SubResource("RectangleShape2D_w4vqc")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Box"]
+sprite_frames = SubResource("SpriteFrames_a055b")
+animation = &"dropped"
+autoplay = "idle"
 
-[node name="Kotak" parent="." instance=ExtResource("26_073ue")]
-position = Vector2(3375, 965)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box"]
+position = Vector2(7, 113)
+scale = Vector2(2.98735, 51.7618)
+shape = SubResource("RectangleShape2D_6d3xw")
 
 [node name="MC" parent="." instance=ExtResource("27_2hg52")]
-position = Vector2(2994, 614)
-script = ExtResource("28_ramj0")
+position = Vector2(2996, 566)
+script = ExtResource("29_vyccd")
+SPEED = 400.0
 
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
-position = Vector2(793, 535)
-scale = Vector2(1.65429, 1.42037)
-sprite_frames = SubResource("SpriteFrames_6j02s")
-autoplay = "default"
-frame_progress = 0.696502
+[node name="BGM" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(1946, 67)
+stream = ExtResource("44_u1iqs")
+autoplay = true
 
-[node name="RichTextLabel2" type="TextEdit" parent="."]
-visible = false
-offset_left = 353.0
-offset_top = 584.0
-offset_right = 838.0
-offset_bottom = 695.0
-theme_override_fonts/font = ExtResource("29_acw8g")
-theme_override_font_sizes/font_size = 20
-text = "Ayo kita susun isi kotaknya lagi.
-
-- Ketik x untuk membereskan!-"
-
-[node name="RichTextLabel" type="TextEdit" parent="."]
-offset_left = 2268.0
-offset_top = 473.0
-offset_right = 2761.0
-offset_bottom = 668.0
-theme_override_fonts/font = ExtResource("29_acw8g")
-theme_override_font_sizes/font_size = 20
-text = "Oh, anak tadi pasti membohongiku.
-Pintunya terkunci, aku tidak bisa keluar. 
-
-TOLONG!!"
-
-[node name="DarkIn" type="Sprite2D" parent="."]
-position = Vector2(1904, 494.25)
-scale = Vector2(3.17, 2.22444)
-texture = ExtResource("1_is3rv")
-script = ExtResource("29_dbkcw")
+[connection signal="body_entered" from="Box" to="Box" method="_on_body_entered"]
+[connection signal="start_task" from="Box" to="." method="_on_box_start_task"]
+[connection signal="animation_finished" from="Box/AnimatedSprite2D" to="Box" method="_on_animation_finished"]

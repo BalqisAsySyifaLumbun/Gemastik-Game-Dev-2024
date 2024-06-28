@@ -14,7 +14,3 @@ func _process(delta):
 		var fade_amount = current_time / fade_duration # Calculate the amount of fade
 		modulate.a = 1.0 - fade_amount # Adjust alpha value for fading
 		 # Free the node when fade out is complete
-
-
-func _on_answer_3_gui_input(event):
-	pass # Replace with function body.

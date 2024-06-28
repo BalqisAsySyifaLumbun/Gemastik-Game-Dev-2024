@@ -82,7 +82,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("14_wp0uh")
 }],
-"loop": true,
+"loop": false,
 "name": &"dropped",
 "speed": 9.0
 }, {
@@ -104,18 +104,17 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6d3xw"]
-size = Vector2(70, 31)
+size = Vector2(47.5101, 8.52518)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
-position = Vector2(3311, 596)
 script = ExtResource("1_83m32")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-2780, -275)
 sprite_frames = SubResource("SpriteFrames_a055b")
 animation = &"dropped"
 autoplay = "idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2753, -106)
+position = Vector2(-2, 149)
+scale = Vector2(2.18901, 17.8295)
 shape = SubResource("RectangleShape2D_6d3xw")
