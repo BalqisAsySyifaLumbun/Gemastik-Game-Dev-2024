@@ -11,9 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://dbirrygityipt" path="res://Sprites/Tasks/Task 7/Level 3/opsi 3.png" id="8_f56ab"]
 [ext_resource type="Texture2D" uid="uid://d0mqwww4wx3is" path="res://Sprites/Tasks/Task 7/Level 2/correct answer.png" id="9_wtqwi"]
 [ext_resource type="Texture2D" uid="uid://b8as1fcevshdx" path="res://Sprites/Tasks/Task 7/Level 3/opsi 4.png" id="10_n7su2"]
-[ext_resource type="AudioStream" uid="uid://bbydlh8fksxrj" path="res://Sounds/Task/correct answer.mp3" id="12_snung"]
-[ext_resource type="AudioStream" uid="uid://dijynhoke17vf" path="res://Sounds/Task/wrong answer.mp3" id="13_ud26t"]
-[ext_resource type="AudioStream" uid="uid://bibfig1oef4j8" path="res://Sounds/Task/task finish.mp3" id="14_726pe"]
+[ext_resource type="AudioStream" uid="uid://dnps4av0mxtdo" path="res://Sounds/Task/correct answer.mp3" id="12_snung"]
+[ext_resource type="AudioStream" uid="uid://brsij0rmv2oii" path="res://Sounds/Task/wrong answer.mp3" id="13_ud26t"]
+[ext_resource type="AudioStream" uid="uid://06dmq7w8p4q7" path="res://Sounds/Task/task finish.mp3" id="14_726pe"]
 [ext_resource type="AudioStream" uid="uid://jqnue8vkp620" path="res://Sounds/Task/backsound quest loop.mp3" id="15_qopdy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nw812"]

@@ -10,6 +10,8 @@ const TEXT_DELAY_FRAMES = 10 * 60  # 10 seconds at 60 FPS
 @onready var main_char = get_parent().get_node('MC/CollisionShape2D')
 @onready var text_gudang = get_parent().get_node('RichTextLabel')
 @onready var text_gudang2 = get_parent().get_node('RichTextLabel2')
+@onready var pintu = get_parent().get_node('Go_Door')
+@onready var task = get_parent().get_node('Task1')
 
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
@@ -38,23 +40,10 @@ func _physics_process(delta):
 			delay_counter += 1
 			if delay_counter >= DELAY_FRAMES:
 				kotak.animation = "mess"  # Set animation on AnimatedSprite node
-				
-				# Show text and reset text delay counter if not shown already
-				if !text2_shown && text_delay_counter <= TEXT_DELAY_FRAMES:
-					text_gudang2.visible = true
-					text2_shown = true
-					text_delay_counter = 0  # Reset text delay counter
-				else:
-					if distance >= 400:
-						text_gudang2.visible = false
-					else:
-						text_gudang2.visible = true
-						if Input.is_action_just_pressed("talk"):
-							get_tree().change_scene_to_file("res://Storyline/4_Task 1/box_drag_drop.tscn")
-						
-				
-				# Increment text delay counter
-				text_delay_counter += 1
+				if kotak.animation == "mess":
+					task.visible = true
+					
+					
 		else:
 			# Reset animation state when the characters are not in range
 			kotak.animation = "idle"  # Set idle animation
