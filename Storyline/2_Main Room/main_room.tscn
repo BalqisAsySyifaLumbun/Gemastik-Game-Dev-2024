@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Storyline/2_Main Room/main_room.gd" id="1_c0m0q"]
 [ext_resource type="PackedScene" uid="uid://dnyv5ckw26ug8" path="res://Characters/Otan/otan.tscn" id="2_b88js"]
 [ext_resource type="Texture2D" uid="uid://dvlitpew1cfxa" path="res://Sprites/Sekolah/lantai dasar.jpg" id="2_mtftp"]
-[ext_resource type="PackedScene" uid="uid://cjq723u0rgaxo" path="res://Characters/MC/ucing.tscn" id="3_qissp"]
+[ext_resource type="PackedScene" uid="uid://lgdo5awdwe0r" path="res://Characters/MC/ucing.tscn" id="3_qissp"]
 [ext_resource type="Texture2D" uid="uid://oc5s7i86txx8" path="res://Sprites/Sekolah/tangga ke atas.png" id="3_wgk5i"]
 [ext_resource type="Texture2D" uid="uid://dsej27wehpbhf" path="res://Sprites/Sekolah/tangga ke bawah.png" id="4_nt36v"]
 [ext_resource type="Script" path="res://Characters/MC/ucing.gd" id="4_xucuy"]
@@ -57,7 +57,6 @@
 [ext_resource type="Texture2D" uid="uid://be3i63il8su0n" path="res://Sprites/Guide Icon/turun tangga/turun_0013.png" id="43_q0d2o"]
 [ext_resource type="Texture2D" uid="uid://brbvky5b6ogpw" path="res://Sprites/Guide Icon/turun tangga/turun_0014.png" id="44_8byjk"]
 [ext_resource type="AudioStream" uid="uid://cck4jfw2a5koi" path="res://Sounds/Pop - guide icon.wav" id="54_mfs8a"]
-[ext_resource type="Script" path="res://Storyline/2_Main Room/scripts/DarkIn.gd" id="55_odhb6"]
 [ext_resource type="AudioStream" uid="uid://chc2gh27gxb1m" path="res://Sounds/Room background/asrama.mp3" id="57_nv6wi"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8lvg4"]
@@ -568,12 +567,6 @@ position = Vector2(7285, 672)
 
 [node name="Pintu4" parent="GuideIcon" instance=ExtResource("17_dy5op")]
 position = Vector2(8599, 665)
-
-[node name="DarkIn" type="Sprite2D" parent="."]
-position = Vector2(4124, 456)
-scale = Vector2(4.94573, 1.85518)
-texture = ExtResource("1_b6san")
-script = ExtResource("55_odhb6")
 
 [node name="BGM" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("57_nv6wi")
